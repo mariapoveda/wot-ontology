@@ -20,6 +20,7 @@
 
 <https://iot.linkeddata.es/def/wot> rdf:type owl:Ontology ;
                                      dcterms:creator <http://purl.org/net/mpoveda> ;
+                                     dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
                                      dc:title "Vicinity model for Web of Things"@en ;
                                      vann:preferredNamespacePrefix "wot" ;
                                      dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
