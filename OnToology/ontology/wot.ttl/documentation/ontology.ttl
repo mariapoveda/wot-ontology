@@ -29,15 +29,15 @@ vs:term_status
       a       owl:ObjectProperty ;
       rdfs:label "isMeasuredIn"@en .
 
-:defaultValue
-      a       owl:DatatypeProperty ;
-      rdfs:label "defaultValue"@en ;
-      rdfs:range rdfs:Literal .
-
 :VirtualEntity
       a       owl:Class ;
       rdfs:label "VirtualEntity"@en ;
       rdfs:subClassOf :Entity .
+
+:defaultValue
+      a       owl:DatatypeProperty ;
+      rdfs:label "defaultValue"@en ;
+      rdfs:range rdfs:Literal .
 
 :isComponentOf
       a       owl:ObjectProperty ;
@@ -80,6 +80,11 @@ vs:term_status
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:allValuesFrom :DataFormat ;
+                owl:onProperty :hasOutputData
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:boolean ;
                 owl:onProperty :isWritable
               ] ;
@@ -88,17 +93,25 @@ vs:term_status
                 owl:onProperty :hasOutputData ;
                 owl:someValuesFrom :DataFormat
               ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :DataFormat ;
-                owl:onProperty :hasOutputData
-              ] ;
       owl:disjointWith saref:Service , :WoTInterface .
 
 :WebResource
       a       owl:Class ;
       rdfs:label "WebResource"@en ;
       vs:term_status "unstable" .
+
+<http://iot.linkeddata.es/def/wot>
+      a       owl:Ontology ;
+      rdfs:comment "This ontology aims to model the Web of Things domain according to the w3c Interest Group (http://w3c.github.io/wot/)"@en ;
+      dc:publisher <http://www.oeg-upm.net/> ;
+      dc:title "Vicinity model for Web of Things"@en ;
+      dcterms:creator <http://purl.org/net/mpoveda> , <http://www.garcia-castro.com/foaf.rdf#me> ;
+      dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+      vann:preferredNamespacePrefix
+              "wot" ;
+      vann:preferredNamespaceUri
+              "https://iot.linkeddata.es/def/wot" ;
+      owl:versionInfo "1.0" .
 
 :href
       a       owl:FunctionalProperty , owl:DatatypeProperty ;
@@ -158,11 +171,6 @@ vs:term_status
       rdfs:label "Entity"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :Ecosystem ;
-                owl:onProperty :isComponentOf
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
                 owl:allValuesFrom :InteractionPattern ;
                 owl:onProperty :providesInteractionPattern
               ] ;
@@ -170,6 +178,11 @@ vs:term_status
               [ a       owl:Restriction ;
                 owl:allValuesFrom :ThingDescription ;
                 owl:onProperty :isDescribedBy
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Ecosystem ;
+                owl:onProperty :isComponentOf
               ] .
 
 :DigitalRepresentation
@@ -200,13 +213,13 @@ vs:term_status
       rdfs:label "Thing description"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :Entity ;
-                owl:onProperty :describes
+                owl:onProperty :describes ;
+                owl:someValuesFrom :Entity
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :describes ;
-                owl:someValuesFrom :Entity
+                owl:allValuesFrom :Entity ;
+                owl:onProperty :describes
               ] .
 
 :PhysicalEntity
@@ -253,13 +266,13 @@ saref:Service
       rdfs:label "Ecosystem"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :hasComponent ;
-                owl:someValuesFrom :Entity
+                owl:onProperty :isDescribedBy ;
+                owl:someValuesFrom :ThingEcosystemDescription
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :isDescribedBy ;
-                owl:someValuesFrom :ThingEcosystemDescription
+                owl:onProperty :hasComponent ;
+                owl:someValuesFrom :Entity
               ] .
 
 :InteractionPattern
@@ -267,8 +280,8 @@ saref:Service
       rdfs:label "Interaction"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :providedBy ;
-                owl:someValuesFrom :WebResource
+                owl:onProperty :interactionName ;
+                owl:someValuesFrom xsd:string
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -277,8 +290,8 @@ saref:Service
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :interactionName ;
-                owl:someValuesFrom xsd:string
+                owl:onProperty :providedBy ;
+                owl:someValuesFrom :WebResource
               ] .
 
 :DataType
@@ -295,6 +308,11 @@ saref:Service
       rdfs:label "Endpoint"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:onProperty :href ;
+                owl:someValuesFrom xsd:string
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:allValuesFrom :MediaType ;
                 owl:onProperty :hasMediaType
               ] ;
@@ -302,11 +320,6 @@ saref:Service
               [ a       owl:Restriction ;
                 owl:onProperty :isProvidedOverProtocol ;
                 owl:someValuesFrom :CommunicationProtocol
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onProperty :href ;
-                owl:someValuesFrom xsd:string
               ] .
 
 :entityName
@@ -329,25 +342,12 @@ saref:Service
       a       owl:ObjectProperty ;
       rdfs:label "isDescribedBy"@en .
 
-<https://iot.linkeddata.es/def/wot>
-      a       owl:Ontology ;
-      rdfs:comment "This ontology aims to model the Web of Things domain according to the w3c Interest Group (http://w3c.github.io/wot/)"@en ;
-      dc:publisher <http://www.oeg-upm.net/> ;
-      dc:title "Vicinity model for Web of Things"@en ;
-      dcterms:creator <http://purl.org/net/mpoveda> , <http://www.garcia-castro.com/foaf.rdf#me> ;
-      dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-      vann:preferredNamespacePrefix
-              "wot" ;
-      vann:preferredNamespaceUri
-              "https://iot.linkeddata.es/def/wot" ;
-      owl:versionInfo "1.0" .
+:describes
+      a       owl:ObjectProperty ;
+      rdfs:label "describesThing"@en ;
+      owl:inverseOf :isDescribedBy .
 
 :isRequired
       a       owl:FunctionalProperty , owl:DatatypeProperty ;
       rdfs:label "isRequired"@en ;
       rdfs:range xsd:boolean .
-
-:describes
-      a       owl:ObjectProperty ;
-      rdfs:label "describesThing"@en ;
-      owl:inverseOf :isDescribedBy .
