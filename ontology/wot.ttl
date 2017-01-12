@@ -1,4 +1,4 @@
-@prefix : <http://iot.linkeddata.es/def/wot##> .
+@prefix : <http://iot.linkeddata.es/def/wot#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
