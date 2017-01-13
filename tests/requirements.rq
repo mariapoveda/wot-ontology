@@ -1,0 +1,124 @@
+#ID Wot1
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+ASK { ?r a owl:Class .
+	  ?r rdfs:label "Entity"@en}
+
+#Result true
+
+#ID WoT4
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+ASK { ?r a owl:Class .
+	  ?r rdfs:label "Thing description"@en}
+#Result true
+
+#ID WoT5
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+ASK { ?r a owl:Class .
+	  ?r rdfs:label "Web of Thing interface"@en}
+#Result true
+
+#ID Wot11
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+ASK { ?r a owl:ObjectProperty .
+	  ?r rdfs:label "describesThing"@en} 
+#Result true
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX : <http://iot.linkeddata.es/def/wot#>
+INSERT DATA {	:Entity1 a <http://iot.linkeddata.es/def/wot#Entity>.
+				:ThingDesc1 a <http://iot.linkeddata.es/def/wot#ThingDescription>.
+				:ThingDesc1 <http://iot.linkeddata.es/def/wot#describes> :Entity1 
+}
+#Result true
+
+#ID WoT15
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+ASK { ?r a owl:Class .
+	  ?r rdfs:label "Property"@en} 
+#Result true
+
+#ID WoT14
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+ASK { ?r a owl:ObjectProperty .
+	  ?r rdfs:label "providesInteractionPattern"@en} 
+#Result true
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+ASK { ?r a owl:Class .
+	  ?r rdfs:label  "Interaction"@en} 
+#Result true
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX : <http://iot.linkeddata.es/def/wot#>
+INSERT DATA {	:Interaction1 a <http://iot.linkeddata.es/def/wot#InteractionPattern>.
+				:Interface1 a <http://iot.linkeddata.es/def/wot#WoTInterface>.
+				:Interface1 <http://iot.linkeddata.es/def/wot#providesInteractionPattern> :Interaction1 
+}
+#Result true
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+ASK { ?r a owl:Class .
+	  ?r rdfs:label "WebResource"@en} 
+#Result true
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+ASK { ?r a owl:ObjectProperty .
+	  ?r rdfs:label "providedBy"@en} 
+
+#Result true
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX : <http://iot.linkeddata.es/def/wot#>
+INSERT DATA {	:Interaction1 a <http://iot.linkeddata.es/def/wot#InteractionPattern>.
+				:WebResource1 a <http://iot.linkeddata.es/def/wot#WebResource>.
+				:Interaction1 <http://iot.linkeddata.es/def/wot#providedBy> :WebResource1 
+}
+#Result true
+
+#ID WoT22
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+ASK { ?r a owl:Class .
+	  ?r rdfs:label "Communication protocol"@en}
+#Result true
+
+#ID WoT21
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+ASK { ?r a owl:ObjectProperty .
+	  ?r rdfs:label  "is provided over protocol"@en}
+#Result true
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX : <https://w3id.org/def/saref4envi#>
+INSERT DATA {	:Interaction1 a <https://w3id.org/def/saref4envi#InteractionPattern>.
+				:Protocol1 a <http://iot.linkeddata.es/def/wot#CommunicationProtocol>.
+				:Protocol2 a <http://iot.linkeddata.es/def/wot#CommunicationProtocol>.
+				:Interaction1 <http://iot.linkeddata.es/def/wot#providedOverProtocol> :Protocol1. 
+				:Interaction1 <http://iot.linkeddata.es/def/wot#providedOverProtocol> :Protocol2. 
+}
+#Result true
