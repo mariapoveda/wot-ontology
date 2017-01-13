@@ -1,0 +1,13 @@
+language: java
+notifications:
+  email:
+    on_success: never 
+    on_failure: never 
+
+script:
+- curl -i -X POST  -d $TRAVIS_REPO_SLUG http://vicinity.iot.linkeddata.es/reqmanager/rest/hook/;
+- response=$(curl -i -X POST  -d $TRAVIS_REPO_SLUG http://vicinity.iot.linkeddata.es/reqmanager/rest/test/);
+- echo ${response}
+- if [${response} == *'WARNING'*]; then
+      exit(1)
+  fi
