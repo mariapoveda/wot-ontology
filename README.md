@@ -1,5 +1,5 @@
 # vicinity-ontology-wot
-Repository for collaborative edition of the VICINITY module for the Web Of Things domain
+Repository for collaborative edition of the VICINITY ontology module for the Web Of Things domain. This ontology is being developed within the context of the [VICINITY H2020 project] (http://vicinity2020.eu/)
 
 To include issues for this domain (that is, things you need this ontology to represent or improve): https://github.com/mariapoveda/vicinity-ontology-wot/issues
 
@@ -11,11 +11,11 @@ Relevant links:
 - [WoT demos] (https://www.w3.org/WoT/demos/td2ttl/)
 
 # How We Work
-This document provides a brief overview of the process for developing the [WOT ontology](http://iot.linkeddata.es/def/wot/). It contains a minimal amount of technical detail sufficient to explain our approach to ontology development.
+This document provides a brief overview of the process for developing the [WOT ontology](http://iot.linkeddata.es/def/wot/). It contains a minimal amount of technical detail sufficient to explain our approach to collaborative ontology development.
 
 ## Structure of the GitHub repository
 
-The tool selected to store the ontology is GitHub. Each module in VICINITY ontology will be stored in a repository. We will also have an aggregator repository which integrates all the modules and submodules of VICINITY Ontology. Each repository will include:
+The sytem selected to store the ontology is GitHub. Each module in VICINITY ontology will be stored in a repository. We will also have an aggregator repository which integrates all the modules and submodules of VICINITY Ontology. Each repository will include:
 
 An evaluation folder where the evaluation reports of the ontology are stored.
 
