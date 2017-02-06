@@ -27,8 +27,9 @@ For developing an ontology using GitHub the developers can follow the [GitHub go
 
 ## Development process
 
-Once the ontology is implemented, it has to be evaluated and documented before its publication.
-Ontology Evaluation
+Once the ontology is implemented (for this step you can use an ontology editor like [Protégé](http://protege.stanford.edu/)), it has to be evaluated and documented before its publication.
+
+### Ontology Evaluation
 The ontology has to be evaluated according to syntactic, model and semantic errors. The ontology developers have to guarantee that the ontology meets all the requirements identified.
 
 ### Ontology Documentation
