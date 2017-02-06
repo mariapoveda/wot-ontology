@@ -31,13 +31,13 @@ Once the ontology is implemented, it has to be evaluated and documented before i
 Ontology Evaluation
 The ontology has to be evaluated according to syntactic, model and semantic errors. The ontology developers have to guarantee that the ontology meets all the requirements identified.
 
-##Ontology Documentation
+###Ontology Documentation
 
 The ontology development team in collaboration with the domain experts has to generate the ontology documentation. This documentation has to include an HTML description of the ontology which describes the classes, properties and data properties of the ontology, and the license URI and title being used.
 
-##Ontology Publication
+###Ontology Publication
 
 Releases are published in the official site by the project webmaster, so the ontology and its documentation will be accessible to all the users. The site will publish additionally for each ontology the repositiory where is stored, its issue tracker and the requirements associated to each ontology.
 
-##Ontology Maintenance
+###Ontology Maintenance
 If the ontology developers or domain experts want to update or add new requirements to the ontology they have to create a new issue in the GitHub issue tracker. This issue will let the developers to start a discussion and accept or regret the modifications. GitHub also provide a good practices guide for creating issues. 
