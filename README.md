@@ -7,11 +7,11 @@ The ontology latest release is published: (draft) http://iot.linkeddata.es/def/w
 
 Relevant links:
 
-*http://w3c.github.io/wot/current-practices/wot-practices.html
-*https://www.w3.org/WoT/demos/td2ttl/
+-http://w3c.github.io/wot/current-practices/wot-practices.html
+-https://www.w3.org/WoT/demos/td2ttl/
 
 #How We Work
-This document provides a brief overview of the process for developing the WOT ontology. It contains a minimal amount of technical detail sufficient to explain our approach to ontology development.
+This document provides a brief overview of the process for developing the [WOT ontology](http://iot.linkeddata.es/def/wot/). It contains a minimal amount of technical detail sufficient to explain our approach to ontology development.
 
 ##Structure of the GitHub repository
 
