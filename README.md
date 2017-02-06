@@ -11,7 +11,7 @@ Relevant links:
 *https://www.w3.org/WoT/demos/td2ttl/
 
 #How We Work
-This document provides a brief overview of our process for developing ontologies. It contains a minimal amount of technical detail sufficient to explain our approach to ontology development.
+This document provides a brief overview of the process for developing the WOT ontology. It contains a minimal amount of technical detail sufficient to explain our approach to ontology development.
 
 ##Structure of the GitHub repository
 
