@@ -18,7 +18,7 @@ This document provides a brief overview of the process for developing the [WOT o
 - VICINITY provides a core ontology for describing the core information to be used in VICINITY ecosystem. This core ontology, which relies in more general modules or cross-domains ontologies (e.g., time, space, web things, etc.), might be extended for more specific domains and applications (e.g., health, buildings, transport, etc.)
 - Each domain is going to be stored in a GitHub repository. This repository hosts the [WOT ontology](http://iot.linkeddata.es/def/wot/).
 - Improvements and issues for each domain are discussed in the repository's GitHub issue tracker ([issues for the WoT ontology] (https://github.com/mariapoveda/vicinity-ontology-wot/issues))
-- The requirements of each domains are stored in a Google Spreadsheet ([WoT ontology requirements (https://docs.google.com/spreadsheets/d/1_VcoGD5Qq6iKr8-XNGJGsOo475aiZsnKf0i01awdZkc/edit#gid=0)). When there is a release version a domain, the spreadsheet is automatically converted to HTML and commited to the repository.
+- The requirements of each domains are stored in a Google Spreadsheet ([WoT ontology requirements] (https://docs.google.com/spreadsheets/d/1_VcoGD5Qq6iKr8-XNGJGsOo475aiZsnKf0i01awdZkc/edit#gid=0)). When there is a release version a domain, the spreadsheet is automatically converted to HTML and commited to the repository.
 - The ontology developers have to evaluate the ontology and generate its documentation before publishing it.
 - The releases versions of the domains are published in the site.
 - OnToology will generate the documentation and the evaluation of the ontology. 
