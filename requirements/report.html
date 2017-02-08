@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Requirements</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This describes the requirements identified for the ontology">
+    <meta name="languaje" content="English">
+    
+    <link rel="stylesheet" href="HTMLGenerator/themes/blue/style.css" type="text/css" media="print, projection, screen" />
+    <script src="HTMLGenerator/js/jquery-1.11.0.js"></script>
+    <script type="text/javascript" src="HTMLGenerator/js/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="HTMLGenerator/js/jquery.stickytableheaders.js"></script>
+    <script type="text/javascript" src="HTMLGenerator/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="HTMLGenerator/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="HTMLGenerator/css/jquery-ui.css"></link>
+    <script type="text/javascript" id="js">
+	    $(document).ready(function() 
+		    { 
+		    	$("#tablesorter-demo").tablesorter(); 
+		    	$("#tablesorter-demo").stickyTableHeaders(); 
+		    	$('[data-toggle="tooltip"]').tooltip(); 
+		    } 
+	    ); 
+    </script>
+
+    <!-- Le styles -->
+    <link href="HTMLGenerator/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="HTMLGenerator/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+  </head>
+
+  <body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Ontology requirements</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+ </div>
+    <div class="container">
+
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <h1><img src="HTMLGenerator/vicinity.png" alt="VICINITY logo" class="img-rounded" class="img-responsive" /></h1>
+        <p class="lead">Here you can find the list of the requirements identified for  <a href = "http://iot.linkeddata.es/def/wot" target="_blank">Vicinity ontology model for Web of Things ontology</a> and their main features.      </div>
+      <hr>
+<div class="row"> 
+<div class="ui-widget">
+<div class="col-md-8" > 
+</div>
+</div>
+</div>
+<br>
+<table id="tablesorter-demo" class="tablesorter table table-hover table-responsive">
+<thead>
+ <tr><th class="col-md-2">Identifier </th><th class="col-md-2">Sprint</th><th class="col-md-2">Competency Question</th><th class="col-md-2">Answer</th><th class="col-md-2">Extracted from</th><th class="col-md-2">Priority</th></tr></thead>
+<tbody>
+<tr><td class="tg-031e">WoT1</td><td class="tg-031e">1</td><td class="tg-031e">What is a thing in the web thing context?</td><td class="tg-031e">The abstract concept of a physical entity that can either be a real-world artifact, such as a device, or a virtual entity that represents physicality, such as a room or group of devices</td><td class="tg-031e">http://w3c.github.io/wot/current-practices/wot-practices.html</td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT2</td><td class="tg-031e"></td><td class="tg-031e">What is a servient?</td><td class="tg-031e">The addressable application endpoint of a Thing that makes it interactive by providing a WoT Interface and means to execute application logic</td><td class="tg-031e">http://w3c.github.io/wot/current-practices/wot-practices.html</td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT3</td><td class="tg-031e"></td><td class="tg-031e">What is a repository?</td><td class="tg-031e">A registry for Thing Descriptions that provides a Web interface to register Thing Descriptions and look them up, for intance using SPARQL queries</td><td class="tg-031e">http://w3c.github.io/wot/current-practices/wot-practices.html</td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT4</td><td class="tg-031e">1</td><td class="tg-031e">What is a thing description?</td><td class="tg-031e">An RDF document (currently serialized in JSON-LD by default) that contains semantic and functional descriptions of a Thing</td><td class="tg-031e">http://w3c.github.io/wot/current-practices/wot-practices.html</td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT5</td><td class="tg-031e">1</td><td class="tg-031e">What is a WoT interface?</td><td class="tg-031e">Def 1: Resource-oriented Web interface (often called "Web API") that allows access to servients over the network using different Protocol Bindings. 
+Def 2: A WoT interface is also a web API that follows the recommendations of the WoT Interest Group.</td><td class="tg-031e">http://w3c.github.io/wot/current-practices/wot-practices.html</td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT6</td><td class="tg-031e"></td><td class="tg-031e">Things in the WoT architecture are represented by servients,</td><td class="tg-031e"></td><td class="tg-031e">http://w3c.github.io/wot/current-practices/wot-practices.html</td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT7</td><td class="tg-031e"></td><td class="tg-031e">Servient can represent virtual things as well.</td><td class="tg-031e"></td><td class="tg-031e">http://w3c.github.io/wot/current-practices/wot-practices.html</td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT8</td><td class="tg-031e"></td><td class="tg-031e">Servients are hosted anywhere, a smartphone, local gateway, or the cloud.</td><td class="tg-031e"></td><td class="tg-031e">http://w3c.github.io/wot/current-practices/wot-practices.html</td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT9</td><td class="tg-031e"></td><td class="tg-031e">Servient communicate to each other through a WoT interface</td><td class="tg-031e"></td><td class="tg-031e">http://w3c.github.io/wot/current-practices/wot-practices.html</td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT10</td><td class="tg-031e"></td><td class="tg-031e">Servient can have cliente or server roles or both.</td><td class="tg-031e"></td><td class="tg-031e">http://w3c.github.io/wot/current-practices/wot-practices.html</td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT11</td><td class="tg-031e">1</td><td class="tg-031e">Each thing is described by WoT Thing Descriptions.</td><td class="tg-031e"></td><td class="tg-031e">http://w3c.github.io/wot/current-practices/wot-practices.html</td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT12</td><td class="tg-031e"></td><td class="tg-031e">Thing Descriptions can be registered in Td repositories.</td><td class="tg-031e"></td><td class="tg-031e">http://w3c.github.io/wot/current-practices/wot-practices.html</td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT13</td><td class="tg-031e"></td><td class="tg-031e">TD repositories can be queried using for example SPARQL</td><td class="tg-031e"></td><td class="tg-031e">http://w3c.github.io/wot/current-practices/wot-practices.html</td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT14</td><td class="tg-031e">1</td><td class="tg-031e">A WoT interface provides Web resources that implement the interaction patterns of Properties, Actions, and Events. Each web resource acts as a mediator/proxy (web interface) between the Thing and their clients.</td><td class="tg-031e"></td><td class="tg-031e">http://w3c.github.io/wot/current-practices/wot-practices.html</td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT15</td><td class="tg-031e">1</td><td class="tg-031e">What is a property?</td><td class="tg-031e"></td><td class="tg-031e">http://w3c.github.io/wot/current-practices/wot-practices.html</td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT16</td><td class="tg-031e"></td><td class="tg-031e">What is an action?</td><td class="tg-031e"></td><td class="tg-031e">http://w3c.github.io/wot/current-practices/wot-practices.html</td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT17</td><td class="tg-031e"></td><td class="tg-031e">What is an event?</td><td class="tg-031e"></td><td class="tg-031e">http://w3c.github.io/wot/current-practices/wot-practices.html</td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT18</td><td class="tg-031e">1</td><td class="tg-031e">Which interaction pattern can a property have?</td><td class="tg-031e"></td><td class="tg-031e">http://w3c.github.io/wot/current-practices/wot-practices.html</td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT19</td><td class="tg-031e"></td><td class="tg-031e">Which interaction pattern can an action have?</td><td class="tg-031e"></td><td class="tg-031e">http://w3c.github.io/wot/current-practices/wot-practices.html</td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT20</td><td class="tg-031e"></td><td class="tg-031e">Which interaction pattern can an event have?</td><td class="tg-031e"></td><td class="tg-031e">http://w3c.github.io/wot/current-practices/wot-practices.html</td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT21</td><td class="tg-031e">1</td><td class="tg-031e">A thing interaction can be available over different or multiple protocols</td><td class="tg-031e"></td><td class="tg-031e">http://w3c.github.io/wot/current-practices/wot-practices.html</td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT22</td><td class="tg-031e">1</td><td class="tg-031e">What is a protocol?</td><td class="tg-031e">Any web protocol that is supported by WoT interfaces.</td><td class="tg-031e">http://w3c.github.io/wot/current-practices/wot-practices.html</td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT23</td><td class="tg-031e"></td><td class="tg-031e">The default interaction with properties is read.</td><td class="tg-031e"></td><td class="tg-031e">http://w3c.github.io/wot/current-practices/wot-practices.html</td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT24</td><td class="tg-031e"></td><td class="tg-031e">Each thing has an interaction pattern</td><td class="tg-031e"></td><td class="tg-031e">http://w3c.github.io/wot/current-practices/wot-practices.html</td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT25</td><td class="tg-031e"></td><td class="tg-031e">An interaction pattern can have different endpoints</td><td class="tg-031e"></td><td class="tg-031e">http://w3c.github.io/wot/current-practices/wot-practices.html</td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT26</td><td class="tg-031e"></td><td class="tg-031e">Each interaction pattern has its own attributes</td><td class="tg-031e"></td><td class="tg-031e">http://w3c.github.io/wot/current-practices/wot-practices.html</td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT27</td><td class="tg-031e"></td><td class="tg-031e">Each interaction pattern has an endpoint</td><td class="tg-031e"></td><td class="tg-031e">http://w3c.github.io/wot/current-practices/wot-practices.html</td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT28</td><td class="tg-031e"></td><td class="tg-031e">Each endpoints has minimun two attributes: URI and mediatype</td><td class="tg-031e"></td><td class="tg-031e">http://w3c.github.io/wot/current-practices/wot-practices.html</td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT29</td><td class="tg-031e"></td><td class="tg-031e">Security is associated with things</td><td class="tg-031e"></td><td class="tg-031e">http://w3c.github.io/wot/current-practices/wot-practices.html</td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT30</td><td class="tg-031e"></td><td class="tg-031e">An interaction pattern can have an attribute href</td><td class="tg-031e"></td><td class="tg-031e">http://w3c.github.io/wot/current-practices/wot-practices.html</td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT31</td><td class="tg-031e"></td><td class="tg-031e">An endpoint can be associated with a thing without determine the interaction patterns</td><td class="tg-031e"></td><td class="tg-031e">http://w3c.github.io/wot/current-practices/wot-practices.html</td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT32</td><td class="tg-031e"></td><td class="tg-031e">Each interaction pattern has a name and a Web Resource address</td><td class="tg-031e"></td><td class="tg-031e"></td><td class="tg-031e"></td></tr><tr><td class="tg-031e">WoT33</td><td class="tg-031e"></td><td class="tg-031e">An interaction has a type and attributes</td><td class="tg-031e"></td><td class="tg-031e"></td><td class="tg-031e"></td></tr></tbody></table>
+<hr>
+      <footer class="footer">
+            <div class="row">
+    	<div class="col-md-10">
+    		Developed by 	        <a href = "http://oeg-upm.net" target="_blank">Ontology Engineering Group</a>
+	        <br>
+    	Built with <a target="_blank" href="http://getbootstrap.com/">Bootstrap</a>
+    	Icons from <a target="_blank" href="http://glyphicons.com/">Glyphicons</a>
+ 	        <br>
+	        Latest revision February, 2017
+           <br><p>&copy; Ontology Engineering Group</p>
+        </div>
+    	<div class="col-md-2">
+    		<a href="http://www.oeg-upm.net/" target="_blank"><img src="HTMLGenerator/logo.gif" alt="OEG logo" class="img-rounded" class="img-responsive" /></a>
+    	</div>
+      </div>
+      </footer>
+    </div> <!-- /container -->
