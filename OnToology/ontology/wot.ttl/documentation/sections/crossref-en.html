@@ -1,5 +1,5 @@
-<h2>4. Cross reference for WoT classes, properties and dataproperties</h2>
-This section provides details for each class and property defined by WoT.
+<h2>4. Cross reference for [Ontology Name] classes, properties and dataproperties</h2>
+This section provides details for each class and property defined by [Ontology Name].
 <div id="classes">
    <h2>Classes</h2>
    <ul class="hlist">
@@ -19,9 +19,6 @@ This section provides details for each class and property defined by WoT.
       <li>
          <a href="#http://iot.linkeddata.es/def/wot#DigitalRepresentation"
             title="http://iot.linkeddata.es/def/wot#DigitalRepresentation">Digital representation</a>
-      </li>
-      <li>
-         <a href="#http://iot.linkeddata.es/def/wot#Ecosystem" title="http://iot.linkeddata.es/def/wot#Ecosystem">Ecosystem</a>
       </li>
       <li>
          <a href="#http://iot.linkeddata.es/def/wot#Endpoint" title="http://iot.linkeddata.es/def/wot#Endpoint">Endpoint</a>
@@ -53,10 +50,6 @@ This section provides details for each class and property defined by WoT.
             title="http://iot.linkeddata.es/def/wot#ThingDescription">Thing description</a>
       </li>
       <li>
-         <a href="#http://iot.linkeddata.es/def/wot#ThingEcosystemDescription"
-            title="http://iot.linkeddata.es/def/wot#ThingEcosystemDescription">Thing ecosystem description</a>
-      </li>
-      <li>
          <a href="#http://iot.linkeddata.es/def/wot#UnitOfMeasure" title="http://iot.linkeddata.es/def/wot#UnitOfMeasure">UnitOfMeasure</a>
       </li>
       <li>
@@ -84,14 +77,14 @@ This section provides details for each class and property defined by WoT.
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#http://iot.linkeddata.es/def/wot#hasOutputData" title="http://iot.linkeddata.es/def/wot#hasOutputData">hasOutputData</a>
+            <a href="#http://iot.linkeddata.es/def/wot#hasInputData" title="http://iot.linkeddata.es/def/wot#hasInputData">hasInputData</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#http://iot.linkeddata.es/def/wot#DataFormat" title="http://iot.linkeddata.es/def/wot#DataFormat">DataFormat</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#http://iot.linkeddata.es/def/wot#hasInputData" title="http://iot.linkeddata.es/def/wot#hasInputData">hasInputData</a>
+            <a href="#http://iot.linkeddata.es/def/wot#hasOutputData" title="http://iot.linkeddata.es/def/wot#hasOutputData">hasOutputData</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#http://iot.linkeddata.es/def/wot#DataFormat" title="http://iot.linkeddata.es/def/wot#DataFormat">DataFormat</a>
@@ -177,32 +170,6 @@ This section provides details for each class and property defined by WoT.
          </dd>
       </dl>
    </div>
-   <div class="entity" id="http://iot.linkeddata.es/def/wot#Ecosystem">
-      <h3>Ecosystem<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://iot.linkeddata.es/def/wot#Ecosystem</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#http://iot.linkeddata.es/def/wot#hasComponent" title="http://iot.linkeddata.es/def/wot#hasComponent">hasComponent</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#http://iot.linkeddata.es/def/wot#Entity" title="http://iot.linkeddata.es/def/wot#Entity">Entity</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#http://iot.linkeddata.es/def/wot#isDescribedBy" title="http://iot.linkeddata.es/def/wot#isDescribedBy">isDescribedBy</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#http://iot.linkeddata.es/def/wot#ThingEcosystemDescription"
-               title="http://iot.linkeddata.es/def/wot#ThingEcosystemDescription">Thing ecosystem description</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="http://iot.linkeddata.es/def/wot#Endpoint">
       <h3>Endpoint<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -213,10 +180,12 @@ This section provides details for each class and property defined by WoT.
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#http://iot.linkeddata.es/def/wot#hasMediaType" title="http://iot.linkeddata.es/def/wot#hasMediaType">hasMediaType</a>
+            <a href="#http://iot.linkeddata.es/def/wot#isProvidedOverProtocol"
+               title="http://iot.linkeddata.es/def/wot#isProvidedOverProtocol">is provided over protocol</a>
             <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#http://iot.linkeddata.es/def/wot#MediaType" title="http://iot.linkeddata.es/def/wot#MediaType">MediaType</a>
+            <span class="logic">some</span> 
+            <a href="#http://iot.linkeddata.es/def/wot#CommunicationProtocol"
+               title="http://iot.linkeddata.es/def/wot#CommunicationProtocol">Communication protocol</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
@@ -226,12 +195,10 @@ This section provides details for each class and property defined by WoT.
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
          <dd>
-            <a href="#http://iot.linkeddata.es/def/wot#isProvidedOverProtocol"
-               title="http://iot.linkeddata.es/def/wot#isProvidedOverProtocol">is provided over protocol</a>
+            <a href="#http://iot.linkeddata.es/def/wot#hasMediaType" title="http://iot.linkeddata.es/def/wot#hasMediaType">hasMediaType</a>
             <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#http://iot.linkeddata.es/def/wot#CommunicationProtocol"
-               title="http://iot.linkeddata.es/def/wot#CommunicationProtocol">Communication protocol</a>
+            <span class="logic">only</span> 
+            <a href="#http://iot.linkeddata.es/def/wot#MediaType" title="http://iot.linkeddata.es/def/wot#MediaType">MediaType</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -248,13 +215,6 @@ This section provides details for each class and property defined by WoT.
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
-         <dd>
-            <a href="#http://iot.linkeddata.es/def/wot#isComponentOf" title="http://iot.linkeddata.es/def/wot#isComponentOf">isComponentOf</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#http://iot.linkeddata.es/def/wot#Ecosystem" title="http://iot.linkeddata.es/def/wot#Ecosystem">Ecosystem</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
          <dd>
             <a href="#http://iot.linkeddata.es/def/wot#isDescribedBy" title="http://iot.linkeddata.es/def/wot#isDescribedBy">isDescribedBy</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -397,12 +357,6 @@ This section provides details for each class and property defined by WoT.
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#http://iot.linkeddata.es/def/wot#isWritable" title="http://iot.linkeddata.es/def/wot#isWritable">isWritable</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
-         </dd>
-         <dd>
             <a href="#http://iot.linkeddata.es/def/wot#isRequired" title="http://iot.linkeddata.es/def/wot#isRequired">isRequired</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
@@ -421,6 +375,12 @@ This section provides details for each class and property defined by WoT.
             <span class="logic">only</span> 
             <a href="#http://iot.linkeddata.es/def/wot#DataFormat" title="http://iot.linkeddata.es/def/wot#DataFormat">DataFormat</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://iot.linkeddata.es/def/wot#isWritable" title="http://iot.linkeddata.es/def/wot#isWritable">isWritable</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
          </dd>
          <dt>is disjoint with</dt>
          <dd>
@@ -486,27 +446,6 @@ This section provides details for each class and property defined by WoT.
          </dd>
       </dl>
    </div>
-   <div class="entity" id="http://iot.linkeddata.es/def/wot#ThingEcosystemDescription">
-      <h3>Thing ecosystem description<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://iot.linkeddata.es/def/wot#ThingEcosystemDescription</p>
-      <div class="comment">
-         <span class="markdown">A digital representation that encapsulates an ecosystem taht is accessible via Web services</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#http://iot.linkeddata.es/def/wot#describes" title="http://iot.linkeddata.es/def/wot#describes">describesThing</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#http://iot.linkeddata.es/def/wot#Ecosystem" title="http://iot.linkeddata.es/def/wot#Ecosystem">Ecosystem</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="http://iot.linkeddata.es/def/wot#UnitOfMeasure">
       <h3>UnitOfMeasure<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -538,7 +477,7 @@ This section provides details for each class and property defined by WoT.
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/wot#WoTInterface</p>
       <div class="comment">
-         <span class="markdown">Resource-oriented Web interface (often called "Web API") that allows access to servients over the network using different Protocol Bindings.</span>
+         <span class="markdown">A WoT interface is also a web API that follows the recommendations of the WoT Interest Group.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -577,9 +516,6 @@ This section provides details for each class and property defined by WoT.
          <a href="#http://iot.linkeddata.es/def/wot#describes" title="http://iot.linkeddata.es/def/wot#describes">describesThing</a>
       </li>
       <li>
-         <a href="#http://iot.linkeddata.es/def/wot#hasComponent" title="http://iot.linkeddata.es/def/wot#hasComponent">hasComponent</a>
-      </li>
-      <li>
          <a href="#http://iot.linkeddata.es/def/wot#hasInputData" title="http://iot.linkeddata.es/def/wot#hasInputData">hasInputData</a>
       </li>
       <li>
@@ -598,9 +534,6 @@ This section provides details for each class and property defined by WoT.
       <li>
          <a href="#http://iot.linkeddata.es/def/wot#isAccesibleThrough"
             title="http://iot.linkeddata.es/def/wot#isAccesibleThrough">isAccesibleThrough</a>
-      </li>
-      <li>
-         <a href="#http://iot.linkeddata.es/def/wot#isComponentOf" title="http://iot.linkeddata.es/def/wot#isComponentOf">isComponentOf</a>
       </li>
       <li>
          <a href="#http://iot.linkeddata.es/def/wot#isDescribedBy" title="http://iot.linkeddata.es/def/wot#isDescribedBy">isDescribedBy</a>
@@ -628,23 +561,6 @@ This section provides details for each class and property defined by WoT.
             <dt>is inverse of</dt>
             <dd>
                <a href="#http://iot.linkeddata.es/def/wot#isDescribedBy" title="http://iot.linkeddata.es/def/wot#isDescribedBy">isDescribedBy</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="http://iot.linkeddata.es/def/wot#hasComponent">
-      <h3>hasComponent<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://iot.linkeddata.es/def/wot#hasComponent</p>
-      <div class="description">
-         <dl>
-            <dt>is inverse of</dt>
-            <dd>
-               <a href="#http://iot.linkeddata.es/def/wot#isComponentOf" title="http://iot.linkeddata.es/def/wot#isComponentOf">isComponentOf</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -697,23 +613,6 @@ This section provides details for each class and property defined by WoT.
       </h3>
       <p>
          <strong>IRI:</strong> http://iot.linkeddata.es/def/wot#isAccesibleThrough</p>
-   </div>
-   <div class="entity" id="http://iot.linkeddata.es/def/wot#isComponentOf">
-      <h3>isComponentOf<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://iot.linkeddata.es/def/wot#isComponentOf</p>
-      <div class="description">
-         <dl>
-            <dt>is inverse of</dt>
-            <dd>
-               <a href="#http://iot.linkeddata.es/def/wot#hasComponent" title="http://iot.linkeddata.es/def/wot#hasComponent">hasComponent</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
-      </div>
    </div>
    <div class="entity" id="http://iot.linkeddata.es/def/wot#isDescribedBy">
       <h3>isDescribedBy<sup class="type-op" title="object property">op</sup>
