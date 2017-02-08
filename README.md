@@ -57,7 +57,7 @@ The ontology has to be evaluated according to syntactic, model and semantic erro
 
 ### Ontology Documentation
 
-OnToology will generate the documentation using [Widoco](https://github.com/dgarijo/Widoco) every time there is a push in the repository. This documentation includes an HTML description of the ontology which describes the classes, properties and data properties of the ontology, and the license URI and title being used. The ontology development team in collaboration with the domain experts can complete this HTML documentation. OnToology will also generate the diagrams using [AR2DTool](https://github.com/idafensp/ar2dtool. It will generate two kinds of diagrams:
+OnToology will generate the documentation using [Widoco](https://github.com/dgarijo/Widoco) every time there is a push in the repository. This documentation includes an HTML description of the ontology which describes the classes, properties and data properties of the ontology, and the license URI and title being used. The ontology development team in collaboration with the domain experts can complete this HTML documentation. OnToology will also generate the diagrams using [AR2DTool](https://github.com/idafensp/ar2dtool). It will generate two kinds of diagrams:
 
 - Class diagram
 - Taxonomy diagram
