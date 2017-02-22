@@ -18,11 +18,6 @@
     <rdfs:label xml:lang="en">MediaType</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A0">
-    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#Entity"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#describes"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
@@ -43,9 +38,14 @@
     <rdfs:label xml:lang="en">isMeasuredIn</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A1">
-    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#InteractionPattern"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#providesInteractionPattern"/>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#thingName">
+    <rdfs:label xml:lang="en">thing name</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://iot.linkeddata.es/def/wot#name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#Thing"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#describes"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#hasInputData">
@@ -61,32 +61,30 @@
     <rdfs:label xml:lang="en">providedBy</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A2">
+  <rdf:Description rdf:nodeID="A1">
+    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#MediaType"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#hasMediaType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#Event">
+    <rdfs:label xml:lang="en">Event</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="A2"/>
+    <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/wot#InteractionPattern"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#VirtualThing">
+    <rdfs:label xml:lang="en">Virtual thing</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/wot#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
     <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#DataType"/>
     <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#hasValueType"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A3">
-    <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#CommunicationProtocol"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#isProvidedOverProtocol"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#Entity">
-    <rdfs:label xml:lang="en">Entity</rdfs:label>
-    <rdfs:comment xml:lang="en">The abstract concept of a physical entity that can either be a real-world artifact, such as a device, or a virtual entity that represents physicality, such as a room or group of devices</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="A1"/>
-    <rdfs:subClassOf rdf:nodeID="A4"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#Event">
-    <rdfs:label xml:lang="en">Event</rdfs:label>
-    <rdfs:subClassOf rdf:nodeID="A5"/>
-    <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/wot#InteractionPattern"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A6">
-    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#interactionName"/>
+  <rdf:Description rdf:nodeID="A4">
+    <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#WebResource"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#providedBy"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#name">
@@ -100,73 +98,68 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A7">
-    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#DataFormat"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#hasOutputData"/>
+  <rdf:Description rdf:nodeID="A5">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#isWritable"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#Action">
     <rdfs:label xml:lang="en">Action</rdfs:label>
-    <rdfs:subClassOf rdf:nodeID="A8"/>
-    <rdfs:subClassOf rdf:nodeID="A9"/>
+    <rdfs:subClassOf rdf:nodeID="A6"/>
+    <rdfs:subClassOf rdf:nodeID="A7"/>
     <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/wot#InteractionPattern"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#DataFormat">
     <rdfs:label xml:lang="en">DataFormat</rdfs:label>
-    <rdfs:subClassOf rdf:nodeID="A2"/>
+    <rdfs:subClassOf rdf:nodeID="A3"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A4">
-    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#ThingDescription"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#isDescribedBy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#ThingDescription">
     <rdfs:label xml:lang="en">Thing description</rdfs:label>
     <rdfs:comment xml:lang="en">A digital representation encapsulates a physical object accessible via Web services</rdfs:comment>
     <rdfs:subClassOf rdf:nodeID="A0"/>
-    <rdfs:subClassOf rdf:nodeID="A10"/>
+    <rdfs:subClassOf rdf:nodeID="A8"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A11">
-    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#UnitOfMeasure"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#isMeasuredIn"/>
+  <rdf:Description rdf:nodeID="A8">
+    <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#Thing"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#describes"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#href"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#DataType">
     <rdfs:label xml:lang="en">DataType</rdfs:label>
-    <rdfs:subClassOf rdf:nodeID="A11"/>
+    <rdfs:subClassOf rdf:nodeID="A10"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A12">
-    <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#WebResource"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#providedBy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#interactionName">
     <rdfs:label xml:lang="en">interactionName</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://iot.linkeddata.es/def/wot#name"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#hasValueType">
-    <rdfs:label xml:lang="en">hasValueType</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:nodeID="A11">
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#interactionName"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A13">
+  <rdf:Description rdf:nodeID="A12">
     <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#isRequired"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#entityName">
-    <rdfs:label xml:lang="en">entityName</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="http://iot.linkeddata.es/def/wot#name"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A14">
-    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#href"/>
+  <rdf:Description rdf:nodeID="A6">
+    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#DataFormat"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#hasOutputData"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#hasValueType">
+    <rdfs:label xml:lang="en">hasValueType</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#providesInteractionPattern">
     <rdfs:label xml:lang="en">providesInteractionPattern</rdfs:label>
@@ -177,24 +170,34 @@
     <rdfs:label xml:lang="en">hasOutputData</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A15">
-    <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#Endpoint"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#isAccesibleThrough"/>
+  <rdf:Description rdf:nodeID="A13">
+    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#InteractionPattern"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#providesInteractionPattern"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A9">
-    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#DataFormat"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#hasInputData"/>
+  <rdf:Description rdf:nodeID="A14">
+    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#InteractionPattern"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#providesInteractionPattern"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#UnitOfMeasure"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#isMeasuredIn"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#isAccesibleThrough">
     <rdfs:label xml:lang="en">isAccesibleThrough</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#DataFormat"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#hasOutputData"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#baseURI">
     <rdfs:label xml:lang="en">baseURI</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/wot#Entity"/>
+    <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/wot#Thing"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#isProvidedOverProtocol">
@@ -202,14 +205,20 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A16">
-    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#isWritable"/>
+  <rdf:Description rdf:nodeID="A7">
+    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#DataFormat"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#hasInputData"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#VirtualEntity">
-    <rdfs:label xml:lang="en">VirtualEntity</rdfs:label>
-    <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/wot#Entity"/>
+  <rdf:Description rdf:nodeID="A15">
+    <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#DataFormat"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#hasOutputData"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#PhysicalThing">
+    <rdfs:label xml:lang="en">Physical thing</rdfs:label>
+    <rdfs:comment xml:lang="en">Any entity that has a proper space region.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/wot#Thing"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/saref#Service">
@@ -221,15 +230,10 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#InteractionPattern">
     <rdfs:label xml:lang="en">Interaction</rdfs:label>
-    <rdfs:subClassOf rdf:nodeID="A6"/>
-    <rdfs:subClassOf rdf:nodeID="A12"/>
-    <rdfs:subClassOf rdf:nodeID="A15"/>
+    <rdfs:subClassOf rdf:nodeID="A11"/>
+    <rdfs:subClassOf rdf:nodeID="A4"/>
+    <rdfs:subClassOf rdf:nodeID="A16"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A17">
-    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#MediaType"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#hasMediaType"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#describes">
     <rdfs:label xml:lang="en">describesThing</rdfs:label>
@@ -242,33 +246,40 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A17">
+    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#ThingDescription"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#isDescribedBy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#href">
     <rdfs:label xml:lang="en">href</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A18">
+    <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#CommunicationProtocol"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#isProvidedOverProtocol"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#WebResource">
     <vs:term_status>unstable</vs:term_status>
     <rdfs:label xml:lang="en">WebResource</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A8">
-    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#DataFormat"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#hasOutputData"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A5">
-    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#DataFormat"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#hasOutputData"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#Thing">
+    <rdfs:label xml:lang="en">Thing</rdfs:label>
+    <rdfs:comment xml:lang="en">The abstract concept of a physical entity that can either be a real-world artifact, such as a device, or a virtual entity that represents physicality, such as a room or group of devices</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="A14"/>
+    <rdfs:subClassOf rdf:nodeID="A17"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#WoTInterface">
     <vs:term_status>proposed for deletion</vs:term_status>
     <rdfs:label xml:lang="en">Web of Thing interface</rdfs:label>
     <rdfs:comment xml:lang="en">Resource-oriented Web interface (often called "Web API") that allows access to servients over the network using different Protocol Bindings.</rdfs:comment>
     <rdfs:comment xml:lang="en">A WoT interface is also a web API that follows the recommendations of the WoT Interest Group.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="A18"/>
+    <rdfs:subClassOf rdf:nodeID="A13"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#defaultValue">
@@ -276,13 +287,8 @@
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A18">
-    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#InteractionPattern"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#providesInteractionPattern"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
   <rdf:Description rdf:nodeID="A19">
-    <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#DataFormat"/>
+    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#DataFormat"/>
     <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#hasOutputData"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
@@ -299,12 +305,6 @@
     <dcterms:creator rdf:resource="http://www.garcia-castro.com/foaf.rdf#me"/>
     <dcterms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#PhysicalEntity">
-    <rdfs:label xml:lang="en">Physical entity</rdfs:label>
-    <rdfs:comment xml:lang="en">Any entity that has a proper space region.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/wot#Entity"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#DigitalRepresentation">
     <vs:term_status>unstable</vs:term_status>
     <rdfs:label xml:lang="en">Digital representation</rdfs:label>
@@ -312,32 +312,32 @@
     <owl:disjointWith rdf:resource="http://iot.linkeddata.es/def/wot#WoTInterface"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A10">
-    <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#Entity"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#describes"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#Property">
-    <owl:disjointWith rdf:resource="https://w3id.org/saref#Service"/>
     <rdfs:subClassOf rdf:nodeID="A19"/>
-    <rdfs:subClassOf rdf:nodeID="A7"/>
+    <rdfs:subClassOf rdf:nodeID="A12"/>
+    <rdfs:subClassOf rdf:nodeID="A5"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/saref#Service"/>
     <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/wot#InteractionPattern"/>
-    <rdfs:subClassOf rdf:nodeID="A13"/>
     <rdfs:comment xml:lang="en">An aspect of an entity that can be observable by a sensor.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="A16"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label xml:lang="en">Property</rdfs:label>
     <owl:disjointWith rdf:resource="http://iot.linkeddata.es/def/wot#WoTInterface"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#Endpoint">
-    <rdfs:label xml:lang="en">Endpoint</rdfs:label>
-    <rdfs:subClassOf rdf:nodeID="A14"/>
-    <rdfs:subClassOf rdf:nodeID="A17"/>
-    <rdfs:subClassOf rdf:nodeID="A3"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="A15"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#UnitOfMeasure">
     <rdfs:label xml:lang="en">UnitOfMeasure</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#Endpoint"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#isAccesibleThrough"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#Endpoint">
+    <rdfs:label xml:lang="en">Endpoint</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="A9"/>
+    <rdfs:subClassOf rdf:nodeID="A1"/>
+    <rdfs:subClassOf rdf:nodeID="A18"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
 </rdf:RDF>
