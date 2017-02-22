@@ -36,6 +36,11 @@ vs:term_status
       a       owl:ObjectProperty ;
       rdfs:label "isMeasuredIn"@en .
 
+:thingName
+      a       owl:DatatypeProperty ;
+      rdfs:label "thing name"@en ;
+      rdfs:subPropertyOf :name .
+
 :hasInputData
       a       owl:ObjectProperty ;
       rdfs:label "hasInputData"@en .
@@ -49,21 +54,6 @@ vs:term_status
       rdfs:label "providedBy"@en ;
       vs:term_status "propose for deletion" .
 
-:Entity
-      a       owl:Class ;
-      rdfs:comment "The abstract concept of a physical entity that can either be a real-world artifact, such as a device, or a virtual entity that represents physicality, such as a room or group of devices"@en ;
-      rdfs:label "Entity"@en ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :ThingDescription ;
-                owl:onProperty :isDescribedBy
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :InteractionPattern ;
-                owl:onProperty :providesInteractionPattern
-              ] .
-
 :Event
       a       owl:Class ;
       rdfs:label "Event"@en ;
@@ -73,6 +63,11 @@ vs:term_status
                 owl:allValuesFrom :DataFormat ;
                 owl:onProperty :hasOutputData
               ] .
+
+:VirtualThing
+      a       owl:Class ;
+      rdfs:label "Virtual thing"@en ;
+      rdfs:subClassOf :Thing .
 
 :name
       a       owl:DatatypeProperty ;
@@ -114,13 +109,13 @@ vs:term_status
       rdfs:label "Thing description"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :Entity ;
+                owl:allValuesFrom :Thing ;
                 owl:onProperty :describes
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:onProperty :describes ;
-                owl:someValuesFrom :Entity
+                owl:someValuesFrom :Thing
               ] .
 
 :DataType
@@ -141,11 +136,6 @@ vs:term_status
       a       owl:ObjectProperty ;
       rdfs:label "hasValueType"@en .
 
-:entityName
-      a       owl:DatatypeProperty ;
-      rdfs:label "entityName"@en ;
-      rdfs:subPropertyOf :name .
-
 :providesInteractionPattern
       a       owl:ObjectProperty ;
       rdfs:domain :InteractionPattern ;
@@ -161,7 +151,7 @@ vs:term_status
 
 :baseURI
       a       owl:DatatypeProperty ;
-      rdfs:domain :Entity ;
+      rdfs:domain :Thing ;
       rdfs:label "baseURI"@en ;
       rdfs:range xsd:string .
 
@@ -169,10 +159,11 @@ vs:term_status
       a       owl:FunctionalProperty , owl:ObjectProperty ;
       rdfs:label "is provided over protocol"@en .
 
-:VirtualEntity
+:PhysicalThing
       a       owl:Class ;
-      rdfs:label "VirtualEntity"@en ;
-      rdfs:subClassOf :Entity .
+      rdfs:comment "Any entity that has a proper space region."@en ;
+      rdfs:label "Physical thing"@en ;
+      rdfs:subClassOf :Thing .
 
 saref:Service
       a       owl:Class ;
@@ -186,13 +177,13 @@ saref:Service
       rdfs:label "Interaction"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :interactionName ;
-                owl:someValuesFrom xsd:string
+                owl:onProperty :providedBy ;
+                owl:someValuesFrom :WebResource
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :providedBy ;
-                owl:someValuesFrom :WebResource
+                owl:onProperty :interactionName ;
+                owl:someValuesFrom xsd:string
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -219,6 +210,21 @@ saref:Service
       a       owl:Class ;
       rdfs:label "WebResource"@en ;
       vs:term_status "unstable" .
+
+:Thing
+      a       owl:Class ;
+      rdfs:comment "The abstract concept of a physical entity that can either be a real-world artifact, such as a device, or a virtual entity that represents physicality, such as a room or group of devices"@en ;
+      rdfs:label "Thing"@en ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :ThingDescription ;
+                owl:onProperty :isDescribedBy
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :InteractionPattern ;
+                owl:onProperty :providesInteractionPattern
+              ] .
 
 :WoTInterface
       a       owl:Class ;
@@ -248,12 +254,6 @@ saref:Service
               "http://iot.linkeddata.es/def/wot" ;
       owl:versionInfo "1.0" .
 
-:PhysicalEntity
-      a       owl:Class ;
-      rdfs:comment "Any entity that has a proper space region."@en ;
-      rdfs:label "Physical entity"@en ;
-      rdfs:subClassOf :Entity .
-
 :DigitalRepresentation
       a       owl:Class ;
       rdfs:comment "A digital representation encapsulates a physical object accessible via Web services"@en ;
@@ -268,13 +268,13 @@ saref:Service
       rdfs:subClassOf :InteractionPattern ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :hasOutputData ;
-                owl:someValuesFrom :DataFormat
+                owl:allValuesFrom :DataFormat ;
+                owl:onProperty :hasOutputData
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:boolean ;
-                owl:onProperty :isWritable
+                owl:onProperty :hasOutputData ;
+                owl:someValuesFrom :DataFormat
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -283,14 +283,23 @@ saref:Service
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :DataFormat ;
-                owl:onProperty :hasOutputData
+                owl:allValuesFrom xsd:boolean ;
+                owl:onProperty :isWritable
               ] ;
       owl:disjointWith saref:Service , :WoTInterface .
+
+:UnitOfMeasure
+      a       owl:Class ;
+      rdfs:label "UnitOfMeasure"@en .
 
 :Endpoint
       a       owl:Class ;
       rdfs:label "Endpoint"@en ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :isProvidedOverProtocol ;
+                owl:someValuesFrom :CommunicationProtocol
+              ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:onProperty :href ;
@@ -300,13 +309,4 @@ saref:Service
               [ a       owl:Restriction ;
                 owl:allValuesFrom :MediaType ;
                 owl:onProperty :hasMediaType
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onProperty :isProvidedOverProtocol ;
-                owl:someValuesFrom :CommunicationProtocol
               ] .
-
-:UnitOfMeasure
-      a       owl:Class ;
-      rdfs:label "UnitOfMeasure"@en .
