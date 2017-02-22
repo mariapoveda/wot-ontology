@@ -26,7 +26,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2017-02-21 13:12:51 +0000</string>
+	<string>2017-02-22 09:32:17 +0000</string>
 	<key>Modifier</key>
 	<string>María Poveda</string>
 	<key>NotesVisible</key>
@@ -85,7 +85,7 @@
 			<key>BackgroundGraphic</key>
 			<dict>
 				<key>Bounds</key>
-				<string>{{0, 0}, {1196.8640109890109, 837}}</string>
+				<string>{{0, 0}, {1062, 865.77379619260921}}</string>
 				<key>Class</key>
 				<string>SolidGraphic</string>
 				<key>ID</key>
@@ -104,7 +104,7 @@
 			<key>CanvasOrigin</key>
 			<string>{0, 0}</string>
 			<key>CanvasSize</key>
-			<string>{1196.8640109890109, 837}</string>
+			<string>{1062, 865.77379619260921}</string>
 			<key>ColumnAlign</key>
 			<integer>1</integer>
 			<key>ColumnSpacing</key>
@@ -3371,7 +3371,7 @@ wot:ThingDescription}</string>
 \pard\tx60\tx300\tx940\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li20\fi-20\pardirnatural\qc
 
 \f0\fs24 \cf2 \expnd0\expndtw0\kerning0
-wot:PhysicalEntity}</string>
+wot:PhysicalThing}</string>
 					</dict>
 					<key>VFlip</key>
 					<string>YES</string>
@@ -3471,7 +3471,7 @@ wot:PhysicalEntity}</string>
 \pard\tx60\tx300\tx940\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li20\fi-20\pardirnatural\qc
 
 \f0\fs24 \cf2 \expnd0\expndtw0\kerning0
-wot:VirtualEntity}</string>
+wot:VirtualThing}</string>
 					</dict>
 					<key>VFlip</key>
 					<string>YES</string>
@@ -4585,7 +4585,7 @@ wot:defaultValue:: Literal}</string>
 \pard\tx60\tx300\tx940\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li20\fi-20\pardirnatural
 \ls1\ilvl0
 \f0\fs24 \cf2 \expnd0\expndtw0\kerning0
-wot:entityName:: String\
+wot:thingName:: String\
 wot:baseURI:: String}</string>
 					</dict>
 					<key>VFlip</key>
@@ -5906,7 +5906,7 @@ wot:InteractionPattern}</string>
 \pard\tx60\tx300\tx940\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li20\fi-20\pardirnatural\qc
 
 \f0\fs24 \cf2 \expnd0\expndtw0\kerning0
-wot:Entity}</string>
+wot:Thing}</string>
 					</dict>
 					<key>VFlip</key>
 					<string>YES</string>
@@ -6093,7 +6093,7 @@ wot:providesInteractionPattern}</string>
 				<string>YES</string>
 			</dict>
 			<key>HPages</key>
-			<integer>3</integer>
+			<integer>2</integer>
 			<key>KeepToScale</key>
 			<false/>
 			<key>Layers</key>
@@ -12346,7 +12346,7 @@ Class}</string>
 			<key>BackgroundGraphic</key>
 			<dict>
 				<key>Bounds</key>
-				<string>{{0, 0}, {1562, 1127}}</string>
+				<string>{{0, 0}, {1562, 1273.3885778275476}}</string>
 				<key>Class</key>
 				<string>SolidGraphic</string>
 				<key>ID</key>
@@ -12365,7 +12365,7 @@ Class}</string>
 			<key>CanvasOrigin</key>
 			<string>{0, 0}</string>
 			<key>CanvasSize</key>
-			<string>{1562, 1127}</string>
+			<string>{1562, 1273.3885778275476}</string>
 			<key>ColumnAlign</key>
 			<integer>1</integer>
 			<key>ColumnSpacing</key>
@@ -14064,7 +14064,7 @@ wot:DataFormat}</string>
 \pard\tx60\tx300\tx940\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li20\fi-20\pardirnatural\qc
 
 \f0\fs24 \cf2 \expnd0\expndtw0\kerning0
-wot:entityName}</string>
+wot:thingName}</string>
 					</dict>
 					<key>VFlip</key>
 					<string>YES</string>
@@ -25778,7 +25778,7 @@ wot:InteractionPattern}</string>
 \pard\tx60\tx300\tx940\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li20\fi-20\pardirnatural\qc
 
 \f0\fs24 \cf2 \expnd0\expndtw0\kerning0
-wot:Entity}</string>
+wot:Thing}</string>
 					</dict>
 					<key>VFlip</key>
 					<string>YES</string>
@@ -96686,13 +96686,13 @@ WebThing *}</string>
 		<key>BottomSlabHeight</key>
 		<real>195</real>
 		<key>CurrentSheet</key>
-		<integer>0</integer>
+		<integer>2</integer>
 		<key>Expanded_Canvases</key>
 		<array/>
 		<key>FitInWindow</key>
 		<true/>
 		<key>Frame</key>
-		<string>{{85, -896}, {1588, 873}}</string>
+		<string>{{73, -896}, {1440, 873}}</string>
 		<key>ShowInfo</key>
 		<true/>
 		<key>ShowRuler</key>
@@ -96702,9 +96702,9 @@ WebThing *}</string>
 		<key>SidebarWidth</key>
 		<integer>230</integer>
 		<key>VisibleRegion</key>
-		<string>{{0, 0}, {1196.8640109890109, 837}}</string>
+		<string>{{0, 0}, {1562, 1273.3885778275476}}</string>
 		<key>Zoom</key>
-		<real>0.86977299880525683</real>
+		<real>0.57170294494238161</real>
 		<key>ZoomValues</key>
 		<array>
 			<array>
