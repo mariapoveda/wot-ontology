@@ -1,0 +1,61 @@
+{
+  "@context": {    
+    "@vocab": "http://iot.linkeddata.es/def/wot#",    
+    "links": {
+      "@id": "http://iot.linkeddata.es/def/wot#isAccessibleThrough",
+      "@type": "@id"
+    },
+    "interactions": {
+      "@id": "http://iot.linkeddata.es/def/wot#providesInteractionPattern",
+      "@type": "@id"
+    }    
+  },
+  "@type": [
+    "Thing",
+    "s4all:Photometer"
+  ],
+  "links": {
+    "href": "http://localhost:5000/things/stars1",
+    "@type": "Endpoint",
+    "mediaType": "application/json"
+  },
+  "name": "stars1",
+  "interactions": [
+    {
+      "@type": "Property",
+      "links": {
+        "href": "properties/tamb",
+        "@type": "Endpoint",
+        "mediaType": "application/json"
+      },
+      "name": "tamb"
+    },
+    {
+      "@type": "Property",
+      "links": {
+        "href": "properties/tsky",
+        "@type": "Endpoint",
+        "mediaType": "application/json"
+      },
+      "name": "tsky"
+    },
+    {
+      "@type": "Property",
+      "links": {
+        "href": "properties/mag",
+        "@type": "Endpoint",
+        "mediaType": "application/json"
+      },
+      "name": "mag"
+    },
+    {
+      "@type": "Property",
+      "links": {
+        "href": "properties/freq",
+        "@type": "Endpoint",
+        "mediaType": "application/json"
+      },
+      "name": "freq"
+    }
+  ]
+}
