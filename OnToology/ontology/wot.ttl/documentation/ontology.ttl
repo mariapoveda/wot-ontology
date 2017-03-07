@@ -109,14 +109,18 @@ vs:term_status
       rdfs:label "Thing description"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :Thing ;
-                owl:onProperty :describes
+                owl:onProperty :describes ;
+                owl:someValuesFrom :Thing
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :describes ;
-                owl:someValuesFrom :Thing
+                owl:allValuesFrom :Thing ;
+                owl:onProperty :describes
               ] .
+
+:isRelativeTo
+      a       owl:ObjectProperty ;
+      rdfs:label "is relative to"@en .
 
 :DataType
       a       owl:Class ;
@@ -177,13 +181,13 @@ saref:Service
       rdfs:label "Interaction"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :providedBy ;
-                owl:someValuesFrom :WebResource
+                owl:onProperty :interactionName ;
+                owl:someValuesFrom xsd:string
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :interactionName ;
-                owl:someValuesFrom xsd:string
+                owl:onProperty :providedBy ;
+                owl:someValuesFrom :WebResource
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -245,7 +249,7 @@ saref:Service
 :     a       owl:Ontology ;
       rdfs:comment "This ontology aims to model the Web of Things domain according to the w3c Interest Group (http://w3c.github.io/wot/)"@en ;
       dc:publisher <http://www.oeg-upm.net/> ;
-      dc:title "Vicinity ontology model for Web of Things"@en ;
+      dc:title "Ontology model for Web of Things"@en ;
       dcterms:creator <http://purl.org/net/mpoveda> , <http://www.garcia-castro.com/foaf.rdf#me> , <http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/> ;
       dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
       vann:preferredNamespacePrefix
@@ -261,16 +265,29 @@ saref:Service
       owl:disjointWith :WoTInterface ;
       vs:term_status "unstable" .
 
+:RelativeEndpoint
+      a       owl:Class ;
+      rdfs:comment "An endpoint which is relative (its href is composed by a relative path and an absolute one given by another endpoint) to an endpoint which can not be relative."@en ;
+      rdfs:label "Relative endpoint"@en ;
+      rdfs:subClassOf :Endpoint ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:maxQualifiedCardinality
+                        "1"^^xsd:nonNegativeInteger ;
+                owl:onClass
+                        [ a       owl:Class ;
+                          owl:intersectionOf (:Endpoint [ a       owl:Class ;
+                                      owl:complementOf :RelativeEndpoint
+                                    ])
+                        ] ;
+                owl:onProperty :isRelativeTo
+              ] .
+
 :Property
       a       owl:Class ;
       rdfs:comment "An aspect of an entity that can be observable by a sensor."@en ;
       rdfs:label "Property"@en ;
       rdfs:subClassOf :InteractionPattern ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :DataFormat ;
-                owl:onProperty :hasOutputData
-              ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:onProperty :hasOutputData ;
@@ -286,20 +303,16 @@ saref:Service
                 owl:allValuesFrom xsd:boolean ;
                 owl:onProperty :isWritable
               ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :DataFormat ;
+                owl:onProperty :hasOutputData
+              ] ;
       owl:disjointWith saref:Service , :WoTInterface .
-
-:UnitOfMeasure
-      a       owl:Class ;
-      rdfs:label "UnitOfMeasure"@en .
 
 :Endpoint
       a       owl:Class ;
       rdfs:label "Endpoint"@en ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onProperty :isProvidedOverProtocol ;
-                owl:someValuesFrom :CommunicationProtocol
-              ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:onProperty :href ;
@@ -309,4 +322,13 @@ saref:Service
               [ a       owl:Restriction ;
                 owl:allValuesFrom :MediaType ;
                 owl:onProperty :hasMediaType
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :isProvidedOverProtocol ;
+                owl:someValuesFrom :CommunicationProtocol
               ] .
+
+:UnitOfMeasure
+      a       owl:Class ;
+      rdfs:label "UnitOfMeasure"@en .
