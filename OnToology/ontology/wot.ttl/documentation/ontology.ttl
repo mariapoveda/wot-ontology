@@ -67,7 +67,12 @@ vs:term_status
 :VirtualThing
       a       owl:Class ;
       rdfs:label "Virtual thing"@en ;
-      rdfs:subClassOf :Thing .
+      rdfs:subClassOf :Thing ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :VirtualThing ;
+                owl:onProperty :contains
+              ] .
 
 :name
       a       owl:DatatypeProperty ;
@@ -118,6 +123,11 @@ vs:term_status
                 owl:onProperty :describes
               ] .
 
+:contains
+      a       owl:ObjectProperty ;
+      rdfs:label "contains"@en ;
+      rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)" .
+
 :isRelativeTo
       a       owl:ObjectProperty ;
       rdfs:label "is relative to"@en .
@@ -167,7 +177,12 @@ vs:term_status
       a       owl:Class ;
       rdfs:comment "Any entity that has a proper space region."@en ;
       rdfs:label "Physical thing"@en ;
-      rdfs:subClassOf :Thing .
+      rdfs:subClassOf :Thing ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :PhysicalThing ;
+                owl:onProperty :contains
+              ] .
 
 saref:Service
       a       owl:Class ;
@@ -186,13 +201,13 @@ saref:Service
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :providedBy ;
-                owl:someValuesFrom :WebResource
+                owl:onProperty :isAccesibleThrough ;
+                owl:someValuesFrom :Endpoint
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :isAccesibleThrough ;
-                owl:someValuesFrom :Endpoint
+                owl:onProperty :providedBy ;
+                owl:someValuesFrom :WebResource
               ] .
 
 :describes
@@ -221,13 +236,18 @@ saref:Service
       rdfs:label "Thing"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :ThingDescription ;
-                owl:onProperty :isDescribedBy
+                owl:allValuesFrom :Endpoint ;
+                owl:onProperty :isAccesibleThrough
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :InteractionPattern ;
                 owl:onProperty :providesInteractionPattern
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :ThingDescription ;
+                owl:onProperty :isDescribedBy
               ] .
 
 :WoTInterface
@@ -256,7 +276,7 @@ saref:Service
               "wot" ;
       vann:preferredNamespaceUri
               "http://iot.linkeddata.es/def/wot" ;
-      owl:versionInfo "1.0" .
+      owl:versionInfo "0.0.4" .
 
 :DigitalRepresentation
       a       owl:Class ;
@@ -290,13 +310,13 @@ saref:Service
       rdfs:subClassOf :InteractionPattern ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :hasOutputData ;
-                owl:someValuesFrom :DataFormat
+                owl:allValuesFrom :DataFormat ;
+                owl:onProperty :hasOutputData
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:boolean ;
-                owl:onProperty :isRequired
+                owl:onProperty :hasOutputData ;
+                owl:someValuesFrom :DataFormat
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -305,8 +325,8 @@ saref:Service
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :DataFormat ;
-                owl:onProperty :hasOutputData
+                owl:allValuesFrom xsd:boolean ;
+                owl:onProperty :isRequired
               ] ;
       owl:disjointWith saref:Service , :WoTInterface .
 
@@ -315,8 +335,8 @@ saref:Service
       rdfs:label "Endpoint"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :href ;
-                owl:someValuesFrom xsd:string
+                owl:onProperty :isProvidedOverProtocol ;
+                owl:someValuesFrom :CommunicationProtocol
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -325,8 +345,8 @@ saref:Service
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :isProvidedOverProtocol ;
-                owl:someValuesFrom :CommunicationProtocol
+                owl:onProperty :href ;
+                owl:someValuesFrom xsd:string
               ] .
 
 :UnitOfMeasure
