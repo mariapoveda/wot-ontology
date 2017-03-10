@@ -21,7 +21,7 @@
                                                      <http://www.garcia-castro.com/foaf.rdf#me> ;
                                      vann:preferredNamespacePrefix "wot" ;
                                      dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-                                     owl:versionInfo "1.0" ;
+                                     owl:versionInfo "0.0.4" ;
                                      vann:preferredNamespaceUri "http://iot.linkeddata.es/def/wot" ;
                                      rdfs:comment "This ontology aims to model the Web of Things domain according to the w3c Interest Group (http://w3c.github.io/wot/)"@en ;
                                      dc:title "Ontology model for Web of Things"@en ;
@@ -39,6 +39,12 @@ vs:term_status rdf:type owl:AnnotationProperty .
 #################################################################
 #    Object Properties
 #################################################################
+
+###  http://iot.linkeddata.es/def/wot#contains
+:contains rdf:type owl:ObjectProperty ;
+          rdfs:label "contains"@en ;
+          rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)" .
+
 
 ###  http://iot.linkeddata.es/def/wot#describes
 :describes rdf:type owl:ObjectProperty ;
@@ -265,7 +271,11 @@ vs:term_status rdf:type owl:AnnotationProperty .
 
 ###  http://iot.linkeddata.es/def/wot#PhysicalThing
 :PhysicalThing rdf:type owl:Class ;
-               rdfs:subClassOf :Thing ;
+               rdfs:subClassOf :Thing ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :contains ;
+                                 owl:allValuesFrom :PhysicalThing
+                               ] ;
                rdfs:comment "Any entity that has a proper space region."@en ;
                rdfs:label "Physical thing"@en .
 
@@ -316,6 +326,10 @@ vs:term_status rdf:type owl:AnnotationProperty .
 ###  http://iot.linkeddata.es/def/wot#Thing
 :Thing rdf:type owl:Class ;
        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :isAccesibleThrough ;
+                         owl:allValuesFrom :Endpoint
+                       ] ,
+                       [ rdf:type owl:Restriction ;
                          owl:onProperty :isDescribedBy ;
                          owl:allValuesFrom :ThingDescription
                        ] ,
@@ -348,7 +362,11 @@ vs:term_status rdf:type owl:AnnotationProperty .
 
 ###  http://iot.linkeddata.es/def/wot#VirtualThing
 :VirtualThing rdf:type owl:Class ;
-              rdfs:subClassOf :Thing ;
+              rdfs:subClassOf :Thing ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :contains ;
+                                owl:allValuesFrom :VirtualThing
+                              ] ;
               rdfs:label "Virtual thing"@en .
 
 
