@@ -17,6 +17,9 @@
 
 :MediaType
       a       owl:Class ;
+      rdfs:comment """Represent the label (estructured into trees) used to identify the content type os a particular protocols, including but not limited to HTTP [RFC2616] and MIME [RFC2045], which are capable of carrying arbitrary labeled content. (Definicion adapted from https://tools.ietf.org/html/rfc6838).
+
+The location of the media type registry is http://www.iana.org/assignments/media-types/"""@en ;
       rdfs:label "MediaType"@en .
 
 vs:term_status
@@ -24,7 +27,8 @@ vs:term_status
 
 :isDescribedBy
       a       owl:ObjectProperty ;
-      rdfs:label "isDescribedBy"@en .
+      rdfs:comment "Relation from a thing to its thing descriptions"@en ;
+      rdfs:label "is described by"@en .
 
 :CommunicationProtocol
       a       owl:Class ;
@@ -34,20 +38,24 @@ vs:term_status
 
 :isMeasuredIn
       a       owl:ObjectProperty ;
-      rdfs:label "isMeasuredIn"@en .
+      rdfs:comment "A relation between a measurement and the unit of measure in which the measurement value is expressed."@en ;
+      rdfs:label "is measured in"@en .
 
 :thingName
       a       owl:DatatypeProperty ;
+      rdfs:comment "Name of a thing, physical or virtual" ;
       rdfs:label "thing name"@en ;
       rdfs:subPropertyOf :name .
 
 :hasInputData
       a       owl:ObjectProperty ;
-      rdfs:label "hasInputData"@en .
+      rdfs:comment "link to the n-ary class that allows the declaration of the data type and unit of measure expected by an interaction pattern."@en ;
+      rdfs:label "has input data"@en .
 
 :hasMediaType
       a       owl:ObjectProperty ;
-      rdfs:label "hasMediaType"@en .
+      rdfs:comment "link to the media types sopported by an endpoint"@en ;
+      rdfs:label "has media type"@en .
 
 :providedBy
       a       owl:ObjectProperty ;
@@ -56,6 +64,7 @@ vs:term_status
 
 :Event
       a       owl:Class ;
+      rdfs:comment "The Event interaction pattern enables a mechanism to be notified by a Thing on a certain condition. (Description taken from http://w3c.github.io/wot/current-practices/wot-practices#event)"@en ;
       rdfs:label "Event"@en ;
       rdfs:subClassOf :InteractionPattern ;
       rdfs:subClassOf
@@ -66,7 +75,12 @@ vs:term_status
 
 :VirtualThing
       a       owl:Class ;
+      rdfs:comment """A virtual entity is a digital representation of a physical entity, contained within a service. A virtual entity interacts through an endpoint. A virtual entity represents a physical entity.
+
+(Definition taken from 
+ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA))"""@en ;
       rdfs:label "Virtual thing"@en ;
+      rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"@en ;
       rdfs:subClassOf :Thing ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -76,16 +90,19 @@ vs:term_status
 
 :name
       a       owl:DatatypeProperty ;
+      rdfs:comment "General attribute for names assigned to any type of concept" ;
       rdfs:label "name"@en ;
       rdfs:range xsd:string .
 
 :isRequired
       a       owl:FunctionalProperty , owl:DatatypeProperty ;
-      rdfs:label "isRequired"@en ;
+      rdfs:comment "Boolean value that indicates whether a property is required to be present."@en ;
+      rdfs:label "is required"@en ;
       rdfs:range xsd:boolean .
 
 :Action
       a       owl:Class ;
+      rdfs:comment "The Action interaction pattern targets changes or processes on a Thing that take a certain time to complete (i.e., actions cannot be applied instantaneously like property writes). Examples include an LED fade in, moving a robot, brewing a cup of coffee, etc. Usually, ongoing Actions are modelled as Task resources, which are created when an Action invocation is received by the Thing. (Definition taken from http://w3c.github.io/wot/current-practices/wot-practices#action)"@en ;
       rdfs:label "Action"@en ;
       rdfs:subClassOf :InteractionPattern ;
       rdfs:subClassOf
@@ -101,11 +118,17 @@ vs:term_status
 
 :DataFormat
       a       owl:Class ;
-      rdfs:label "DataFormat"@en ;
+      rdfs:comment "N-ary class defined to allow the representation of pairs (data type, unit of measure) that are expected as input data or output data of a given interaction pattern."@en ;
+      rdfs:label "Data format"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :DataType ;
                 owl:onProperty :hasValueType
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :UnitOfMeasure ;
+                owl:onProperty :isMeasuredIn
               ] .
 
 :ThingDescription
@@ -125,58 +148,68 @@ vs:term_status
 
 :contains
       a       owl:ObjectProperty ;
+      rdfs:comment "A property between a thing and its components. For example, virtual things can contain virtual things whiel physical things can contain physicial things."@en ;
       rdfs:label "contains"@en ;
       rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)" .
 
 :isRelativeTo
       a       owl:ObjectProperty ;
+      rdfs:comment "Link from a relative endpoint to the (non relative) endpoint to which it is relative."@en ;
       rdfs:label "is relative to"@en .
 
 :DataType
       a       owl:Class ;
-      rdfs:label "DataType"@en ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :UnitOfMeasure ;
-                owl:onProperty :isMeasuredIn
-              ] .
+      rdfs:comment "Set of distinct values, characterized by properties of those values, and by operations on those values (definition taken from ISO/IEC 11404:2007)"@en ;
+      rdfs:label "Data type"@en ;
+      rdfs:seeAlso "https://www.iso.org/obp/ui/#iso:std:iso-iec:11404:ed-2:v1:en"@en .
 
 :interactionName
       a       owl:DatatypeProperty ;
-      rdfs:label "interactionName"@en ;
+      rdfs:comment "Name of an interaction pattern" ;
+      rdfs:label "interaction name"@en ;
       rdfs:subPropertyOf :name .
 
 :hasValueType
       a       owl:ObjectProperty ;
-      rdfs:label "hasValueType"@en .
+      rdfs:comment "Link to the data type used for the values provided following a given data format"@en ;
+      rdfs:label "has value type"@en .
 
 :providesInteractionPattern
       a       owl:ObjectProperty ;
+      rdfs:comment "Link from a thing to the interaction patterns it provides"@en ;
       rdfs:domain :InteractionPattern ;
-      rdfs:label "providesInteractionPattern"@en .
+      rdfs:label "provides interaction pattern"@en .
 
 :hasOutputData
       a       owl:ObjectProperty ;
-      rdfs:label "hasOutputData"@en .
+      rdfs:comment "link to the n-ary class that allows the declaration of the data type and unit of measure provided by an interaction pattern."@en ;
+      rdfs:label "has output data"@en .
 
 :isAccesibleThrough
       a       owl:ObjectProperty ;
-      rdfs:label "isAccesibleThrough"@en .
+      rdfs:comment "Indicates the endpoints from which an interaction pattern is accesible"@en ;
+      rdfs:label "is accesible through"@en .
 
 :baseURI
       a       owl:DatatypeProperty ;
+      rdfs:comment "Define base URI that is valid for all defined local interaction resources. All other URIs in the TD must then be resolved using the algorithm defined in [RFC3986]. This field is optional. (Definition taken from http://w3c.github.io/wot/current-practices/wot-practices#thing-metadata)"@en ;
       rdfs:domain :Thing ;
-      rdfs:label "baseURI"@en ;
+      rdfs:label "base URI"@en ;
       rdfs:range xsd:string .
 
 :isProvidedOverProtocol
       a       owl:FunctionalProperty , owl:ObjectProperty ;
+      rdfs:comment "Relates an endpoint with the communication protocol it is served over. A given endpoint can be provided over at most one protocol."@en ;
       rdfs:label "is provided over protocol"@en .
 
 :PhysicalThing
       a       owl:Class ;
-      rdfs:comment "Any entity that has a proper space region."@en ;
+      rdfs:comment """A physical entity is a real-world thing. A physical entity is a specialization of entity. A physical entity may contain other physical entities. A physical entity is a discrete, identifiable part of the physical environment that is of interest to the user for the completion of her goal. Physical entities can be almost any physical object or environment; from humans or animals to cars; from store or logistics chain items to computers; from electronic appliances to closed or open environments.
+
+(Definition taken from 
+ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA))"""@en , "Any entity that has a proper space region."@en ;
       rdfs:label "Physical thing"@en ;
+      rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en ;
       rdfs:subClassOf :Thing ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -193,11 +226,12 @@ saref:Service
 
 :InteractionPattern
       a       owl:Class ;
-      rdfs:label "Interaction"@en ;
+      rdfs:comment "An interaction in the context of the Web of Things is an exchange of data between a Web client and a Thing. This data can be either given as input by the client, returned as output by the Thing or both. Three interaction patterns have been defined so far: Property, Action and Event. (Definition taken from http://w3c.github.io/wot/current-practices/wot-practices#interaction-patterns)"@en ;
+      rdfs:label "Interaction pattern"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :interactionName ;
-                owl:someValuesFrom xsd:string
+                owl:onProperty :providedBy ;
+                owl:someValuesFrom :WebResource
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -206,22 +240,25 @@ saref:Service
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :providedBy ;
-                owl:someValuesFrom :WebResource
+                owl:onProperty :interactionName ;
+                owl:someValuesFrom xsd:string
               ] .
 
 :describes
       a       owl:ObjectProperty ;
-      rdfs:label "describesThing"@en ;
+      rdfs:comment "Link from a thing description to the thing being described"@en ;
+      rdfs:label "describes thing"@en ;
       owl:inverseOf :isDescribedBy .
 
 :isWritable
       a       owl:FunctionalProperty , owl:DatatypeProperty ;
-      rdfs:label "isWritable"@en ;
+      rdfs:comment "Boolean value that indicates whether a property is writable"@en ;
+      rdfs:label "is writable"@en ;
       rdfs:range xsd:boolean .
 
 :href
       a       owl:FunctionalProperty , owl:DatatypeProperty ;
+      rdfs:comment "URI of the endpoint where an interaction pattern is provided"@en ;
       rdfs:label "href"@en ;
       rdfs:range xsd:string .
 
@@ -232,7 +269,8 @@ saref:Service
 
 :Thing
       a       owl:Class ;
-      rdfs:comment "The abstract concept of a physical entity that can either be a real-world artifact, such as a device, or a virtual entity that represents physicality, such as a room or group of devices"@en ;
+      rdfs:comment "The abstract concept of a physical entity that can either be a real-world artifact, such as a device, or a virtual entity that represents physicality, such as a room or group of devices"@en , """An thing is anything (both physical and non-physical) which has a distinct and independent existence. Every thing has a unique identity. (Definition adapted from 
+ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA))"""@en ;
       rdfs:label "Thing"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -264,7 +302,8 @@ saref:Service
 :defaultValue
       a       owl:DatatypeProperty ;
       rdfs:label "defaultValue"@en ;
-      rdfs:range rdfs:Literal .
+      rdfs:range rdfs:Literal ;
+      vs:term_status "unstable. where does this req come from?"@en .
 
 :     a       owl:Ontology ;
       rdfs:comment "This ontology aims to model the Web of Things domain according to the w3c Interest Group (http://w3c.github.io/wot/)"@en ;
@@ -305,13 +344,18 @@ saref:Service
 
 :Property
       a       owl:Class ;
-      rdfs:comment "An aspect of an entity that can be observable by a sensor."@en ;
+      rdfs:comment "Property provides readable and/or writeable data that can be static (e.g., supported mode, rated output voltage, etc.) or dynamic (e.g., current fill level of water, minimum recorded temperature, etc.).  (Definition taken from http://w3c.github.io/wot/current-practices/wot-practices#property)"@en ;
       rdfs:label "Property"@en ;
       rdfs:subClassOf :InteractionPattern ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :DataFormat ;
                 owl:onProperty :hasOutputData
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:boolean ;
+                owl:onProperty :isRequired
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -323,25 +367,21 @@ saref:Service
                 owl:allValuesFrom xsd:boolean ;
                 owl:onProperty :isWritable
               ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:boolean ;
-                owl:onProperty :isRequired
-              ] ;
       owl:disjointWith saref:Service , :WoTInterface .
 
 :Endpoint
       a       owl:Class ;
+      rdfs:comment "A URL where a service can be accessed by a client application. A service might have more than one endpoint."@en ;
       rdfs:label "Endpoint"@en ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onProperty :isProvidedOverProtocol ;
-                owl:someValuesFrom :CommunicationProtocol
-              ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :MediaType ;
                 owl:onProperty :hasMediaType
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :isProvidedOverProtocol ;
+                owl:someValuesFrom :CommunicationProtocol
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -351,4 +391,5 @@ saref:Service
 
 :UnitOfMeasure
       a       owl:Class ;
-      rdfs:label "UnitOfMeasure"@en .
+      rdfs:comment "The unit of measure is a standard for measurement of a quantity, such as a Property. For example, Temperature is a property and centigrade (or Celsius) is a unit of temperature that represents a definite predetermined temperature: when we say 20 centigrade, we actually mean 20 times the definite predetermined temperature unit called \"centigrade\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). (Definition adapted from SAREF ontology)"@en ;
+      rdfs:label "Unit of measure"@en .
