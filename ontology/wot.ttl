@@ -51,7 +51,8 @@ vs:term_status rdf:type owl:AnnotationProperty .
 :describes rdf:type owl:ObjectProperty ;
            owl:inverseOf :isDescribedBy ;
            rdfs:comment "Link from a thing description to the thing being described"@en ;
-           rdfs:label "describes thing"@en .
+           rdfs:label "describes thing"@en ;
+           owl:deprecated "true"^^xsd:boolean .
 
 
 ###  http://iot.linkeddata.es/def/wot#hasInputData
@@ -78,16 +79,17 @@ vs:term_status rdf:type owl:AnnotationProperty .
               rdfs:label "has value type"@en .
 
 
-###  http://iot.linkeddata.es/def/wot#isAccesibleThrough
-:isAccesibleThrough rdf:type owl:ObjectProperty ;
-                    rdfs:comment "Indicates the endpoints from which an interaction pattern is accesible"@en ;
-                    rdfs:label "is accesible through"@en .
+###  http://iot.linkeddata.es/def/wot#isAccessibleThrough
+:isAccessibleThrough rdf:type owl:ObjectProperty ;
+                    rdfs:comment "Indicates the endpoints from which an interaction pattern is accessible"@en ;
+                    rdfs:label "is accessible through"@en .
 
 
 ###  http://iot.linkeddata.es/def/wot#isDescribedBy
 :isDescribedBy rdf:type owl:ObjectProperty ;
                rdfs:comment "Relation from a thing to its thing descriptions"@en ;
-               rdfs:label "is described by"@en .
+               rdfs:label "is described by"@en ;
+               owl:deprecated "true"^^xsd:boolean .
 
 
 ###  http://iot.linkeddata.es/def/wot#isMeasuredIn
@@ -276,7 +278,7 @@ vs:term_status rdf:type owl:AnnotationProperty .
 ###  http://iot.linkeddata.es/def/wot#InteractionPattern
 :InteractionPattern rdf:type owl:Class ;
                     rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                      owl:onProperty :isAccesibleThrough ;
+                                      owl:onProperty :isAccessibleThrough ;
                                       owl:someValuesFrom :Endpoint
                                     ] ,
                                     [ rdf:type owl:Restriction ;
@@ -361,7 +363,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 ###  http://iot.linkeddata.es/def/wot#Thing
 :Thing rdf:type owl:Class ;
        rdfs:subClassOf [ rdf:type owl:Restriction ;
-                         owl:onProperty :isAccesibleThrough ;
+                         owl:onProperty :isAccessibleThrough ;
                          owl:allValuesFrom :Endpoint
                        ] ,
                        [ rdf:type owl:Restriction ;
@@ -389,7 +391,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
                                     owl:allValuesFrom :Thing
                                   ] ;
                   rdfs:comment "A digital representation encapsulates a physical object accessible via Web services"@en ;
-                  rdfs:label "Thing description"@en .
+                  rdfs:label "Thing description"@en ;
+                  owl:deprecated "true"^^xsd:boolean .
 
 
 ###  http://iot.linkeddata.es/def/wot#UnitOfMeasure
