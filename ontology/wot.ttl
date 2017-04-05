@@ -81,8 +81,8 @@ vs:term_status rdf:type owl:AnnotationProperty .
 
 ###  http://iot.linkeddata.es/def/wot#isAccessibleThrough
 :isAccessibleThrough rdf:type owl:ObjectProperty ;
-                    rdfs:comment "Indicates the endpoints from which an interaction pattern is accessible"@en ;
-                    rdfs:label "is accessible through"@en .
+                     rdfs:comment "Indicates the endpoints from which an interaction pattern is accessible"@en ;
+                     rdfs:label "is accessible through"@en .
 
 
 ###  http://iot.linkeddata.es/def/wot#isDescribedBy
@@ -209,8 +209,7 @@ vs:term_status rdf:type owl:AnnotationProperty .
 
 ###  http://iot.linkeddata.es/def/wot#CommunicationProtocol
 :CommunicationProtocol rdf:type owl:Class ;
-                       owl:disjointWith :DigitalRepresentation ,
-                                        :Property ,
+                       owl:disjointWith :Property ,
                                         :WoTInterface ,
                                         saref:Service ;
                        rdfs:comment "A protocol is an agreement between the communicating parties on how communication is to proceed. (Definition taken from \"Tanenbaum, A. S. (2003). Computer networks, 4-th edition. ed: Prentice Hall.\")"@en ;
@@ -236,14 +235,6 @@ vs:term_status rdf:type owl:AnnotationProperty .
           rdfs:comment "Set of distinct values, characterized by properties of those values, and by operations on those values (definition taken from ISO/IEC 11404:2007)"@en ;
           rdfs:label "Data type"@en ;
           rdfs:seeAlso "https://www.iso.org/obp/ui/#iso:std:iso-iec:11404:ed-2:v1:en"@en .
-
-
-###  http://iot.linkeddata.es/def/wot#DigitalRepresentation
-:DigitalRepresentation rdf:type owl:Class ;
-                       owl:disjointWith :WoTInterface ;
-                       rdfs:comment "A digital representation encapsulates a physical object accessible via Web services"@en ;
-                       rdfs:label "Digital representation"@en ;
-                       vs:term_status "unstable" .
 
 
 ###  http://iot.linkeddata.es/def/wot#Endpoint
