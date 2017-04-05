@@ -28,13 +28,14 @@ vs:term_status
 :isDescribedBy
       a       owl:ObjectProperty ;
       rdfs:comment "Relation from a thing to its thing descriptions"@en ;
-      rdfs:label "is described by"@en .
+      rdfs:label "is described by"@en ;
+      owl:deprecated "true"^^xsd:boolean .
 
 :CommunicationProtocol
       a       owl:Class ;
       rdfs:comment "A protocol is an agreement between the communicating parties on how communication is to proceed. (Definition taken from \"Tanenbaum, A. S. (2003). Computer networks, 4-th edition. ed: Prentice Hall.\")"@en ;
       rdfs:label "Communication protocol"@en ;
-      owl:disjointWith saref:Service , :DigitalRepresentation , :WoTInterface , :Property .
+      owl:disjointWith saref:Service , :WoTInterface , :Property .
 
 :isMeasuredIn
       a       owl:ObjectProperty ;
@@ -108,13 +109,18 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :DataFormat ;
-                owl:onProperty :hasInputData
+                owl:onProperty :hasOutputData
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :DataFormat ;
-                owl:onProperty :hasOutputData
+                owl:onProperty :hasInputData
               ] .
+
+:isAccessibleThrough
+      a       owl:ObjectProperty ;
+      rdfs:comment "Indicates the endpoints from which an interaction pattern is accessible"@en ;
+      rdfs:label "is accessible through"@en .
 
 :DataFormat
       a       owl:Class ;
@@ -144,7 +150,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
               [ a       owl:Restriction ;
                 owl:allValuesFrom :Thing ;
                 owl:onProperty :describes
-              ] .
+              ] ;
+      owl:deprecated "true"^^xsd:boolean .
 
 :contains
       a       owl:ObjectProperty ;
@@ -184,11 +191,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       a       owl:ObjectProperty ;
       rdfs:comment "link to the n-ary class that allows the declaration of the data type and unit of measure provided by an interaction pattern."@en ;
       rdfs:label "has output data"@en .
-
-:isAccesibleThrough
-      a       owl:ObjectProperty ;
-      rdfs:comment "Indicates the endpoints from which an interaction pattern is accesible"@en ;
-      rdfs:label "is accesible through"@en .
 
 :baseURI
       a       owl:DatatypeProperty ;
@@ -230,24 +232,25 @@ saref:Service
       rdfs:label "Interaction pattern"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:onProperty :interactionName ;
+                owl:someValuesFrom xsd:string
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:onProperty :providedBy ;
                 owl:someValuesFrom :WebResource
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :isAccesibleThrough ;
+                owl:onProperty :isAccessibleThrough ;
                 owl:someValuesFrom :Endpoint
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onProperty :interactionName ;
-                owl:someValuesFrom xsd:string
               ] .
 
 :describes
       a       owl:ObjectProperty ;
       rdfs:comment "Link from a thing description to the thing being described"@en ;
       rdfs:label "describes thing"@en ;
+      owl:deprecated "true"^^xsd:boolean ;
       owl:inverseOf :isDescribedBy .
 
 :isWritable
@@ -274,18 +277,18 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       rdfs:label "Thing"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:allValuesFrom :ThingDescription ;
+                owl:onProperty :isDescribedBy
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:allValuesFrom :Endpoint ;
-                owl:onProperty :isAccesibleThrough
+                owl:onProperty :isAccessibleThrough
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :InteractionPattern ;
                 owl:onProperty :providesInteractionPattern
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :ThingDescription ;
-                owl:onProperty :isDescribedBy
               ] .
 
 :WoTInterface
@@ -317,13 +320,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
               "http://iot.linkeddata.es/def/wot" ;
       owl:versionInfo "0.0.4" .
 
-:DigitalRepresentation
-      a       owl:Class ;
-      rdfs:comment "A digital representation encapsulates a physical object accessible via Web services"@en ;
-      rdfs:label "Digital representation"@en ;
-      owl:disjointWith :WoTInterface ;
-      vs:term_status "unstable" .
-
 :RelativeEndpoint
       a       owl:Class ;
       rdfs:comment "An endpoint which is relative (its href is composed by a relative path and an absolute one given by another endpoint) to an endpoint which can not be relative."@en ;
@@ -349,13 +345,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       rdfs:subClassOf :InteractionPattern ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :DataFormat ;
-                owl:onProperty :hasOutputData
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:boolean ;
-                owl:onProperty :isRequired
+                owl:onProperty :isWritable
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -364,8 +355,13 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:allValuesFrom :DataFormat ;
+                owl:onProperty :hasOutputData
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:boolean ;
-                owl:onProperty :isWritable
+                owl:onProperty :isRequired
               ] ;
       owl:disjointWith saref:Service , :WoTInterface .
 
@@ -380,13 +376,13 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :isProvidedOverProtocol ;
-                owl:someValuesFrom :CommunicationProtocol
+                owl:onProperty :href ;
+                owl:someValuesFrom xsd:string
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :href ;
-                owl:someValuesFrom xsd:string
+                owl:onProperty :isProvidedOverProtocol ;
+                owl:someValuesFrom :CommunicationProtocol
               ] .
 
 :UnitOfMeasure
