@@ -40,13 +40,6 @@ vs:term_status rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  http://iot.linkeddata.es/def/wot#contains
-:contains rdf:type owl:ObjectProperty ;
-          rdfs:comment "A property between a thing and its components. For example, virtual things can contain virtual things whiel physical things can contain physicial things."@en ;
-          rdfs:label "contains"@en ;
-          rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)" .
-
-
 ###  http://iot.linkeddata.es/def/wot#describes
 :describes rdf:type owl:ObjectProperty ;
            owl:inverseOf :isDescribedBy ;
@@ -103,12 +96,6 @@ vs:term_status rdf:type owl:AnnotationProperty .
                                  owl:FunctionalProperty ;
                         rdfs:comment "Relates an endpoint with the communication protocol it is served over. A given endpoint can be provided over at most one protocol."@en ;
                         rdfs:label "is provided over protocol"@en .
-
-
-###  http://iot.linkeddata.es/def/wot#isRelativeTo
-:isRelativeTo rdf:type owl:ObjectProperty ;
-              rdfs:comment "Link from a relative endpoint to the (non relative) endpoint to which it is relative."@en ;
-              rdfs:label "is relative to"@en .
 
 
 ###  http://iot.linkeddata.es/def/wot#providedBy
@@ -184,7 +171,7 @@ vs:term_status rdf:type owl:AnnotationProperty .
 ###  http://iot.linkeddata.es/def/wot#thingName
 :thingName rdf:type owl:DatatypeProperty ;
            rdfs:subPropertyOf :name ;
-           rdfs:comment "Name of a thing, physical or virtual" ;
+           rdfs:comment "Name of a thing" ;
            rdfs:label "thing name"@en .
 
 
@@ -273,10 +260,6 @@ vs:term_status rdf:type owl:AnnotationProperty .
                                       owl:someValuesFrom :Endpoint
                                     ] ,
                                     [ rdf:type owl:Restriction ;
-                                      owl:onProperty :providedBy ;
-                                      owl:someValuesFrom :WebResource
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
                                       owl:onProperty :interactionName ;
                                       owl:someValuesFrom xsd:string
                                     ] ;
@@ -290,22 +273,6 @@ vs:term_status rdf:type owl:AnnotationProperty .
 
 The location of the media type registry is http://www.iana.org/assignments/media-types/"""@en ;
            rdfs:label "MediaType"@en .
-
-
-###  http://iot.linkeddata.es/def/wot#PhysicalThing
-:PhysicalThing rdf:type owl:Class ;
-               rdfs:subClassOf :Thing ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :contains ;
-                                 owl:allValuesFrom :PhysicalThing
-                               ] ;
-               rdfs:comment """A physical entity is a real-world thing. A physical entity is a specialization of entity. A physical entity may contain other physical entities. A physical entity is a discrete, identifiable part of the physical environment that is of interest to the user for the completion of her goal. Physical entities can be almost any physical object or environment; from humans or animals to cars; from store or logistics chain items to computers; from electronic appliances to closed or open environments.
-
-(Definition taken from 
-ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA))"""@en ,
-                            "Any entity that has a proper space region."@en ;
-               rdfs:label "Physical thing"@en ;
-               rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA)"@en .
 
 
 ###  http://iot.linkeddata.es/def/wot#Property
@@ -333,33 +300,11 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
           rdfs:label "Property"@en .
 
 
-###  http://iot.linkeddata.es/def/wot#RelativeEndpoint
-:RelativeEndpoint rdf:type owl:Class ;
-                  rdfs:subClassOf :Endpoint ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty :isRelativeTo ;
-                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                    owl:onClass [ owl:intersectionOf ( :Endpoint
-                                                                       [ rdf:type owl:Class ;
-                                                                         owl:complementOf :RelativeEndpoint
-                                                                       ]
-                                                                     ) ;
-                                                  rdf:type owl:Class
-                                                ]
-                                  ] ;
-                  rdfs:comment "An endpoint which is relative (its href is composed by a relative path and an absolute one given by another endpoint) to an endpoint which can not be relative."@en ;
-                  rdfs:label "Relative endpoint"@en .
-
-
 ###  http://iot.linkeddata.es/def/wot#Thing
 :Thing rdf:type owl:Class ;
        rdfs:subClassOf [ rdf:type owl:Restriction ;
                          owl:onProperty :isAccessibleThrough ;
                          owl:allValuesFrom :Endpoint
-                       ] ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :isDescribedBy ;
-                         owl:allValuesFrom :ThingDescription
                        ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :providesInteractionPattern ;
@@ -371,46 +316,10 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
        rdfs:label "Thing"@en .
 
 
-###  http://iot.linkeddata.es/def/wot#ThingDescription
-:ThingDescription rdf:type owl:Class ;
-                  rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                    owl:onProperty :describes ;
-                                    owl:someValuesFrom :Thing
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty :describes ;
-                                    owl:allValuesFrom :Thing
-                                  ] ;
-                  rdfs:comment "A digital representation encapsulates a physical object accessible via Web services"@en ;
-                  rdfs:label "Thing description"@en ;
-                  owl:deprecated "true"^^xsd:boolean .
-
-
 ###  http://iot.linkeddata.es/def/wot#UnitOfMeasure
 :UnitOfMeasure rdf:type owl:Class ;
                rdfs:comment "The unit of measure is a standard for measurement of a quantity, such as a Property. For example, Temperature is a property and centigrade (or Celsius) is a unit of temperature that represents a definite predetermined temperature: when we say 20 centigrade, we actually mean 20 times the definite predetermined temperature unit called \"centigrade\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). (Definition adapted from SAREF ontology)"@en ;
                rdfs:label "Unit of measure"@en .
-
-
-###  http://iot.linkeddata.es/def/wot#VirtualThing
-:VirtualThing rdf:type owl:Class ;
-              rdfs:subClassOf :Thing ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :contains ;
-                                owl:allValuesFrom :VirtualThing
-                              ] ;
-              rdfs:comment """A virtual entity is a digital representation of a physical entity, contained within a service. A virtual entity interacts through an endpoint. A virtual entity represents a physical entity.
-
-(Definition taken from 
-ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA))"""@en ;
-              rdfs:label "Virtual thing"@en ;
-              rdfs:seeAlso "ISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (ioT RA)"@en .
-
-
-###  http://iot.linkeddata.es/def/wot#WebResource
-:WebResource rdf:type owl:Class ;
-             rdfs:label "WebResource"@en ;
-             vs:term_status "unstable" .
 
 
 ###  http://iot.linkeddata.es/def/wot#WoTInterface
