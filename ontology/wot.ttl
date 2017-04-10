@@ -18,7 +18,7 @@
 
 <http://iot.linkeddata.es/def/wot#> rdf:type owl:Ontology ;
                                      dcterms:creator <http://purl.org/net/mpoveda> ;
-                                     owl:versionInfo "0.0.4" ;
+                                     owl:versionInfo "0.0.5" ;
                                      dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
                                      vann:preferredNamespacePrefix "wot" ;
                                      dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;

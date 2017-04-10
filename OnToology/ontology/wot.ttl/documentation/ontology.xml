@@ -254,7 +254,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot#">
     <dc:publisher rdf:resource="http://www.oeg-upm.net/"/>
     <vann:preferredNamespacePrefix>wot</vann:preferredNamespacePrefix>
-    <owl:versionInfo>0.0.4</owl:versionInfo>
+    <owl:versionInfo>0.0.5</owl:versionInfo>
     <vann:preferredNamespaceUri>http://iot.linkeddata.es/def/wot</vann:preferredNamespaceUri>
     <dc:title xml:lang="en">Ontology model for Web of Things</dc:title>
     <dcterms:creator rdf:resource="http://purl.org/net/mpoveda"/>

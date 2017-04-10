@@ -196,7 +196,7 @@ _:AX2dX2b03e9ceX3aX15b56cc4416X3aXX2dX7ffb <http://www.w3.org/2002/07/owl#onProp
 _:AX2dX2b03e9ceX3aX15b56cc4416X3aXX2dX7ffb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://iot.linkeddata.es/def/wot#> <http://purl.org/dc/elements/1.1/publisher> <http://www.oeg-upm.net/> .
 <http://iot.linkeddata.es/def/wot#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "wot" .
-<http://iot.linkeddata.es/def/wot#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.4" .
+<http://iot.linkeddata.es/def/wot#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.5" .
 <http://iot.linkeddata.es/def/wot#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://iot.linkeddata.es/def/wot" .
 <http://iot.linkeddata.es/def/wot#> <http://purl.org/dc/elements/1.1/title> "Ontology model for Web of Things"@en .
 <http://iot.linkeddata.es/def/wot#> <http://purl.org/dc/terms/creator> <http://purl.org/net/mpoveda> .

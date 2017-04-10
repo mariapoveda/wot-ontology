@@ -229,7 +229,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
               "wot" ;
       vann:preferredNamespaceUri
               "http://iot.linkeddata.es/def/wot" ;
-      owl:versionInfo "0.0.4" .
+      owl:versionInfo "0.0.5" .
 
 :DataType
       a       owl:Class ;
