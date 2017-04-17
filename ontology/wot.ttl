@@ -20,7 +20,7 @@
                                      dcterms:creator <http://purl.org/net/mpoveda> ,
                                                      <http://www.garcia-castro.com/foaf.rdf#me> ;
                                      vann:preferredNamespacePrefix "wot" ;
-                                     owl:versionInfo "0.0.5" ;
+                                     owl:versionInfo "0.0.6" ;
                                      dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                      vann:preferredNamespaceUri "http://iot.linkeddata.es/def/wot" ;
                                      rdfs:comment "This ontology aims to model the Web of Things domain according to the w3c Interest Group (http://w3c.github.io/wot/)"@en ;
