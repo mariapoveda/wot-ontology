@@ -11,13 +11,10 @@ This section provides details for each class and property defined by [Ontology N
             title="http://iot.linkeddata.es/def/wot#CommunicationProtocol">Communication protocol</a>
       </li>
       <li>
-         <a href="#http://iot.linkeddata.es/def/wot#DataFormat" title="http://iot.linkeddata.es/def/wot#DataFormat">Data format</a>
+         <a href="#http://iot.linkeddata.es/def/wot#DataSchema" title="http://iot.linkeddata.es/def/wot#DataSchema">Data schema</a>
       </li>
       <li>
          <a href="#http://iot.linkeddata.es/def/wot#DataType" title="http://iot.linkeddata.es/def/wot#DataType">Data type</a>
-      </li>
-      <li>
-         <a href="#http://iot.linkeddata.es/def/wot#Endpoint" title="http://iot.linkeddata.es/def/wot#Endpoint">Endpoint</a>
       </li>
       <li>
          <a href="#http://iot.linkeddata.es/def/wot#Event" title="http://iot.linkeddata.es/def/wot#Event">Event</a>
@@ -27,22 +24,22 @@ This section provides details for each class and property defined by [Ontology N
             title="http://iot.linkeddata.es/def/wot#InteractionPattern">Interaction pattern</a>
       </li>
       <li>
+         <a href="#http://iot.linkeddata.es/def/wot#Link" title="http://iot.linkeddata.es/def/wot#Link">Link</a>
+      </li>
+      <li>
          <a href="#http://iot.linkeddata.es/def/wot#MediaType" title="http://iot.linkeddata.es/def/wot#MediaType">MediaType</a>
       </li>
       <li>
          <a href="#http://iot.linkeddata.es/def/wot#Property" title="http://iot.linkeddata.es/def/wot#Property">Property</a>
       </li>
       <li>
-         <a href="#https://w3id.org/saref#Service" title="https://w3id.org/saref#Service">Service</a>
+         <a href="#http://iot.linkeddata.es/def/wot#Security" title="http://iot.linkeddata.es/def/wot#Security">Security</a>
       </li>
       <li>
          <a href="#http://iot.linkeddata.es/def/wot#Thing" title="http://iot.linkeddata.es/def/wot#Thing">Thing</a>
       </li>
       <li>
          <a href="#http://iot.linkeddata.es/def/wot#UnitOfMeasure" title="http://iot.linkeddata.es/def/wot#UnitOfMeasure">Unit of measure</a>
-      </li>
-      <li>
-         <a href="#http://iot.linkeddata.es/def/wot#WoTInterface" title="http://iot.linkeddata.es/def/wot#WoTInterface">Web of Thing interface</a>
       </li>
    </ul>
    <div class="entity" id="http://iot.linkeddata.es/def/wot#Action">
@@ -66,14 +63,14 @@ This section provides details for each class and property defined by [Ontology N
             <a href="#http://iot.linkeddata.es/def/wot#hasInputData" title="http://iot.linkeddata.es/def/wot#hasInputData">has input data</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
-            <a href="#http://iot.linkeddata.es/def/wot#DataFormat" title="http://iot.linkeddata.es/def/wot#DataFormat">Data format</a>
+            <a href="#http://iot.linkeddata.es/def/wot#DataSchema" title="http://iot.linkeddata.es/def/wot#DataSchema">Data schema</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
             <a href="#http://iot.linkeddata.es/def/wot#hasOutputData" title="http://iot.linkeddata.es/def/wot#hasOutputData">has output data</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
-            <a href="#http://iot.linkeddata.es/def/wot#DataFormat" title="http://iot.linkeddata.es/def/wot#DataFormat">Data format</a>
+            <a href="#http://iot.linkeddata.es/def/wot#DataSchema" title="http://iot.linkeddata.es/def/wot#DataSchema">Data schema</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -92,19 +89,17 @@ This section provides details for each class and property defined by [Ontology N
          <dt>is disjoint with</dt>
          <dd>
             <a href="#http://iot.linkeddata.es/def/wot#Property" title="http://iot.linkeddata.es/def/wot#Property">Property</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#http://iot.linkeddata.es/def/wot#WoTInterface" title="http://iot.linkeddata.es/def/wot#WoTInterface">Web of Thing interface</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/saref#Service" title="https://w3id.org/saref#Service">Service</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="http://iot.linkeddata.es/def/wot#DataFormat">
-      <h3>Data format<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="http://iot.linkeddata.es/def/wot#DataSchema">
+      <h3>Data schema<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://iot.linkeddata.es/def/wot#DataFormat</p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/wot#DataSchema</p>
       <div class="comment">
          <span class="markdown">N-ary class defined to allow the representation of pairs (data type, unit of measure) that are expected as input data or output data of a given interaction pattern.</span>
       </div>
@@ -137,42 +132,6 @@ This section provides details for each class and property defined by [Ontology N
          <span class="markdown">Set of distinct values, characterized by properties of those values, and by operations on those values (definition taken from ISO/IEC 11404:2007)</span>
       </div>
    </div>
-   <div class="entity" id="http://iot.linkeddata.es/def/wot#Endpoint">
-      <h3>Endpoint<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://iot.linkeddata.es/def/wot#Endpoint</p>
-      <div class="comment">
-         <span class="markdown">A URL where a service can be accessed by a client application. A service might have more than one endpoint.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#http://iot.linkeddata.es/def/wot#href" title="http://iot.linkeddata.es/def/wot#href">href</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">some</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
-            <a href="#http://iot.linkeddata.es/def/wot#hasMediaType" title="http://iot.linkeddata.es/def/wot#hasMediaType">has media type</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#http://iot.linkeddata.es/def/wot#MediaType" title="http://iot.linkeddata.es/def/wot#MediaType">MediaType</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#http://iot.linkeddata.es/def/wot#isProvidedOverProtocol"
-               title="http://iot.linkeddata.es/def/wot#isProvidedOverProtocol">is provided over protocol</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#http://iot.linkeddata.es/def/wot#CommunicationProtocol"
-               title="http://iot.linkeddata.es/def/wot#CommunicationProtocol">Communication protocol</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="http://iot.linkeddata.es/def/wot#Event">
       <h3>Event<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -194,7 +153,7 @@ This section provides details for each class and property defined by [Ontology N
             <a href="#http://iot.linkeddata.es/def/wot#hasOutputData" title="http://iot.linkeddata.es/def/wot#hasOutputData">has output data</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
-            <a href="#http://iot.linkeddata.es/def/wot#DataFormat" title="http://iot.linkeddata.es/def/wot#DataFormat">Data format</a>
+            <a href="#http://iot.linkeddata.es/def/wot#DataSchema" title="http://iot.linkeddata.es/def/wot#DataSchema">Data schema</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -212,18 +171,18 @@ This section provides details for each class and property defined by [Ontology N
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#http://iot.linkeddata.es/def/wot#interactionName" title="http://iot.linkeddata.es/def/wot#interactionName">interaction name</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">some</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
             <a href="#http://iot.linkeddata.es/def/wot#isAccessibleThrough"
                title="http://iot.linkeddata.es/def/wot#isAccessibleThrough">is accessible through</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">some</span> 
-            <a href="#http://iot.linkeddata.es/def/wot#Endpoint" title="http://iot.linkeddata.es/def/wot#Endpoint">Endpoint</a>
+            <a href="#http://iot.linkeddata.es/def/wot#Link" title="http://iot.linkeddata.es/def/wot#Link">Link</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://iot.linkeddata.es/def/wot#interactionName" title="http://iot.linkeddata.es/def/wot#interactionName">interaction name</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">some</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
          <dt>has sub-classes</dt>
          <dd>
@@ -237,6 +196,42 @@ This section provides details for each class and property defined by [Ontology N
             <a href="#http://iot.linkeddata.es/def/wot#providesInteractionPattern"
                title="http://iot.linkeddata.es/def/wot#providesInteractionPattern">provides interaction pattern</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://iot.linkeddata.es/def/wot#Link">
+      <h3>Link<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/wot#Link</p>
+      <div class="comment">
+         <span class="markdown">A URL where a service can be accessed by a client application. A service might have more than one link.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://iot.linkeddata.es/def/wot#isProvidedOverProtocol"
+               title="http://iot.linkeddata.es/def/wot#isProvidedOverProtocol">is provided over protocol</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#http://iot.linkeddata.es/def/wot#CommunicationProtocol"
+               title="http://iot.linkeddata.es/def/wot#CommunicationProtocol">Communication protocol</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://iot.linkeddata.es/def/wot#href" title="http://iot.linkeddata.es/def/wot#href">href</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">some</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
+            <a href="#http://iot.linkeddata.es/def/wot#hasMediaType" title="http://iot.linkeddata.es/def/wot#hasMediaType">has media type</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#http://iot.linkeddata.es/def/wot#MediaType" title="http://iot.linkeddata.es/def/wot#MediaType">MediaType</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -271,24 +266,24 @@ The location of the media type registry is http://www.iana.org/assignments/media
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
+            <a href="#http://iot.linkeddata.es/def/wot#hasOutputData" title="http://iot.linkeddata.es/def/wot#hasOutputData">has output data</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#http://iot.linkeddata.es/def/wot#DataSchema" title="http://iot.linkeddata.es/def/wot#DataSchema">Data schema</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://iot.linkeddata.es/def/wot#hasOutputData" title="http://iot.linkeddata.es/def/wot#hasOutputData">has output data</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#http://iot.linkeddata.es/def/wot#DataSchema" title="http://iot.linkeddata.es/def/wot#DataSchema">Data schema</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
             <a href="#http://iot.linkeddata.es/def/wot#isWritable" title="http://iot.linkeddata.es/def/wot#isWritable">is writable</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
-         </dd>
-         <dd>
-            <a href="#http://iot.linkeddata.es/def/wot#hasOutputData" title="http://iot.linkeddata.es/def/wot#hasOutputData">has output data</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#http://iot.linkeddata.es/def/wot#DataFormat" title="http://iot.linkeddata.es/def/wot#DataFormat">Data format</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#http://iot.linkeddata.es/def/wot#hasOutputData" title="http://iot.linkeddata.es/def/wot#hasOutputData">has output data</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#http://iot.linkeddata.es/def/wot#DataFormat" title="http://iot.linkeddata.es/def/wot#DataFormat">Data format</a>
-            <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
             <a href="#http://iot.linkeddata.es/def/wot#isRequired" title="http://iot.linkeddata.es/def/wot#isRequired">is required</a>
@@ -300,37 +295,20 @@ The location of the media type registry is http://www.iana.org/assignments/media
          <dd>
             <a href="#http://iot.linkeddata.es/def/wot#CommunicationProtocol"
                title="http://iot.linkeddata.es/def/wot#CommunicationProtocol">Communication protocol</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#http://iot.linkeddata.es/def/wot#WoTInterface" title="http://iot.linkeddata.es/def/wot#WoTInterface">Web of Thing interface</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/saref#Service" title="https://w3id.org/saref#Service">Service</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="https://w3id.org/saref#Service">
-      <h3>Service<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="http://iot.linkeddata.es/def/wot#Security">
+      <h3>Security<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/saref#Service</p>
-      <dl class="definedBy">
-         <dt>is defined by</dt>
-         <dd>
-            <a href="https://w3id.org/saref#">https://w3id.org/saref#</a>
-         </dd>
-      </dl>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/wot#Security</p>
       <div class="comment">
-         <span class="markdown">A service is a representation of a function to a network that makes the function discoverable, registerable, remotely controllable by other devices in the network. A service can represent one or more functions. A Service is offered by a device that wants (a certain set of) its function(s) to be discoverable, registerable, remotely controllable by other devices in the network. A Service must specify the device that is offering the service, the function(s) to be represented, and the (input and output) parameters necessary to operate the service.</span>
+         <span class="markdown">The (optional) security field can be used to provide access metadata (self-contained) information of the Thing for securely transmitting information via all its resources. Definition taken from http://w3c.github.io/wot/current-practices/wot-practices#security</span>
       </div>
-      <dl class="description">
-         <dt>is disjoint with</dt>
-         <dd>
-            <a href="#http://iot.linkeddata.es/def/wot#CommunicationProtocol"
-               title="http://iot.linkeddata.es/def/wot#CommunicationProtocol">Communication protocol</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#http://iot.linkeddata.es/def/wot#Property" title="http://iot.linkeddata.es/def/wot#Property">Property</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
    </div>
    <div class="entity" id="http://iot.linkeddata.es/def/wot#Thing">
       <h3>Thing<sup class="type-c" title="class">c</sup>
@@ -350,7 +328,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
                title="http://iot.linkeddata.es/def/wot#isAccessibleThrough">is accessible through</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
-            <a href="#http://iot.linkeddata.es/def/wot#Endpoint" title="http://iot.linkeddata.es/def/wot#Endpoint">Endpoint</a>
+            <a href="#http://iot.linkeddata.es/def/wot#Link" title="http://iot.linkeddata.es/def/wot#Link">Link</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
@@ -380,36 +358,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <span class="markdown">The unit of measure is a standard for measurement of a quantity, such as a Property. For example, Temperature is a property and centigrade (or Celsius) is a unit of temperature that represents a definite predetermined temperature: when we say 20 centigrade, we actually mean 20 times the definite predetermined temperature unit called "centigrade". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). (Definition adapted from SAREF ontology)</span>
       </div>
    </div>
-   <div class="entity" id="http://iot.linkeddata.es/def/wot#WoTInterface">
-      <h3>Web of Thing interface<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://iot.linkeddata.es/def/wot#WoTInterface</p>
-      <div class="comment">
-         <span class="markdown">Resource-oriented Web interface (often called "Web API") that allows access to servients over the network using different Protocol Bindings.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#http://iot.linkeddata.es/def/wot#providesInteractionPattern"
-               title="http://iot.linkeddata.es/def/wot#providesInteractionPattern">provides interaction pattern</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#http://iot.linkeddata.es/def/wot#InteractionPattern"
-               title="http://iot.linkeddata.es/def/wot#InteractionPattern">Interaction pattern</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is disjoint with</dt>
-         <dd>
-            <a href="#http://iot.linkeddata.es/def/wot#CommunicationProtocol"
-               title="http://iot.linkeddata.es/def/wot#CommunicationProtocol">Communication protocol</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#http://iot.linkeddata.es/def/wot#Property" title="http://iot.linkeddata.es/def/wot#Property">Property</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
 </div><div id="objectproperties">
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
@@ -427,6 +375,10 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       </li>
       <li>
          <a href="#http://iot.linkeddata.es/def/wot#hasValueType" title="http://iot.linkeddata.es/def/wot#hasValueType">has value type</a>
+      </li>
+      <li>
+         <a href="#http://iot.linkeddata.es/def/wot#implementsSecurity"
+            title="http://iot.linkeddata.es/def/wot#implementsSecurity">implements security</a>
       </li>
       <li>
          <a href="#http://iot.linkeddata.es/def/wot#isAccessibleThrough"
@@ -512,6 +464,17 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <strong>IRI:</strong> http://iot.linkeddata.es/def/wot#hasValueType</p>
       <div class="comment">
          <span class="markdown">Link to the data type used for the values provided following a given data format</span>
+      </div>
+   </div>
+   <div class="entity" id="http://iot.linkeddata.es/def/wot#implementsSecurity">
+      <h3>implements security<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/wot#implementsSecurity</p>
+      <div class="comment">
+         <span class="markdown">Links a given thing to the security information that indicates the access metadata information for securely transmitting information via all the resources of the thing.</span>
       </div>
    </div>
    <div class="entity" id="http://iot.linkeddata.es/def/wot#isAccessibleThrough">
