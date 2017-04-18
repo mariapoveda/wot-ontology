@@ -54,12 +54,6 @@ vs:term_status rdf:type owl:AnnotationProperty .
               rdfs:label "has input data"@en .
 
 
-###  http://iot.linkeddata.es/def/wot#hasMediaType
-:hasMediaType rdf:type owl:ObjectProperty ;
-              rdfs:comment "link to the media types sopported by an endpoint"@en ;
-              rdfs:label "has media type"@en .
-
-
 ###  http://iot.linkeddata.es/def/wot#hasOutputData
 :hasOutputData rdf:type owl:ObjectProperty ;
                rdfs:comment "link to the n-ary class that allows the declaration of the data type and unit of measure provided by an interaction pattern."@en ;
@@ -136,6 +130,13 @@ vs:term_status rdf:type owl:AnnotationProperty .
               vs:term_status "unstable. where does this req come from?"@en .
 
 
+###  http://iot.linkeddata.es/def/wot#hasMediaType
+:hasMediaType rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:string ;
+              rdfs:comment "link to the media types sopported by an endpoint"@en ;
+              rdfs:label "has media type"@en .
+
+
 ###  http://iot.linkeddata.es/def/wot#href
 :href rdf:type owl:DatatypeProperty ,
                owl:FunctionalProperty ;
@@ -169,6 +170,7 @@ vs:term_status rdf:type owl:AnnotationProperty .
 
 ###  http://iot.linkeddata.es/def/wot#name
 :name rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Thing ;
       rdfs:range xsd:string ;
       rdfs:comment "General attribute for names assigned to any type of concept" ;
       rdfs:label "name"@en .
@@ -260,12 +262,12 @@ vs:term_status rdf:type owl:AnnotationProperty .
                         owl:someValuesFrom :CommunicationProtocol
                       ] ,
                       [ rdf:type owl:Restriction ;
-                        owl:onProperty :hasMediaType ;
-                        owl:allValuesFrom :MediaType
-                      ] ,
-                      [ rdf:type owl:Restriction ;
                         owl:onProperty :href ;
                         owl:someValuesFrom xsd:string
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasMediaType ;
+                        owl:allValuesFrom xsd:string
                       ] ;
       rdfs:comment "A URL where a service can be accessed by a client application. A service might have more than one link."@en ;
       rdfs:label "Link"@en .
