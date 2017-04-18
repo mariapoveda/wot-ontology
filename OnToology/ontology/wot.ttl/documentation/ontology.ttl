@@ -20,7 +20,8 @@
       rdfs:comment """Represent the label (estructured into trees) used to identify the content type os a particular protocols, including but not limited to HTTP [RFC2616] and MIME [RFC2045], which are capable of carrying arbitrary labeled content. (Definicion adapted from https://tools.ietf.org/html/rfc6838).
 
 The location of the media type registry is http://www.iana.org/assignments/media-types/"""@en ;
-      rdfs:label "MediaType"@en .
+      rdfs:label "MediaType"@en ;
+      owl:deprecated "true"^^xsd:boolean .
 
 vs:term_status
       a       owl:AnnotationProperty .
@@ -196,13 +197,13 @@ vs:term_status
       rdfs:label "Interaction pattern"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :interactionName ;
-                owl:someValuesFrom xsd:string
+                owl:onProperty :isAccessibleThrough ;
+                owl:someValuesFrom :Link
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :isAccessibleThrough ;
-                owl:someValuesFrom :Link
+                owl:onProperty :interactionName ;
+                owl:someValuesFrom xsd:string
               ] .
 
 :describes
@@ -270,8 +271,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       rdfs:subClassOf :InteractionPattern ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :DataSchema ;
-                owl:onProperty :hasOutputData
+                owl:allValuesFrom xsd:boolean ;
+                owl:onProperty :isWritable
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -280,8 +281,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:boolean ;
-                owl:onProperty :isWritable
+                owl:allValuesFrom :DataSchema ;
+                owl:onProperty :hasOutputData
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
