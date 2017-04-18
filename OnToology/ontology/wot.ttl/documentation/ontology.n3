@@ -1,19 +1,16 @@
 <http://iot.linkeddata.es/def/wot#InteractionPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Interaction pattern"@en .
 <http://iot.linkeddata.es/def/wot#InteractionPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "An interaction in the context of the Web of Things is an exchange of data between a Web client and a Thing. This data can be either given as input by the client, returned as output by the Thing or both. Three interaction patterns have been defined so far: Property, Action and Event. (Definition taken from http://w3c.github.io/wot/current-practices/wot-practices#interaction-patterns)"@en .
-<http://iot.linkeddata.es/def/wot#InteractionPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff6 .
-<http://iot.linkeddata.es/def/wot#InteractionPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff7 .
+<http://iot.linkeddata.es/def/wot#InteractionPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff6 .
+<http://iot.linkeddata.es/def/wot#InteractionPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff7 .
 <http://iot.linkeddata.es/def/wot#InteractionPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ffb <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es/def/wot#DataSchema> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ffb <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#hasOutputData> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ffb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://iot.linkeddata.es/def/wot#isWritable> <http://www.w3.org/2000/01/rdf-schema#label> "is writable"@en .
 <http://iot.linkeddata.es/def/wot#isWritable> <http://www.w3.org/2000/01/rdf-schema#comment> "Boolean value that indicates whether a property is writable"@en .
 <http://iot.linkeddata.es/def/wot#isWritable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
 <http://iot.linkeddata.es/def/wot#isWritable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://iot.linkeddata.es/def/wot#isWritable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff4 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es/def/wot#MediaType> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff4 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#hasMediaType> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7fed <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es/def/wot#InteractionPattern> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7fed <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#providesInteractionPattern> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7fed <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://iot.linkeddata.es/def/wot#providesInteractionPattern> <http://www.w3.org/2000/01/rdf-schema#label> "provides interaction pattern"@en .
 <http://iot.linkeddata.es/def/wot#providesInteractionPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Link from a thing to the interaction patterns it provides"@en .
 <http://iot.linkeddata.es/def/wot#providesInteractionPattern> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iot.linkeddata.es/def/wot#InteractionPattern> .
@@ -28,6 +25,7 @@ _:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7fed <http://www.w3.org/1999/02/22-rdf-synta
 <http://iot.linkeddata.es/def/wot#name> <http://www.w3.org/2000/01/rdf-schema#label> "name"@en .
 <http://iot.linkeddata.es/def/wot#name> <http://www.w3.org/2000/01/rdf-schema#comment> "General attribute for names assigned to any type of concept" .
 <http://iot.linkeddata.es/def/wot#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://iot.linkeddata.es/def/wot#name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iot.linkeddata.es/def/wot#Thing> .
 <http://iot.linkeddata.es/def/wot#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://iot.linkeddata.es/def/wot#UnitOfMeasure> <http://www.w3.org/2000/01/rdf-schema#label> "Unit of measure"@en .
 <http://iot.linkeddata.es/def/wot#UnitOfMeasure> <http://www.w3.org/2000/01/rdf-schema#comment> "The unit of measure is a standard for measurement of a quantity, such as a Property. For example, Temperature is a property and centigrade (or Celsius) is a unit of temperature that represents a definite predetermined temperature: when we say 20 centigrade, we actually mean 20 times the definite predetermined temperature unit called \"centigrade\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). (Definition adapted from SAREF ontology)"@en .
@@ -35,20 +33,20 @@ _:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7fed <http://www.w3.org/1999/02/22-rdf-synta
 <http://iot.linkeddata.es/def/wot#Thing> <http://www.w3.org/2000/01/rdf-schema#label> "Thing"@en .
 <http://iot.linkeddata.es/def/wot#Thing> <http://www.w3.org/2000/01/rdf-schema#comment> "The abstract concept of a physical entity that can either be a real-world artifact, such as a device, or a virtual entity that represents physicality, such as a room or group of devices"@en .
 <http://iot.linkeddata.es/def/wot#Thing> <http://www.w3.org/2000/01/rdf-schema#comment> "An thing is anything (both physical and non-physical) which has a distinct and independent existence. Every thing has a unique identity. (Definition adapted from \nISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA))"@en .
-<http://iot.linkeddata.es/def/wot#Thing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7fed .
-<http://iot.linkeddata.es/def/wot#Thing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7fee .
+<http://iot.linkeddata.es/def/wot#Thing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7fed .
+<http://iot.linkeddata.es/def/wot#Thing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7fee .
 <http://iot.linkeddata.es/def/wot#Thing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ffa <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es/def/wot#DataType> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ffa <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#hasValueType> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ffa <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff4 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#href> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7fed <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es/def/wot#InteractionPattern> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7fed <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#providesInteractionPattern> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7fed <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://iot.linkeddata.es/def/wot#DataSchema> <http://www.w3.org/2000/01/rdf-schema#label> "Data schema"@en .
 <http://iot.linkeddata.es/def/wot#DataSchema> <http://www.w3.org/2000/01/rdf-schema#comment> "N-ary class defined to allow the representation of pairs (data type, unit of measure) that are expected as input data or output data of a given interaction pattern."@en .
-<http://iot.linkeddata.es/def/wot#DataSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff9 .
-<http://iot.linkeddata.es/def/wot#DataSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ffa .
+<http://iot.linkeddata.es/def/wot#DataSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff9 .
+<http://iot.linkeddata.es/def/wot#DataSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ffa .
 <http://iot.linkeddata.es/def/wot#DataSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff9 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es/def/wot#UnitOfMeasure> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff9 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#isMeasuredIn> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://iot.linkeddata.es/def/wot#MediaType> <http://www.w3.org/2000/01/rdf-schema#label> "MediaType"@en .
 <http://iot.linkeddata.es/def/wot#MediaType> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent the label (estructured into trees) used to identify the content type os a particular protocols, including but not limited to HTTP [RFC2616] and MIME [RFC2045], which are capable of carrying arbitrary labeled content. (Definicion adapted from https://tools.ietf.org/html/rfc6838).\n\nThe location of the media type registry is http://www.iana.org/assignments/media-types/"@en .
 <http://iot.linkeddata.es/def/wot#MediaType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -57,27 +55,30 @@ _:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff9 <http://www.w3.org/1999/02/22-rdf-synta
 <http://iot.linkeddata.es/def/wot#describes> <http://www.w3.org/2000/01/rdf-schema#comment> "Link from a thing description to the thing being described"@en .
 <http://iot.linkeddata.es/def/wot#describes> <http://www.w3.org/2002/07/owl#inverseOf> <http://iot.linkeddata.es/def/wot#isDescribedBy> .
 <http://iot.linkeddata.es/def/wot#describes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff3 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#href> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ffa <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es/def/wot#DataType> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ffa <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#hasValueType> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ffa <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff9 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es/def/wot#UnitOfMeasure> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff9 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#isMeasuredIn> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://iot.linkeddata.es/def/wot#Action> <http://www.w3.org/2000/01/rdf-schema#label> "Action"@en .
 <http://iot.linkeddata.es/def/wot#Action> <http://www.w3.org/2000/01/rdf-schema#comment> "The Action interaction pattern targets changes or processes on a Thing that take a certain time to complete (i.e., actions cannot be applied instantaneously like property writes). Examples include an LED fade in, moving a robot, brewing a cup of coffee, etc. Usually, ongoing Actions are modelled as Task resources, which are created when an Action invocation is received by the Thing. (Definition taken from http://w3c.github.io/wot/current-practices/wot-practices#action)"@en .
-<http://iot.linkeddata.es/def/wot#Action> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ffb .
-<http://iot.linkeddata.es/def/wot#Action> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ffc .
+<http://iot.linkeddata.es/def/wot#Action> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ffb .
+<http://iot.linkeddata.es/def/wot#Action> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ffc .
 <http://iot.linkeddata.es/def/wot#Action> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/wot#InteractionPattern> .
 <http://iot.linkeddata.es/def/wot#Action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff3 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#hasMediaType> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://iot.linkeddata.es/def/wot#isMeasuredIn> <http://www.w3.org/2000/01/rdf-schema#label> "is measured in"@en .
 <http://iot.linkeddata.es/def/wot#isMeasuredIn> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a measurement and the unit of measure in which the measurement value is expressed."@en .
 <http://iot.linkeddata.es/def/wot#isMeasuredIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://iot.linkeddata.es/def/wot#isAccessibleThrough> <http://www.w3.org/2000/01/rdf-schema#label> "is accessible through"@en .
 <http://iot.linkeddata.es/def/wot#isAccessibleThrough> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the endpoints from which an interaction pattern is accessible"@en .
 <http://iot.linkeddata.es/def/wot#isAccessibleThrough> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff8 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es/def/wot#DataSchema> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff8 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#hasOutputData> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.es/def/wot#DataSchema> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff2 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#hasOutputData> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff8 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es/def/wot#DataSchema> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff8 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#hasOutputData> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://iot.linkeddata.es/def/wot#hasValueType> <http://www.w3.org/2000/01/rdf-schema#label> "has value type"@en .
 <http://iot.linkeddata.es/def/wot#hasValueType> <http://www.w3.org/2000/01/rdf-schema#comment> "Link to the data type used for the values provided following a given data format"@en .
 <http://iot.linkeddata.es/def/wot#hasValueType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -86,36 +87,39 @@ _:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff2 <http://www.w3.org/1999/02/22-rdf-synta
 <http://iot.linkeddata.es/def/wot#baseURI> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://iot.linkeddata.es/def/wot#baseURI> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iot.linkeddata.es/def/wot#Thing> .
 <http://iot.linkeddata.es/def/wot#baseURI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.es/def/wot#DataSchema> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff2 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#hasOutputData> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://iot.linkeddata.es/def/wot#Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event"@en .
 <http://iot.linkeddata.es/def/wot#Event> <http://www.w3.org/2000/01/rdf-schema#comment> "The Event interaction pattern enables a mechanism to be notified by a Thing on a certain condition. (Description taken from http://w3c.github.io/wot/current-practices/wot-practices#event)"@en .
-<http://iot.linkeddata.es/def/wot#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff8 .
+<http://iot.linkeddata.es/def/wot#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff8 .
 <http://iot.linkeddata.es/def/wot#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/wot#InteractionPattern> .
 <http://iot.linkeddata.es/def/wot#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.es/def/wot#Link> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff7 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#isAccessibleThrough> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://iot.linkeddata.es/def/wot#defaultValue> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable. where does this req come from?"@en .
 <http://iot.linkeddata.es/def/wot#defaultValue> <http://www.w3.org/2000/01/rdf-schema#label> "defaultValue"@en .
 <http://iot.linkeddata.es/def/wot#defaultValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 <http://iot.linkeddata.es/def/wot#defaultValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff1 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es/def/wot#DataSchema> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff1 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#hasOutputData> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://iot.linkeddata.es/def/wot#Link> <http://www.w3.org/2000/01/rdf-schema#label> "Link"@en .
 <http://iot.linkeddata.es/def/wot#Link> <http://www.w3.org/2000/01/rdf-schema#comment> "A URL where a service can be accessed by a client application. A service might have more than one link."@en .
-<http://iot.linkeddata.es/def/wot#Link> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff3 .
-<http://iot.linkeddata.es/def/wot#Link> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff4 .
-<http://iot.linkeddata.es/def/wot#Link> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff5 .
+<http://iot.linkeddata.es/def/wot#Link> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff3 .
+<http://iot.linkeddata.es/def/wot#Link> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff4 .
+<http://iot.linkeddata.es/def/wot#Link> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff5 .
 <http://iot.linkeddata.es/def/wot#Link> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://iot.linkeddata.es/def/wot#providedBy> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "propose for deletion" .
 <http://iot.linkeddata.es/def/wot#providedBy> <http://www.w3.org/2000/01/rdf-schema#label> "providedBy"@en .
 <http://iot.linkeddata.es/def/wot#providedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.es/def/wot#Link> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff7 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#isAccessibleThrough> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://iot.linkeddata.es/def/wot#href> <http://www.w3.org/2000/01/rdf-schema#label> "href"@en .
 <http://iot.linkeddata.es/def/wot#href> <http://www.w3.org/2000/01/rdf-schema#comment> "URI of the endpoint where an interaction pattern is provided"@en .
 <http://iot.linkeddata.es/def/wot#href> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://iot.linkeddata.es/def/wot#href> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://iot.linkeddata.es/def/wot#href> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff1 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es/def/wot#DataSchema> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff1 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#hasOutputData> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://iot.linkeddata.es/def/wot#CommunicationProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "Communication protocol"@en .
 <http://iot.linkeddata.es/def/wot#CommunicationProtocol> <http://www.w3.org/2000/01/rdf-schema#comment> "A protocol is an agreement between the communicating parties on how communication is to proceed. (Definition taken from \"Tanenbaum, A. S. (2003). Computer networks, 4-th edition. ed: Prentice Hall.\")"@en .
 <http://iot.linkeddata.es/def/wot#CommunicationProtocol> <http://www.w3.org/2002/07/owl#disjointWith> <http://iot.linkeddata.es/def/wot#Property> .
@@ -127,58 +131,56 @@ _:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff1 <http://www.w3.org/1999/02/22-rdf-synta
 <http://iot.linkeddata.es/def/wot#interactionName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of an interaction pattern" .
 <http://iot.linkeddata.es/def/wot#interactionName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://iot.linkeddata.es/def/wot#name> .
 <http://iot.linkeddata.es/def/wot#interactionName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff6 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#interactionName> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7fef <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7fef <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#isWritable> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7fef <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://iot.linkeddata.es/def/wot#Property> <http://www.w3.org/2000/01/rdf-schema#label> "Property"@en .
 <http://iot.linkeddata.es/def/wot#Property> <http://www.w3.org/2000/01/rdf-schema#comment> "Property provides readable and/or writeable data that can be static (e.g., supported mode, rated output voltage, etc.) or dynamic (e.g., current fill level of water, minimum recorded temperature, etc.).  (Definition taken from http://w3c.github.io/wot/current-practices/wot-practices#property)"@en .
-<http://iot.linkeddata.es/def/wot#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7fef .
-<http://iot.linkeddata.es/def/wot#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff0 .
-<http://iot.linkeddata.es/def/wot#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff1 .
-<http://iot.linkeddata.es/def/wot#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff2 .
+<http://iot.linkeddata.es/def/wot#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7fef .
+<http://iot.linkeddata.es/def/wot#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff0 .
+<http://iot.linkeddata.es/def/wot#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff1 .
+<http://iot.linkeddata.es/def/wot#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff2 .
 <http://iot.linkeddata.es/def/wot#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/wot#InteractionPattern> .
 <http://iot.linkeddata.es/def/wot#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://iot.linkeddata.es/def/wot#isProvidedOverProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "is provided over protocol"@en .
 <http://iot.linkeddata.es/def/wot#isProvidedOverProtocol> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an endpoint with the communication protocol it is served over. A given endpoint can be provided over at most one protocol."@en .
 <http://iot.linkeddata.es/def/wot#isProvidedOverProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://iot.linkeddata.es/def/wot#isProvidedOverProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff0 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff0 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#isRequired> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://iot.linkeddata.es/def/wot#DataType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.iso.org/obp/ui/#iso:std:iso-iec:11404:ed-2:v1:en"@en .
 <http://iot.linkeddata.es/def/wot#DataType> <http://www.w3.org/2000/01/rdf-schema#label> "Data type"@en .
 <http://iot.linkeddata.es/def/wot#DataType> <http://www.w3.org/2000/01/rdf-schema#comment> "Set of distinct values, characterized by properties of those values, and by operations on those values (definition taken from ISO/IEC 11404:2007)"@en .
 <http://iot.linkeddata.es/def/wot#DataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ffc <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es/def/wot#DataSchema> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ffc <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#hasInputData> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ffc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff6 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#interactionName> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://iot.linkeddata.es/def/wot#thingName> <http://www.w3.org/2000/01/rdf-schema#label> "thing name"@en .
 <http://iot.linkeddata.es/def/wot#thingName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of a thing" .
 <http://iot.linkeddata.es/def/wot#thingName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://iot.linkeddata.es/def/wot#name> .
 <http://iot.linkeddata.es/def/wot#thingName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7fef <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7fef <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#isWritable> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7fef <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://iot.linkeddata.es/def/wot#isRequired> <http://www.w3.org/2000/01/rdf-schema#label> "is required"@en .
 <http://iot.linkeddata.es/def/wot#isRequired> <http://www.w3.org/2000/01/rdf-schema#comment> "Boolean value that indicates whether a property is required to be present."@en .
 <http://iot.linkeddata.es/def/wot#isRequired> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
 <http://iot.linkeddata.es/def/wot#isRequired> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://iot.linkeddata.es/def/wot#isRequired> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff5 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.es/def/wot#CommunicationProtocol> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff5 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#isProvidedOverProtocol> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ff5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7fee <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es/def/wot#Link> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7fee <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#isAccessibleThrough> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7fee <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff0 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff0 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#isRequired> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ffc <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es/def/wot#DataSchema> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ffc <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#hasInputData> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ffc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://iot.linkeddata.es/def/wot#hasMediaType> <http://www.w3.org/2000/01/rdf-schema#label> "has media type"@en .
 <http://iot.linkeddata.es/def/wot#hasMediaType> <http://www.w3.org/2000/01/rdf-schema#comment> "link to the media types sopported by an endpoint"@en .
-<http://iot.linkeddata.es/def/wot#hasMediaType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://iot.linkeddata.es/def/wot#hasMediaType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://iot.linkeddata.es/def/wot#hasMediaType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://iot.linkeddata.es/def/wot#hasOutputData> <http://www.w3.org/2000/01/rdf-schema#label> "has output data"@en .
 <http://iot.linkeddata.es/def/wot#hasOutputData> <http://www.w3.org/2000/01/rdf-schema#comment> "link to the n-ary class that allows the declaration of the data type and unit of measure provided by an interaction pattern."@en .
 <http://iot.linkeddata.es/def/wot#hasOutputData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ffb <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es/def/wot#DataSchema> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ffb <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#hasOutputData> .
-_:AX2dX1d1140X3aX15b7c05cfc0X3aXX2dX7ffb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff5 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.es/def/wot#CommunicationProtocol> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff5 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#isProvidedOverProtocol> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7ff5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7fee <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es/def/wot#Link> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7fee <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#isAccessibleThrough> .
+_:AX2dX438563b8X3aX15b80cedc43X3aXX2dX7fee <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://iot.linkeddata.es/def/wot#Security> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing"@en .
 <http://iot.linkeddata.es/def/wot#Security> <http://www.w3.org/2000/01/rdf-schema#label> "Security"@en .
 <http://iot.linkeddata.es/def/wot#Security> <http://www.w3.org/2000/01/rdf-schema#comment> "The (optional) security field can be used to provide access metadata (self-contained) information of the Thing for securely transmitting information via all its resources. Definition taken from http://w3c.github.io/wot/current-practices/wot-practices#security"@en .
