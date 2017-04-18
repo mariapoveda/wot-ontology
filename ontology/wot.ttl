@@ -278,7 +278,8 @@ vs:term_status rdf:type owl:AnnotationProperty .
            rdfs:comment """Represent the label (estructured into trees) used to identify the content type os a particular protocols, including but not limited to HTTP [RFC2616] and MIME [RFC2045], which are capable of carrying arbitrary labeled content. (Definicion adapted from https://tools.ietf.org/html/rfc6838).
 
 The location of the media type registry is http://www.iana.org/assignments/media-types/"""@en ;
-           rdfs:label "MediaType"@en .
+           rdfs:label "MediaType"@en ;
+           owl:deprecated "true"^^xsd:boolean .
 
 
 ###  http://iot.linkeddata.es/def/wot#Property
