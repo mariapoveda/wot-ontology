@@ -42,7 +42,7 @@ vs:term_status
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :MediaType ;
+                owl:allValuesFrom xsd:string ;
                 owl:onProperty :hasMediaType
               ] ;
       rdfs:subClassOf
@@ -79,9 +79,10 @@ vs:term_status
       vs:term_status "propose for deletion" .
 
 :hasMediaType
-      a       owl:ObjectProperty ;
+      a       owl:DatatypeProperty ;
       rdfs:comment "link to the media types sopported by an endpoint"@en ;
-      rdfs:label "has media type"@en .
+      rdfs:label "has media type"@en ;
+      rdfs:range xsd:string .
 
 :Event
       a       owl:Class ;
@@ -100,18 +101,19 @@ vs:term_status
       rdfs:label "Data schema"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :DataType ;
-                owl:onProperty :hasValueType
+                owl:allValuesFrom :UnitOfMeasure ;
+                owl:onProperty :isMeasuredIn
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :UnitOfMeasure ;
-                owl:onProperty :isMeasuredIn
+                owl:allValuesFrom :DataType ;
+                owl:onProperty :hasValueType
               ] .
 
 :name
       a       owl:DatatypeProperty ;
       rdfs:comment "General attribute for names assigned to any type of concept" ;
+      rdfs:domain :Thing ;
       rdfs:label "name"@en ;
       rdfs:range xsd:string .
 
@@ -129,12 +131,12 @@ vs:term_status
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :DataSchema ;
-                owl:onProperty :hasOutputData
+                owl:onProperty :hasInputData
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom :DataSchema ;
-                owl:onProperty :hasInputData
+                owl:onProperty :hasOutputData
               ] .
 
 :isAccessibleThrough
@@ -229,13 +231,13 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       rdfs:label "Thing"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :Link ;
-                owl:onProperty :isAccessibleThrough
+                owl:allValuesFrom :InteractionPattern ;
+                owl:onProperty :providesInteractionPattern
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :InteractionPattern ;
-                owl:onProperty :providesInteractionPattern
+                owl:allValuesFrom :Link ;
+                owl:onProperty :isAccessibleThrough
               ] .
 
 :defaultValue
@@ -268,6 +270,11 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       rdfs:subClassOf :InteractionPattern ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:allValuesFrom :DataSchema ;
+                owl:onProperty :hasOutputData
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:onProperty :hasOutputData ;
                 owl:someValuesFrom :DataSchema
               ] ;
@@ -280,11 +287,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:boolean ;
                 owl:onProperty :isRequired
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :DataSchema ;
-                owl:onProperty :hasOutputData
               ] .
 
 :UnitOfMeasure
