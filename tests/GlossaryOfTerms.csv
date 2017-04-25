@@ -1,42 +1,31 @@
 Termino,URI
-describesThing@en,http://iot.linkeddata.es/def/wot#describes
-hasComponent@en,http://iot.linkeddata.es/def/wot#hasComponent
-hasInputData@en,http://iot.linkeddata.es/def/wot#hasInputData
-hasMediaType@en,### http://iot.linkeddata.es/def/wot#hasMediaType
-hasOutputData@en ,http://iot.linkeddata.es/def/wot#hasOutputData
-hasValueType@en ,http://iot.linkeddata.es/def/wot#hasValueType
-isAccesibleThrough@en ,http://iot.linkeddata.es/def/wot#isAccesibleThrough
-isComponentOf@en,http://iot.linkeddata.es/def/wot#isComponentOf
-isDescribedBy@en,http://iot.linkeddata.es/def/wot#isDescribedBy
-isMeasuredIn@en,http://iot.linkeddata.es/def/wot#isMeasuredIn
+has input Data@en,http://iot.linkeddata.es/def/wot#hasInputData
+"has media type"@en, http://iot.linkeddata.es/def/wot#hasMediaType
+"has output data"@en ,http://iot.linkeddata.es/def/wot#hasOutputData
+"has value type"@en  ,http://iot.linkeddata.es/def/wot#hasValueType
+"is accessible through"@en ,http://iot.linkeddata.es/def/wot#isAccesibleThrough
+"is measured in"@en,http://iot.linkeddata.es/def/wot#isMeasuredIn
 is provided over protocol@en,http://iot.linkeddata.es/def/wot#isProvidedOverProtocol
 providedBy@en,http://iot.linkeddata.es/def/wot#providedBy
-providesInteractionPattern@en,http://iot.linkeddata.es/def/wot#providesInteractionPattern
-baseURI@en,http://iot.linkeddata.es/def/wot#baseURI
+"provides interaction pattern"@en,http://iot.linkeddata.es/def/wot#providesInteractionPattern
+"base URI"@en,http://iot.linkeddata.es/def/wot#baseURI
 defaultValue@en,http://iot.linkeddata.es/def/wot#defaultValue
-entityName@en,http://iot.linkeddata.es/def/wot#entityName
+"thing name"@en,http://iot.linkeddata.es/def/wot#thingName
 href@en,http://iot.linkeddata.es/def/wot#href
-interactionName@en,http://iot.linkeddata.es/def/wot#interactionName
-isRequired@en ,http://iot.linkeddata.es/def/wot#isRequired
-isWritable@en,http://iot.linkeddata.es/def/wot#isWritable
+"interaction name"@en,http://iot.linkeddata.es/def/wot#interactionName
+"is required"@en ,http://iot.linkeddata.es/def/wot#isRequired
+"is writable"@en,http://iot.linkeddata.es/def/wot#isWritable
 name@en ,http://iot.linkeddata.es/def/wot#name
 Action@en,http://iot.linkeddata.es/def/wot#Action
-Communication protocol@en,http://iot.linkeddata.es/def/wot#CommunicationProtocol
-DataFormat@en,http://iot.linkeddata.es/def/wot#DataFormat
-DataType@en,http://iot.linkeddata.es/def/wot#DataType
-Digital representation@en,http://iot.linkeddata.es/def/wot#DigitalRepresentation
+"Communication protocol"@en,http://iot.linkeddata.es/def/wot#CommunicationProtocol
+"Data type"@en,http://iot.linkeddata.es/def/wot#DataType
 Ecosystem@en ,http://iot.linkeddata.es/def/wot#Ecosystem
 Endpoint@en ,http://iot.linkeddata.es/def/wot#Endpoint
-Entity@en,http://iot.linkeddata.es/def/wot#Entity
+Thing@en,http://iot.linkeddata.es/def/wot#Thing
 Event@en ,http://iot.linkeddata.es/def/wot#Event
 Interaction@en,http://iot.linkeddata.es/def/wot#InteractionPattern
-MediaType@en,http://iot.linkeddata.es/def/wot#MediaType
-Physical entity@en ,http://iot.linkeddata.es/def/wot#PhysicalEntity
+MediaType@en,http://iot.linkeddata.es/def/wot#hasMediaType
 Property@en,http://iot.linkeddata.es/def/wot#Property
-Thing description@en ,http://iot.linkeddata.es/def/wot#ThingDescription
-Thing ecosystem description@en,http://iot.linkeddata.es/def/wot#ThingEcosystemDescription
-UnitOfMeasure@en ,http://iot.linkeddata.es/def/wot#UnitOfMeasure
-VirtualEntity@en,http://iot.linkeddata.es/def/wot#VirtualEntity
-WebResource@en ,http://iot.linkeddata.es/def/wot#WebResource
-Web of Thing interface@en,http://iot.linkeddata.es/def/wot#WoTInterface
+"Unit of measure"@en ,http://iot.linkeddata.es/def/wot#UnitOfMeasure
 Service@en,https://w3id.org/saref#Service
+Link"@en, http://iot.linkeddata.es/def/wot#Link
