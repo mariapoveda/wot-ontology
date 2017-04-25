@@ -1,31 +1,31 @@
 Termino,URI
-has input Data@en,http://iot.linkeddata.es/def/wot#hasInputData
-"has media type"@en, http://iot.linkeddata.es/def/wot#hasMediaType
-"has output data"@en ,http://iot.linkeddata.es/def/wot#hasOutputData
-"has value type"@en  ,http://iot.linkeddata.es/def/wot#hasValueType
-"is accessible through"@en ,http://iot.linkeddata.es/def/wot#isAccesibleThrough
-"is measured in"@en,http://iot.linkeddata.es/def/wot#isMeasuredIn
-is provided over protocol@en,http://iot.linkeddata.es/def/wot#isProvidedOverProtocol
-providedBy@en,http://iot.linkeddata.es/def/wot#providedBy
-"provides interaction pattern"@en,http://iot.linkeddata.es/def/wot#providesInteractionPattern
-"base URI"@en,http://iot.linkeddata.es/def/wot#baseURI
-defaultValue@en,http://iot.linkeddata.es/def/wot#defaultValue
-"thing name"@en,http://iot.linkeddata.es/def/wot#thingName
-href@en,http://iot.linkeddata.es/def/wot#href
-"interaction name"@en,http://iot.linkeddata.es/def/wot#interactionName
-"is required"@en ,http://iot.linkeddata.es/def/wot#isRequired
-"is writable"@en,http://iot.linkeddata.es/def/wot#isWritable
-name@en ,http://iot.linkeddata.es/def/wot#name
-Action@en,http://iot.linkeddata.es/def/wot#Action
-"Communication protocol"@en,http://iot.linkeddata.es/def/wot#CommunicationProtocol
-"Data type"@en,http://iot.linkeddata.es/def/wot#DataType
-Ecosystem@en ,http://iot.linkeddata.es/def/wot#Ecosystem
-Endpoint@en ,http://iot.linkeddata.es/def/wot#Endpoint
-Thing@en,http://iot.linkeddata.es/def/wot#Thing
-Event@en ,http://iot.linkeddata.es/def/wot#Event
-Interaction@en,http://iot.linkeddata.es/def/wot#InteractionPattern
-MediaType@en,http://iot.linkeddata.es/def/wot#hasMediaType
-Property@en,http://iot.linkeddata.es/def/wot#Property
-"Unit of measure"@en ,http://iot.linkeddata.es/def/wot#UnitOfMeasure
-Service@en,https://w3id.org/saref#Service
-Link"@en, http://iot.linkeddata.es/def/wot#Link
+"""has input Data""@en",http://iot.linkeddata.es/def/wot#hasInputData
+"""has media type""@en", http://iot.linkeddata.es/def/wot#hasMediaType
+"""has output data""@en",http://iot.linkeddata.es/def/wot#hasOutputData
+"""has value type""@en",http://iot.linkeddata.es/def/wot#hasValueType
+"""is accessible through""@en",http://iot.linkeddata.es/def/wot#isAccesibleThrough
+"""is measured in""@en",http://iot.linkeddata.es/def/wot#isMeasuredIn
+"""is provided over protocol""@en",http://iot.linkeddata.es/def/wot#isProvidedOverProtocol
+"""providedBy""@en",http://iot.linkeddata.es/def/wot#providedBy
+"""provides interaction pattern""@en",http://iot.linkeddata.es/def/wot#providesInteractionPattern
+"""base URI""@en",http://iot.linkeddata.es/def/wot#baseURI
+"""defaultValue""@en",http://iot.linkeddata.es/def/wot#defaultValue
+"""thing name""@en",http://iot.linkeddata.es/def/wot#thingName
+"""href""@en",http://iot.linkeddata.es/def/wot#href
+"""interaction name""@en",http://iot.linkeddata.es/def/wot#interactionName
+"""is required""@en",http://iot.linkeddata.es/def/wot#isRequired
+"""is writable""@en",http://iot.linkeddata.es/def/wot#isWritable
+"""name""@en",http://iot.linkeddata.es/def/wot#name
+"""Action""@en",http://iot.linkeddata.es/def/wot#Action
+"""Communication protocol""@en",http://iot.linkeddata.es/def/wot#CommunicationProtocol
+"""Data type""@en",http://iot.linkeddata.es/def/wot#DataType
+"""Ecosystem""@en",http://iot.linkeddata.es/def/wot#Ecosystem
+"""Endpoint""@en",http://iot.linkeddata.es/def/wot#Endpoint
+"""Thing""@en",http://iot.linkeddata.es/def/wot#Thing
+"""Event""@en",http://iot.linkeddata.es/def/wot#Event
+"""Interaction""@en",http://iot.linkeddata.es/def/wot#InteractionPattern
+"""MediaType""@en",http://iot.linkeddata.es/def/wot#hasMediaType
+"""Property""@en",http://iot.linkeddata.es/def/wot#Property
+"""Unit of measure""@en",http://iot.linkeddata.es/def/wot#UnitOfMeasure
+"""Service""@en",https://w3id.org/saref#Service
+"""Link""@en", http://iot.linkeddata.es/def/wot#Link
