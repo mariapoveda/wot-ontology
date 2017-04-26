@@ -23,15 +23,15 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1018"
+     inkscape:window-width="1902"
+     inkscape:window-height="1000"
      id="namedview420"
      showgrid="false"
-     inkscape:zoom="0.8737881"
+     inkscape:zoom="1.235723"
      inkscape:cx="567.72837"
      inkscape:cy="443.68383"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-x="1"
+     inkscape:window-y="1"
      inkscape:window-maximized="1"
      inkscape:current-layer="g416" />
   <metadata
@@ -929,10 +929,10 @@
          inkscape:connector-curvature="0"
          style="fill:#ffffff" />
       <path
-         d="m 466.8,191.86568 h 142 c 0.55227,0 1,-0.76366 1,-1.70572 v -35.84164 c 0,-0.94203 -0.44773,-1.70572 -1,-1.70572 h -142 c -0.5523,0 -1,0.76369 -1,1.70572 v 35.84164 c 0,0.94206 0.4477,1.70572 1,1.70572 z"
+         d="m 466.93474,191.86568 h 161.13297 c 0.62669,0 1.13474,-0.76366 1.13474,-1.70572 v -35.84164 c 0,-0.94203 -0.50805,-1.70572 -1.13474,-1.70572 H 466.93474 c -0.62672,0 -1.13474,0.76369 -1.13474,1.70572 v 35.84164 c 0,0.94206 0.50802,1.70572 1.13474,1.70572 z"
          id="path286"
          inkscape:connector-curvature="0"
-         style="stroke:#3c3c3c;stroke-width:1.30603266;stroke-linecap:round;stroke-linejoin:round" />
+         style="stroke:#3c3c3c;stroke-width:1.39124012;stroke-linecap:round;stroke-linejoin:round" />
       <text
          transform="translate(468.8,157.1189)"
          id="text290"
@@ -943,7 +943,10 @@
            x="0"
            y="11"
            id="tspan288"
-           style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#1b1b1b">(1..1) wot:href:: String (F)</tspan>
+           style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#1b1b1b">(1..1) wot:href:: <tspan
+   style="fill:#fc055c;fill-opacity:1"
+   id="tspan1143">URI</tspan>
+(F)</tspan>
       </text>
       <path
          d="m 681.75177,162.07022 h 112.54789 c 0.55228,0 1,-0.44772 1,-1 v -21.01261 c 0,-0.55228 -0.44772,-1 -1,-1 H 681.75177 c -0.55227,0 -1,0.44772 -1,1 v 21.01261 c 0,0.55228 0.44773,1 1,1 z"
@@ -986,7 +989,7 @@
            style="font-weight:500;font-size:13px;font-family:Helvetica;fill:#3d3d3d">
           <tspan
              style="fill:#ff3d3d;fill-opacity:1"
-             id="tspan5047">(1..1) wot:mediaType</tspan>
+             id="tspan5047">(1..1) wot:mediaType::string</tspan>
         </tspan>
       </text>
       <path
@@ -1167,8 +1170,10 @@
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#1a1a1a">(0..1) wot:<tspan
    style="fill:#fa1a1a;fill-opacity:1"
    id="tspan5126">href</tspan>
-
-::String</tspan>
+::<tspan
+   style="fill:#ff3d3d;fill-opacity:1"
+   id="tspan1153">URI</tspan>
+</tspan>
       </text>
       <path
          d="m 112.2581,281.52208 h 187.98749 c 0.55228,0 1,-0.44771 1,-1 v -21.0126 c 0,-0.55229 -0.44772,-1 -1,-1 H 112.2581 c -0.55229,0 -1,0.44771 -1,1 v 21.0126 c 0,0.55229 0.44771,1 1,1 z"
