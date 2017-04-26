@@ -27,9 +27,9 @@
      inkscape:window-height="1018"
      id="namedview420"
      showgrid="false"
-     inkscape:zoom="1.7475762"
-     inkscape:cx="838.50844"
-     inkscape:cy="483.60346"
+     inkscape:zoom="0.8737881"
+     inkscape:cx="605.77982"
+     inkscape:cy="436.85353"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -540,7 +540,7 @@
            x="2.2485521"
            y="11"
            id="tspan152"
-           style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#f81b1b;fill-opacity:1">wot:interactions (1..N)</tspan>
+           style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#f81b1b;fill-opacity:1">wot:interaction (0..N)</tspan>
       </text>
       <path
          d="m 53.26417,75.070156 h 159.03972 c 0.55229,0 1,-0.447716 1,-1 V 53.057552 c 0,-0.552285 -0.44771,-1 -1,-1 H 53.26417 c -0.552285,0 -1,0.447715 -1,1 v 21.012604 c 0,0.552284 0.447715,1 1,1 z"
@@ -649,12 +649,12 @@
          d="m 209.30662,186.10008 v -8.9 -16.91661 H 456.9 h 2"
          id="path196"
          inkscape:connector-curvature="0"
-         style="stroke:#616161;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:4, 4;marker-end:url(#SharpArrow_Marker_2)" />
+         style="stroke:#616161;stroke-width:0.99975;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:3.99899998,3.99899998;marker-end:url(#SharpArrow_Marker_2);stroke-miterlimit:4;stroke-dashoffset:0" />
       <path
-         d="m 225.85459,168.71066 h 187.98749 c 0.55228,0 1,-0.44771 1,-1 v -14.85438 c 0,-0.55228 -0.44772,-1 -1,-1 H 225.85459 c -0.55229,0 -1,0.44772 -1,1 v 14.85438 c 0,0.55229 0.44771,1 1,1 z"
+         d="m 225.32429,168.71066 h 88.29736 c 0.2594,0 0.46969,-0.44771 0.46969,-1 v -14.85438 c 0,-0.55228 -0.21029,-1 -0.46969,-1 h -88.29736 c -0.25941,0 -0.4697,0.44772 -0.4697,1 v 14.85438 c 0,0.55229 0.21029,1 0.4697,1 z"
          id="path198"
          inkscape:connector-curvature="0"
-         style="fill:#ffffff" />
+         style="fill:#ffffff;stroke-width:0.68534523" />
       <text
          transform="translate(227.85459,152.28347)"
          id="text202"
@@ -668,6 +668,7 @@
            style="font-weight:500;font-size:13px;font-family:Helvetica;fill:#3d3d3d">wot:<tspan
    style="fill:#ff3d3d;fill-opacity:1"
    id="tspan5101">link</tspan>
+
  (0..N)</tspan>
       </text>
       <path
@@ -695,7 +696,7 @@
       <path
          d="m 736.73966,305.27357 v 8.9 l -0.15456,47.55077 v 2"
          id="path212"
-         style="stroke:#f56161;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:4, 4;stroke-opacity:1;marker-end:url(#SharpArrow_Marker_2)"
+         style="stroke:#0f2be9;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:4, 4;stroke-opacity:1;marker-end:url(#SharpArrow_Marker_2)"
          inkscape:connector-curvature="0" />
       <path
          d="m 680.38767,349.68913 h 112.54789 c 0.55228,0 1,-0.44773 1,-1 v -21.01261 c 0,-0.55228 -0.44772,-1 -1,-1 H 680.38767 c -0.55227,0 -1,0.44772 -1,1 v 21.01261 c 0,0.55227 0.44773,1 1,1 z"
@@ -705,21 +706,21 @@
       <text
          transform="translate(682.38767,322.18282)"
          id="text220"
-         style="fill:#3d3d3d">
+         style="fill:#0532ff;fill-opacity:1;">
         <tspan
            font-size="13"
            font-weight="500"
            x="0.79811281"
            y="13"
            id="tspan216"
-           style="font-weight:500;font-size:13px;font-family:Helvetica;fill:#3d3d3d">wot:hasValueType</tspan>
+           style="font-weight:500;font-size:13px;font-family:Helvetica;fill:#0532ff;fill-opacity:1;">wot:hasValueType</tspan>
         <tspan
            font-size="13"
            font-weight="500"
            x="39.103043"
            y="29"
            id="tspan218"
-           style="font-weight:500;font-size:13px;font-family:Helvetica;fill:#3d3d3d">(0..1)</tspan>
+           style="font-weight:500;font-size:13px;font-family:Helvetica;fill:#0532ff;fill-opacity:1;">(0..1)</tspan>
       </text>
       <path
          d="m 301.24559,262.34491 h 8.9 150.00001 v 0.73889 h 150.57405 2"
@@ -744,9 +745,11 @@
            style="font-weight:500;font-size:13px;font-family:Helvetica;fill:#3d3d3d">wot:<tspan
    style="fill:#fa3d3d;fill-opacity:1"
    id="tspan5063">outputData</tspan>
+
  (<tspan
    style="fill:#f33d3d;fill-opacity:1"
    id="tspan5075">1</tspan>
+
 ..N)</tspan>
       </text>
       <path
@@ -772,6 +775,7 @@
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#1b1b1b">(1..1) wot:<tspan
    style="fill:#f51b1b;fill-opacity:1"
    id="tspan4973">name</tspan>
+
 :: String</tspan>
         <tspan
            font-size="12"
@@ -784,7 +788,9 @@
    id="tspan4933"><tspan
    style="fill:#fa1b1b;fill-opacity:1"
    id="tspan4951">base</tspan>
+
 :</tspan>
+
 : String</tspan>
       </text>
       <path
@@ -807,7 +813,10 @@
            x="0"
            y="11"
            id="tspan244"
-           style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#1a1a1a">(0..1) wot:isWritable:: Boolean (F)</tspan>
+           style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#1a1a1a">(0..1) wot:<tspan
+   style="fill:#e00d1e;fill-opacity:1"
+   id="tspan1120">writable</tspan>
+:: Boolean (F)</tspan>
         <tspan
            font-size="12"
            font-weight="500"
@@ -841,18 +850,19 @@
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#1b1b1b">(1..1) wot:<tspan
    style="fill:#f91b1b;fill-opacity:1"
    id="tspan5011">name::</tspan>
+
  String</tspan>
       </text>
       <path
          d="m 678.8705,393.63694 h 115.42916 c 0.55228,0 1,-0.44772 1,-1 v -21.0126 c 0,-0.55229 -0.44772,-1 -1,-1 H 678.8705 c -0.55227,0 -1,0.44771 -1,1 v 21.0126 c 0,0.55228 0.44773,1 1,1 z"
          id="path258"
          inkscape:connector-curvature="0"
-         style="fill:#87a8c7" />
+         style="fill:#3343d6;fill-opacity:1" />
       <path
          d="m 678.8705,393.63694 h 115.42916 c 0.55228,0 1,-0.44772 1,-1 v -21.0126 c 0,-0.55229 -0.44772,-1 -1,-1 H 678.8705 c -0.55227,0 -1,0.44771 -1,1 v 21.0126 c 0,0.55228 0.44773,1 1,1 z"
          id="path260"
          inkscape:connector-curvature="0"
-         style="stroke:#3c3c3c;stroke-width:1;stroke-linecap:round;stroke-linejoin:round" />
+         style="stroke:#3c3c3c;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;fill:#0532ff;fill-opacity:1" />
       <text
          transform="translate(680.8705,375.13064)"
          id="text264"
@@ -874,7 +884,7 @@
          d="m 681.75177,209.12528 h 112.54789 c 0.55228,0 1,-0.44771 1,-1 v -21.0126 c 0,-0.55228 -0.44772,-1 -1,-1 H 681.75177 c -0.55227,0 -1,0.44772 -1,1 v 21.0126 c 0,0.55229 0.44773,1 1,1 z"
          id="path268"
          inkscape:connector-curvature="0"
-         style="stroke:#3c3c3c;stroke-width:1;stroke-linecap:round;stroke-linejoin:round" />
+         style="stroke:#3c3c3c;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;fill:#0532ff;fill-opacity:1" />
       <text
          transform="translate(683.75177,190.61898)"
          id="text272"
@@ -890,7 +900,7 @@
       <path
          d="m 648.89966,259.24836 v -8.9 -16 h 127.30869 v -16.32308 -2"
          id="path274"
-         style="stroke:#ff6161;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:4, 4;stroke-opacity:1;marker-end:url(#SharpArrow_Marker_2)"
+         style="stroke:#3207ff;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:4, 4;stroke-opacity:1;marker-end:url(#SharpArrow_Marker_2)"
          inkscape:connector-curvature="0" />
       <path
          d="M 657.02133,242.77555 H 764.2871 c 0.55227,0 1,-0.44771 1,-1 v -14.85437 c 0,-0.55229 -0.44773,-1 -1,-1 H 657.02133 c -0.55228,0 -1,0.44771 -1,1 v 14.85437 c 0,0.55229 0.44772,1 1,1 z"
@@ -900,21 +910,21 @@
       <text
          transform="translate(659.02133,218.34836)"
          id="text282"
-         style="fill:#3d3d3d">
+         style="fill:#0532ff;fill-opacity:1;">
         <tspan
            font-size="13"
            font-weight="500"
            x="0.69293702"
            y="13"
            id="tspan278"
-           style="font-weight:500;font-size:13px;font-family:Helvetica;fill:#3d3d3d">wot:isMeasuredIn</tspan>
+           style="font-weight:500;font-size:13px;font-family:Helvetica;fill:#0532ff;fill-opacity:1;">wot:isMeasuredIn</tspan>
         <tspan
            font-size="13"
            font-weight="500"
            x="36.461979"
            y="29"
            id="tspan280"
-           style="font-weight:500;font-size:13px;font-family:Helvetica;fill:#3d3d3d">(0..1)</tspan>
+           style="font-weight:500;font-size:13px;font-family:Helvetica;fill:#0532ff;fill-opacity:1;">(0..1)</tspan>
       </text>
       <path
          d="m 466.8,175.6252 h 142 c 0.55227,0 1,-0.44771 1,-1 v -21.0126 c 0,-0.55228 -0.44773,-1 -1,-1 h -142 c -0.5523,0 -1,0.44772 -1,1 v 21.0126 c 0,0.55229 0.4477,1 1,1 z"
@@ -922,10 +932,10 @@
          inkscape:connector-curvature="0"
          style="fill:#ffffff" />
       <path
-         d="m 466.8,175.6252 h 142 c 0.55227,0 1,-0.44771 1,-1 v -21.0126 c 0,-0.55228 -0.44773,-1 -1,-1 h -142 c -0.5523,0 -1,0.44772 -1,1 v 21.0126 c 0,0.55229 0.4477,1 1,1 z"
+         d="m 466.8,191.86568 h 142 c 0.55227,0 1,-0.76366 1,-1.70572 v -35.84164 c 0,-0.94203 -0.44773,-1.70572 -1,-1.70572 h -142 c -0.5523,0 -1,0.76369 -1,1.70572 v 35.84164 c 0,0.94206 0.4477,1.70572 1,1.70572 z"
          id="path286"
          inkscape:connector-curvature="0"
-         style="stroke:#3c3c3c;stroke-width:1;stroke-linecap:round;stroke-linejoin:round" />
+         style="stroke:#3c3c3c;stroke-width:1.30603266;stroke-linecap:round;stroke-linejoin:round" />
       <text
          transform="translate(468.8,157.1189)"
          id="text290"
@@ -947,7 +957,7 @@
          d="m 681.75177,162.07022 h 112.54789 c 0.55228,0 1,-0.44772 1,-1 v -21.01261 c 0,-0.55228 -0.44772,-1 -1,-1 H 681.75177 c -0.55227,0 -1,0.44772 -1,1 v 21.01261 c 0,0.55228 0.44773,1 1,1 z"
          id="path294"
          inkscape:connector-curvature="0"
-         style="stroke:#3c3c3c;stroke-width:1;stroke-linecap:round;stroke-linejoin:round" />
+         style="stroke:#3c3c3c;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;fill:#0532ff;fill-opacity:1" />
       <text
          transform="translate(683.75177,143.56392)"
          id="text298"
@@ -964,32 +974,29 @@
          d="M 585.8,129.6 V 120.7 109 h 153.9229 17.39413 v 21.15761 2"
          id="path300"
          inkscape:connector-curvature="0"
-         style="stroke:#616161;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:4, 4;marker-end:url(#SharpArrow_Marker_2)" />
-      <path
-         d="M 599.93762,117.42719 H 748.4176 c 0.5523,0 1,-0.44772 1,-1 v -14.85438 c 0,-0.55228 -0.4477,-1 -1,-1 H 599.93762 c -0.55228,0 -1,0.44772 -1,1 v 14.85438 c 0,0.55228 0.44772,1 1,1 z"
-         id="path302"
-         inkscape:connector-curvature="0"
-         style="fill:#ffffff" />
+         style="stroke:#0532ff;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:4, 4;marker-end:url(#SharpArrow_Marker_2);stroke-opacity:1" />
       <text
-         transform="translate(601.93762,101)"
          id="text308"
-         style="fill:#3d3d3d">
+         style="fill:#3d3d3d"
+         x="466.01062"
+         y="172.93878">
         <tspan
            font-size="13"
            font-weight="500"
-           x="1.0637288"
-           y="13"
+           x="467.07434"
+           y="185.93878"
            id="tspan304"
-           style="font-weight:500;font-size:13px;font-family:Helvetica;fill:#3d3d3d"><tspan
-   style="fill:#ff3d3d;fill-opacity:1"
-   id="tspan5047">wot:mediaType</tspan>
- (1..1)</tspan>
+           style="font-weight:500;font-size:13px;font-family:Helvetica;fill:#3d3d3d">
+          <tspan
+             style="fill:#ff3d3d;fill-opacity:1"
+             id="tspan5047">(1..1) wot:mediaType</tspan>
+        </tspan>
       </text>
       <path
          d="m 681.75177,86.95078 h 112.54789 c 0.55228,0 1,-0.44772 1,-1 V 52.337552 c 0,-0.552285 -0.44772,-1 -1,-1 H 681.75177 c -0.55227,0 -1,0.447715 -1,1 V 85.95078 c 0,0.55228 0.44773,1 1,1 z"
          id="path310"
          inkscape:connector-curvature="0"
-         style="fill:#87a8c7" />
+         style="fill:#0532ff;fill-opacity:1" />
       <path
          d="m 681.75177,86.95078 h 112.54789 c 0.55228,0 1,-0.44772 1,-1 V 52.337552 c 0,-0.552285 -0.44772,-1 -1,-1 H 681.75177 c -0.55227,0 -1,0.447715 -1,1 V 85.95078 c 0,0.55228 0.44773,1 1,1 z"
          id="path312"
@@ -1018,7 +1025,7 @@
          d="m 537.8,129.6 v -8.9 -51.555827 h 134.05177 2"
          id="path320"
          inkscape:connector-curvature="0"
-         style="stroke:#ff6161;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:4, 4;marker-end:url(#SharpArrow_Marker_2);stroke-opacity:1" />
+         style="stroke:#6179ff;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:4, 4;marker-end:url(#SharpArrow_Marker_2);stroke-opacity:1" />
       <path
          d="M 539.46966,80.650475 H 657.201 c 0.55227,0 1,-0.447715 1,-1 V 58.63787 c 0,-0.552283 -0.44773,-1 -1,-1 H 539.46966 c -0.55228,0 -1,0.447717 -1,1 v 21.012605 c 0,0.552285 0.44772,1 1,1 z"
          id="path322"
@@ -1066,6 +1073,7 @@
            style="font-weight:500;font-size:13px;font-family:Helvetica;fill:#3d3d3d">wot:<tspan
    style="fill:#fe3d3d;fill-opacity:1"
    id="tspan5067">inputData</tspan>
+
  (0..N)</tspan>
       </text>
       <path
@@ -1115,7 +1123,7 @@
       <path
          d="m 269.581,258.50948 v -8.9 -51.99048 h 402.27077 2"
          id="path356"
-         style="stroke:#fa6161;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:4, 4;stroke-opacity:1;marker-end:url(#SharpArrow_Marker_2)"
+         style="stroke:#0532ff;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:4, 4;stroke-opacity:1;marker-end:url(#SharpArrow_Marker_2)"
          inkscape:connector-curvature="0" />
       <path
          d="m 306.13472,206.04619 h 107.26576 c 0.55228,0 1,-0.44772 1,-1 v -14.85438 c 0,-0.55229 -0.44772,-1 -1,-1 H 306.13472 c -0.55228,0 -1,0.44771 -1,1 v 14.85438 c 0,0.55228 0.44772,1 1,1 z"
@@ -1137,7 +1145,7 @@
       <path
          d="m 186.46394,110.68338 v 8.9 17.68749 H 456.9 h 2"
          id="path364"
-         style="stroke:#ff6161;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:4, 4;stroke-opacity:1;marker-end:url(#SharpArrow_Marker_2)"
+         style="stroke:#0532ff;stroke-width:0.99975;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:3.99899998, 3.99899997999999980;stroke-opacity:1;marker-end:url(#SharpArrow_Marker_2);stroke-miterlimit:4;stroke-dashoffset:0"
          inkscape:connector-curvature="0" />
       <path
          d="m 620.61965,305.27357 h 173.68001 c 0.55228,0 1,-0.44771 1,-1 v -21.0126 c 0,-0.55229 -0.44772,-1 -1,-1 H 620.61965 c -0.55228,0 -1,0.44771 -1,1 v 21.0126 c 0,0.55229 0.44772,1 1,1 z"
@@ -1162,6 +1170,7 @@
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#1a1a1a">(0..1) wot:<tspan
    style="fill:#fa1a1a;fill-opacity:1"
    id="tspan5126">href</tspan>
+
 ::String</tspan>
       </text>
       <path
@@ -1238,14 +1247,14 @@
       <text
          transform="translate(227.58031,129.27087)"
          id="text402"
-         style="fill:#ff3d3d;fill-opacity:1">
+         style="fill:#0532ff;fill-opacity:1;stroke-width:0.99975;stroke-miterlimit:4;stroke-dasharray:3.99899998, 3.99899997999999980;stroke-dashoffset:0;">
         <tspan
            font-size="13"
            font-weight="500"
            x="2.0442815"
            y="13"
            id="tspan400"
-           style="font-weight:500;font-size:13px;font-family:Helvetica;fill:#ff3d3d;fill-opacity:1">wot:isAccessibleThrough (0..N)</tspan>
+           style="font-weight:500;font-size:13px;font-family:Helvetica;fill:#0532ff;fill-opacity:1;stroke-width:0.99975;stroke-miterlimit:4;stroke-dasharray:3.99899998, 3.99899997999999980;stroke-dashoffset:0;">wot:isAccessibleThrough (0..N)</tspan>
       </text>
       <path
          d="m 213.30389,71.23472 h 8.9 145.12786 2"
@@ -1287,7 +1296,7 @@
          id="tspan5140"
          x="122.76511"
          y="332.3544"
-         style="stroke-width:0.75"></tspan></text>
+         style="stroke-width:0.75" /></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
@@ -1298,7 +1307,7 @@
          id="tspan5144"
          x="176.78207"
          y="333.2648"
-         style="stroke-width:0.75"></tspan></text>
+         style="stroke-width:0.75" /></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
