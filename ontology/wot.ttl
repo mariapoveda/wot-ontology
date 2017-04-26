@@ -274,6 +274,8 @@ vs:term_status rdf:type owl:AnnotationProperty .
           
           rdfs:label "is required"@en ;
           
+          owl:deprecated "true"^^xsd:boolean ;
+          
           rdfs:comment "Boolean value that indicates whether a property is required to be present."@en ;
           
           rdfs:range xsd:boolean .
