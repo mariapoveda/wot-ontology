@@ -229,7 +229,7 @@ vs:term_status rdf:type owl:AnnotationProperty .
       
       rdfs:comment "URI of the endpoint where an interaction pattern is provided"@en ;
       
-      rdfs:range xsd:string .
+      rdfs:range xsd:anyURI .
 
 
 
