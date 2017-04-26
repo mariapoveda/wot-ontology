@@ -165,6 +165,8 @@ vs:term_status rdf:type owl:AnnotationProperty .
       
       rdfs:label "is measured in"@en ;
       
+      owl:deprecated "true"^^xsd:boolean ;
+      
       rdfs:comment "A relation between a measurement and the unit of measure in which the measurement value is expressed."@en .
 
 
@@ -513,6 +515,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
 :UnitOfMeasure rdf:type owl:Class ;
                
                rdfs:label "Unit of measure"@en ;
+               
+               owl:deprecated "true"^^xsd:boolean ;
                
                rdfs:comment "The unit of measure is a standard for measurement of a quantity, such as a Property. For example, Temperature is a property and centigrade (or Celsius) is a unit of temperature that represents a definite predetermined temperature: when we say 20 centigrade, we actually mean 20 times the definite predetermined temperature unit called \"centigrade\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). (Definition adapted from SAREF ontology)"@en .
 
