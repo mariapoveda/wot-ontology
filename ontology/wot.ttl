@@ -198,7 +198,7 @@ vs:term_status rdf:type owl:AnnotationProperty .
       
       rdfs:domain :Thing ;
       
-      rdfs:range xsd:string .
+      rdfs:range xsd:anyURI .
 
 
 
