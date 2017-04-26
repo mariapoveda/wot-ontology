@@ -135,6 +135,8 @@ vs:term_status rdf:type owl:AnnotationProperty .
           
           rdfs:label "is provided over protocol"@en ;
           
+          owl:deprecated "true"^^xsd:boolean ;
+          
           rdfs:comment "Relates an endpoint with the communication protocol it is served over. A given endpoint can be provided over at most one protocol."@en .
 
 
@@ -176,6 +178,8 @@ vs:term_status rdf:type owl:AnnotationProperty .
 :valueType rdf:type owl:ObjectProperty ;
            
            rdfs:label "has value type"@en ;
+           
+           owl:deprecated "true"^^xsd:boolean ;
            
            rdfs:comment "Link to the data type used for the values provided following a given data format"@en .
 
@@ -374,6 +378,8 @@ vs:term_status rdf:type owl:AnnotationProperty .
 :DataType rdf:type owl:Class ;
           
           rdfs:label "Data type"@en ;
+          
+          owl:deprecated "true"^^xsd:boolean ;
           
           rdfs:comment "Set of distinct values, characterized by properties of those values, and by operations on those values (definition taken from ISO/IEC 11404:2007)"@en ;
           
