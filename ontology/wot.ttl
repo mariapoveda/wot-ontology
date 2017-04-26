@@ -18,11 +18,11 @@
 
 <http://iot.linkeddata.es/def/wot#> rdf:type owl:Ontology ;
                                     
-                                    owl:versionInfo "0.0.6" ;
+                                    owl:versionInfo "0.0.7" ;
                                     
                                     dc:title "Ontology model for Web of Things"@en ;
                                     
-                                    vann:preferredNamespacePrefix "wot" ;
+                                    vann:preferredNamespacePrefix "td" ;
                                     
                                     rdfs:comment "This ontology aims to model the Web of Things domain according to the w3c Interest Group (http://w3c.github.io/wot/)"@en ;
                                     
