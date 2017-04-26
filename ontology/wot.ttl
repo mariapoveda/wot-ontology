@@ -344,6 +344,8 @@ vs:term_status rdf:type owl:AnnotationProperty .
                        
                        owl:disjointWith :Property ;
                        
+                       owl:deprecated "true"^^xsd:boolean ;
+                       
                        rdfs:comment "A protocol is an agreement between the communicating parties on how communication is to proceed. (Definition taken from \"Tanenbaum, A. S. (2003). Computer networks, 4-th edition. ed: Prentice Hall.\")"@en .
 
 
