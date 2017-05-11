@@ -1,6 +1,6 @@
 key,label,uri
 :,,http://iot.linkeddata.es/def/wot
-Thing,"Thing"@en,http://iot.linkeddata.es/def/wot#Thing
+Thing,"""Thing"""@en,http://iot.linkeddata.es/def/wot#Thing
 Property,"Property"@en,http://iot.linkeddata.es/def/wot#Property
 InteractionPattern,"Interaction Pattern"@en,http://iot.linkeddata.es/def/wot#InteractionPattern
 Action,"Action"@en,http://iot.linkeddata.es/def/wot#Action
