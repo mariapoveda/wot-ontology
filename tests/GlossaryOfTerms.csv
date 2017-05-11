@@ -13,5 +13,5 @@ providesinteractionpattern,"""provides interaction pattern""@en",http://iot.link
 Link,"""Link""@en",http://iot.linkeddata.es/def/wot#Link
 href,"""href""@en",http://iot.linkeddata.es/def/wot#href
 interactionName,"""interaction name""@en",http://iot.linkeddata.es/def/wot#interactionName
-hasMediaType,"""has media type""@en" ,http://iot.linkeddata.es/def/wot#hasMediaType
+hasMediaType,"""has media type""@en",http://iot.linkeddata.es/def/wot#hasMediaType
 ObjectProperty,,http://www.w3.org/2002/07/owl#ObjectProperty
