@@ -1,17 +1,17 @@
 key,label,uri
 :,,http://iot.linkeddata.es/def/wot
-Thing,"""Thing"""@en,http://iot.linkeddata.es/def/wot#Thing
-Property,"Property"@en,http://iot.linkeddata.es/def/wot#Property
-InteractionPattern,"Interaction Pattern"@en,http://iot.linkeddata.es/def/wot#InteractionPattern
-Action,"Action"@en,http://iot.linkeddata.es/def/wot#Action
-Event,"Event"@en,http://iot.linkeddata.es/def/wot#Event
-Communicationprotocol,"Communication protocol"@en,http://iot.linkeddata.es/def/wot#CommunicationProtocol
-Security,"Security"@en,http://iot.linkeddata.es/def/wot#Security
-isprovidedoverprotocol,"is provided over protocol"@en,http://iot.linkeddata.es/def/wot#isProvidedOverProtocol
-isaccesiblethrough,"is accesible through"@en,http://iot.linkeddata.es/def/wot#isAccessibleThrough
-providesinteractionpattern,,http://iot.linkeddata.es/def/wot#providesInteractionPattern
-Link,,http://iot.linkeddata.es/def/wot#Link
-href,,http://iot.linkeddata.es/def/wot#href
-interactionName,,http://iot.linkeddata.es/def/wot#interactionName
-hasMediaType,,http://iot.linkeddata.es/def/wot#hasMediaType
+Thing,"""Thing""@en",http://iot.linkeddata.es/def/wot#Thing
+Property,"""Property""@en",http://iot.linkeddata.es/def/wot#Property
+InteractionPattern,"""Interaction Pattern""@en",http://iot.linkeddata.es/def/wot#InteractionPattern
+Action,"""Action""@en",http://iot.linkeddata.es/def/wot#Action
+Event,"""Event""@en",http://iot.linkeddata.es/def/wot#Event
+Communicationprotocol,"""Communication protocol""@en",http://iot.linkeddata.es/def/wot#CommunicationProtocol
+Security,"""Security""@en",http://iot.linkeddata.es/def/wot#Security
+isprovidedoverprotocol,"""is provided over protocol""@en",http://iot.linkeddata.es/def/wot#isProvidedOverProtocol
+isaccesiblethrough,"""is accesible through""@en",http://iot.linkeddata.es/def/wot#isAccessibleThrough
+providesinteractionpattern,"""provides interaction pattern""@en",http://iot.linkeddata.es/def/wot#providesInteractionPattern
+Link,"""Link""@en",http://iot.linkeddata.es/def/wot#Link
+href,"""href""@en",http://iot.linkeddata.es/def/wot#href
+interactionName,"""interaction name""@en",http://iot.linkeddata.es/def/wot#interactionName
+hasMediaType,"""has media type""@en" ,http://iot.linkeddata.es/def/wot#hasMediaType
 ObjectProperty,,http://www.w3.org/2002/07/owl#ObjectProperty
