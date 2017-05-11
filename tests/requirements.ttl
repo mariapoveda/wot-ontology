@@ -1,4 +1,4 @@
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> 
 @prefix qt:    <http://www.w3.org/2001/sw/DataAccess/tests/test-query#> 
 @prefix mf:    <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> 
@@ -6,7 +6,7 @@
 @prefix  :     <http://vicinity.iot.linkeddata.es/vicinity/tests/testsuite-wot.ttl> 
 
 : rdf:type mf:Manifest;
-	mf:name "Test suite  for  WoT Ontology v0.0.6"; 
+	mf:name "Test suite  for WoT Ontology v0.0.6"; 
 	mf:entries (
 		:class-test1
 		:class-test2
@@ -15,14 +15,18 @@
 		:class-test5
 		:class-test6
 		:class-test7
+		:class-test8
 		:objproperty-test1
 		:objproperty-test2
 		:objproperty-test3
 		:objproperty-test4
 		:objproperty-test5
+		:objproperty-test6
+		:objproperty-test7
 		:datatype-test1
 		:datatype-test2
 		:datatype-test3
+		:datatype-test4
 	) .
 #
 #
@@ -38,11 +42,12 @@
 	dc:identifier "WoT1";
 	mf:name "Test case 1- Class";
 	dc:description "Related to requirement WoT1 in https://docs.google.com/spreadsheets/d/1eNVcbxxHfV4PntP8f1cRW1uD8IhRTy6nlIkQM85r_Cc/edit#gid=25348692";
-	mf:action[ qt:query """
+	mf:action[qt:query """
+
 				PREFIX owl: <http://www.w3.org/2002/07/owl#>
 				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 				ASK {
- 					Class(<http://iot.linkeddata.es/def/wot#Thing>)
+ 					Class([Thing])
 				} 
 				"""
 			];
@@ -53,14 +58,15 @@
 
 
 :TCC2 a mf:QueryEvaluationTest;
-	dc:identifier "WoT5";
+	dc:identifier "WoT15";
 	mf:name "Test case 2- Class";
-	dc:description "Related to requirement WoT5 in https://docs.google.com/spreadsheets/d/1eNVcbxxHfV4PntP8f1cRW1uD8IhRTy6nlIkQM85r_Cc/edit#gid=25348693";
-	mf:action[ qt:query """
+	dc:description "Related to requirement WoT15 in https://docs.google.com/spreadsheets/d/1eNVcbxxHfV4PntP8f1cRW1uD8IhRTy6nlIkQM85r_Cc/edit#gid=25348693";
+	mf:action[qt:query """
+
 				PREFIX owl: <http://www.w3.org/2002/07/owl#>
 				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 				ASK {
- 					Class(<http://iot.linkeddata.es/def/wot#Property>)
+ 					Class([Property])
 				} 
 				"""
 			];
@@ -74,11 +80,12 @@
 	dc:identifier "WoT18";
 	mf:name "Test case 3- Class";
 	dc:description "Related to requirement WoT18 in https://docs.google.com/spreadsheets/d/1eNVcbxxHfV4PntP8f1cRW1uD8IhRTy6nlIkQM85r_Cc/edit#gid=25348694";
-	mf:action[ qt:query """
+	mf:action[qt:query """
+
 				PREFIX owl: <http://www.w3.org/2002/07/owl#>
 				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 				ASK {
- 					Class(<http://iot.linkeddata.es/def/wot#InteractionPattern>)
+ 					Class([InteractionPattern])
 				} 
 				"""
 			];
@@ -89,14 +96,15 @@
 
 
 :TCC4 a mf:QueryEvaluationTest;
-	dc:identifier "Wot16";
+	dc:identifier "WoT16";
 	mf:name "Test case 4- Class";
 	dc:description "Related to requirement Wot16 in https://docs.google.com/spreadsheets/d/1eNVcbxxHfV4PntP8f1cRW1uD8IhRTy6nlIkQM85r_Cc/edit#gid=25348695";
-	mf:action[ qt:query """
+	mf:action[qt:query """
+
 				PREFIX owl: <http://www.w3.org/2002/07/owl#>
 				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 				ASK {
- 					Class(<http://iot.linkeddata.es/def/wot#Action>)
+ 					Class([Action])
 				} 
 				"""
 			];
@@ -110,11 +118,12 @@
 	dc:identifier "WoT17";
 	mf:name "Test case 5- Class";
 	dc:description "Related to requirement WoT17 in https://docs.google.com/spreadsheets/d/1eNVcbxxHfV4PntP8f1cRW1uD8IhRTy6nlIkQM85r_Cc/edit#gid=25348696";
-	mf:action[ qt:query """
+	mf:action[qt:query """
+
 				PREFIX owl: <http://www.w3.org/2002/07/owl#>
 				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 				ASK {
- 					Class(<http://iot.linkeddata.es/def/wot#Event>)
+ 					Class([Event])
 				} 
 				"""
 			];
@@ -128,11 +137,12 @@
 	dc:identifier "WoT22";
 	mf:name "Test case 6- Class";
 	dc:description "Related to requirement WoT22 in https://docs.google.com/spreadsheets/d/1eNVcbxxHfV4PntP8f1cRW1uD8IhRTy6nlIkQM85r_Cc/edit#gid=25348697";
-	mf:action[ qt:query """
+	mf:action[qt:query """
+
 				PREFIX owl: <http://www.w3.org/2002/07/owl#>
 				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 				ASK {
- 					Class(<http://iot.linkeddata.es/def/wot#CommunicationProtocol>)
+ 					Class([Communicationprotocol])
 				} 
 				"""
 			];
@@ -146,16 +156,41 @@
 	dc:identifier "WoT29";
 	mf:name "Test case 7- Class";
 	dc:description "Related to requirement WoT29 in https://docs.google.com/spreadsheets/d/1eNVcbxxHfV4PntP8f1cRW1uD8IhRTy6nlIkQM85r_Cc/edit#gid=25348698";
-	mf:action[ qt:query """
+	mf:action[qt:query """
+
 				PREFIX owl: <http://www.w3.org/2002/07/owl#>
 				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 				ASK {
- 					Class(<http://iot.linkeddata.es/def/wot#Security>)
+ 					Class([Security])
 				} 
 				"""
 			];
 
 	mf:result "true".		
+
+
+:TCC8 a mf:QueryEvaluationTest;
+	dc:identifier "WoT14";
+	mf:name "Test case 8- Class";
+	dc:description "Related to requirement WoT14 in https://docs.google.com/spreadsheets/d/1eNVcbxxHfV4PntP8f1cRW1uD8IhRTy6nlIkQM85r_Cc/edit#gid=25348698";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					Class([Action]),
+ 					Class([Property]),
+ 					Class([Event]),
+ 					SubClassOf([Action],[InteractionPattern]),
+ 					SubClassOf([Event],[InteractionPattern]),
+ 					SubClassOf([Property],[InteractionPattern])
+
+				} 
+				"""
+			];
+
+	mf:result "true".		
+
 
 
 #
@@ -172,20 +207,21 @@
 	dc:identifier "WoT21";
 	mf:name "Test case 1-Object Properties";
 	dc:description "Related to requirement WoT21 in https://docs.google.com/spreadsheets/d/1eNVcbxxHfV4PntP8f1cRW1uD8IhRTy6nlIkQM85r_Cc/edit#gid=25348692";
-	mf:action[ qt:query """
+	mf:action[qt:query """
+
 				PREFIX owl: <http://www.w3.org/2002/07/owl#>
 				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 				ASK {
- 					ObjectProperty(<http://iot.linkeddata.es/def/wot#isProvidedOverProtocol>)
+ 					ObjectProperty([isprovidedoverprotocol])
 				} 
 				""";
 
 			qt:data """
 			
-				<http://iot.linkeddata.es/def/wot#domain1> a <http://iot.linkeddata.es/def/wot#InteractionPattern> .
-				<http://iot.linkeddata.es/def/wot#isProvidedOverProtocol> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
- 				<http://iot.linkeddata.es/def/wot#range1>   a <http://iot.linkeddata.es/def/wot#CommunicationProtocol> .
-				<http://iot.linkeddata.es/def/wot#domain1> <http://iot.linkeddata.es/def/wot#isProvidedOverProtocol> <http://iot.linkeddata.es/def/wot#range1>.
+				[:domain1] a [InteractionPattern] .
+				[isprovidedoverprotocol] a  [ObjectProperty].
+ 				[:range1]   a [Communicationprotocol] .
+				[:domain1] [isprovidedoverprotocol] [:range1].
   
 				"""
 			];
@@ -199,20 +235,21 @@
 	dc:identifier "WoT24";
 	mf:name "Test case 2-Object Properties";
 	dc:description "Related to requirement WoT24 in https://docs.google.com/spreadsheets/d/1eNVcbxxHfV4PntP8f1cRW1uD8IhRTy6nlIkQM85r_Cc/edit#gid=25348693";
-	mf:action[ qt:query """
+	mf:action[qt:query """
+
 				PREFIX owl: <http://www.w3.org/2002/07/owl#>
 				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 				ASK {
- 					ObjectProperty(<http://iot.linkeddata.es/def/wot#providesInteractionPattern>)
+ 					ObjectProperty([providesinteractionpattern])
 				} 
 				""";
 
 			qt:data """
 			
-				<http://iot.linkeddata.es/def/wot#domain1> a <http://iot.linkeddata.es/def/wot#InteractionPattern> .
-				<http://iot.linkeddata.es/def/wot#providesInteractionPattern> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
- 				<http://iot.linkeddata.es/def/wot#range1>   a <http://iot.linkeddata.es/def/wot#Thing> .
-				<http://iot.linkeddata.es/def/wot#domain1> <http://iot.linkeddata.es/def/wot#providesInteractionPattern> <http://iot.linkeddata.es/def/wot#range1>.
+				[:domain1] a [InteractionPattern] .
+				[providesinteractionpattern] a  [ObjectProperty].
+ 				[:range1]   a [Link] .
+				[:domain1] [providesinteractionpattern] [:range1].
   
 				"""
 			];
@@ -223,23 +260,24 @@
 
 
 :TCP3 a mf:QueryEvaluationTest;
-	dc:identifier "WoT25- WoT27";
+	dc:identifier "WoT25";
 	mf:name "Test case 3-Object Properties";
-	dc:description "Related to requirement WoT25- WoT27 in https://docs.google.com/spreadsheets/d/1eNVcbxxHfV4PntP8f1cRW1uD8IhRTy6nlIkQM85r_Cc/edit#gid=25348694";
-	mf:action[ qt:query """
+	dc:description "Related to requirement WoT25 in https://docs.google.com/spreadsheets/d/1eNVcbxxHfV4PntP8f1cRW1uD8IhRTy6nlIkQM85r_Cc/edit#gid=25348694";
+	mf:action[qt:query """
+
 				PREFIX owl: <http://www.w3.org/2002/07/owl#>
 				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 				ASK {
- 					ObjectProperty(<http://iot.linkeddata.es/def/wot#isAccessibleThrough>)
+ 					ObjectProperty([isaccesiblethrough])
 				} 
 				""";
 
 			qt:data """
 			
-				<http://iot.linkeddata.es/def/wot#domain1> a <http://iot.linkeddata.es/def/wot#InteractionPattern> .
-				<http://iot.linkeddata.es/def/wot#isAccessibleThrough> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
- 				<http://iot.linkeddata.es/def/wot#range1>   a <http://iot.linkeddata.es/def/wot#Link> .
-				<http://iot.linkeddata.es/def/wot#domain1> <http://iot.linkeddata.es/def/wot#isAccessibleThrough> <http://iot.linkeddata.es/def/wot#range1>.
+				[:domain1] a [InteractionPattern] .
+				[isaccesiblethrough] a  [ObjectProperty].
+ 				[:range1]   a [Link] .
+				[:domain1] [isaccesiblethrough] [:range1].
   
 				"""
 			];
@@ -253,20 +291,21 @@
 	dc:identifier "WoT31";
 	mf:name "Test case 4-Object Properties";
 	dc:description "Related to requirement WoT31 in https://docs.google.com/spreadsheets/d/1eNVcbxxHfV4PntP8f1cRW1uD8IhRTy6nlIkQM85r_Cc/edit#gid=25348696";
-	mf:action[ qt:query """
+	mf:action[qt:query """
+
 				PREFIX owl: <http://www.w3.org/2002/07/owl#>
 				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 				ASK {
- 					ObjectProperty(<http://iot.linkeddata.es/def/wot#isAccessibleThrough>)
+ 					ObjectProperty([isaccesiblethrough])
 				} 
 				""";
 
 			qt:data """
 			
-				<http://iot.linkeddata.es/def/wot#domain1> a <http://iot.linkeddata.es/def/wot#Thing> .
-				<http://iot.linkeddata.es/def/wot#isAccessibleThrough> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
- 				<http://iot.linkeddata.es/def/wot#range1>   a <http://iot.linkeddata.es/def/wot#Link> .
-				<http://iot.linkeddata.es/def/wot#domain1> <http://iot.linkeddata.es/def/wot#isAccessibleThrough> <http://iot.linkeddata.es/def/wot#range1>.
+				[:domain1] a [Thing] .
+				[isaccesiblethrough] a  [ObjectProperty].
+ 				[:range1]   a [Link] .
+				[:domain1] [isaccesiblethrough] [:range1].
   
 				"""
 			];
@@ -277,28 +316,80 @@
 
 
 :TCP5 a mf:QueryEvaluationTest;
-	dc:identifier "WoT32 and WoT33";
+	dc:identifier "WoT32";
 	mf:name "Test case 5-Object Properties";
-	dc:description "Related to requirement WoT32 and WoT33 in https://docs.google.com/spreadsheets/d/1eNVcbxxHfV4PntP8f1cRW1uD8IhRTy6nlIkQM85r_Cc/edit#gid=25348697";
-	mf:action[ qt:query """
+	dc:description "Related to requirement WoT32andWoT33 in https://docs.google.com/spreadsheets/d/1eNVcbxxHfV4PntP8f1cRW1uD8IhRTy6nlIkQM85r_Cc/edit#gid=25348697";
+	mf:action[qt:query """
+
 				PREFIX owl: <http://www.w3.org/2002/07/owl#>
 				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 				ASK {
- 					ObjectProperty(<http://iot.linkeddata.es/def/wot#isAccessibleThrough>)
+ 					ObjectProperty([isaccesiblethrough])
 				} 
 				""";
 
 			qt:data """
 			
-				<http://iot.linkeddata.es/def/wot#domain1> a <http://iot.linkeddata.es/def/wot#InteractionPattern> .
-				<http://iot.linkeddata.es/def/wot#isAccessibleThrough> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
- 				<http://iot.linkeddata.es/def/wot#range1>   a <http://iot.linkeddata.es/def/wot#Link> .
-				<http://iot.linkeddata.es/def/wot#domain1> <http://iot.linkeddata.es/def/wot#isAccessibleThrough> <http://iot.linkeddata.es/def/wot#range1>.
+				[:domain1] a [InteractionPattern] .
+				[isaccesiblethrough] a  [ObjectProperty].
+ 				[:range1]   a [Link] .
+				[:domain1] [isaccesiblethrough] [:range1].
+  
+				"""
+			];
+
+	mf:result "true".	
+
+:TCP6 a mf:QueryEvaluationTest;
+	dc:identifier "WoT33";
+	mf:name "Test case 5-Object Properties";
+	dc:description "Related to requirement WoT32 and WoT33 in https://docs.google.com/spreadsheets/d/1eNVcbxxHfV4PntP8f1cRW1uD8IhRTy6nlIkQM85r_Cc/edit#gid=25348697";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([isaccesiblethrough])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [InteractionPattern] .
+				[isaccesiblethrough] a  [ObjectProperty].
+ 				[:range1]   a [Link] .
+				[:domain1] [isaccesiblethrough] [:range1].
   
 				"""
 			];
 
 	mf:result "true".		
+
+
+:TCP7 a mf:QueryEvaluationTest;
+	dc:identifier "WoT27";
+	mf:name "Test case 7-Object Properties";
+	dc:description "Related to requirement WoT25 and WoT27 in https://docs.google.com/spreadsheets/d/1eNVcbxxHfV4PntP8f1cRW1uD8IhRTy6nlIkQM85r_Cc/edit#gid=25348694";
+	mf:action[qt:query """
+
+				PREFIX owl: <http://www.w3.org/2002/07/owl#>
+				PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+				ASK {
+ 					ObjectProperty([isaccesiblethrough])
+				} 
+				""";
+
+			qt:data """
+			
+				[:domain1] a [InteractionPattern] .
+				[isaccesiblethrough] a  [ObjectProperty].
+ 				[:range1]   a [Link] .
+				[:domain1] [isaccesiblethrough] [:range1].
+  
+				"""
+			];
+
+	mf:result "true".	
 
 
 #
@@ -312,16 +403,14 @@
 #
 
 :TCDP1 a mf:QueryEvaluationTest;
-	dc:identifier "WoT30 and WoT28";
+	dc:identifier "WoT30";
 	mf:name "Test case 1-Datatype Properties";
 	dc:description "Related to requirement WoT30 and WoT28 in https://docs.google.com/spreadsheets/d/1eNVcbxxHfV4PntP8f1cRW1uD8IhRTy6nlIkQM85r_Cc/edit#gid=25348692";
-	mf:action[ 
-
+	mf:action[
 			qt:data """
 			
-				<http://iot.linkeddata.es/def/wot#domain1> a <http://iot.linkeddata.es/def/wot#Link> .
-				<http://iot.linkeddata.es/def/wot#hrerf> a  <http://www.w3.org/2002/07/owl#ObjectProperty>.
-				<http://iot.linkeddata.es/def/wot#domain1> <http://iot.linkeddata.es/def/wot#hrerf> "href".
+				[:domain1] a [Link] .
+				[:domain1] [href] "href".
   
 				"""
 			];
@@ -332,14 +421,14 @@
 
 
 :TCDP2 a mf:QueryEvaluationTest;
-	dc:identifier "WoT32 and WoT33";
+	dc:identifier "WoT32";
 	mf:name "Test case 2-Datatype Properties";
 	dc:description "Related to requirement WoT32 and WoT33 in https://docs.google.com/spreadsheets/d/1eNVcbxxHfV4PntP8f1cRW1uD8IhRTy6nlIkQM85r_Cc/edit#gid=25348693";
-	mf:action[ 
+	mf:action[
 			qt:data """
 			
-				<http://iot.linkeddata.es/def/wot#domain1> a <http://iot.linkeddata.es/def/wot#InteractionPattern> .
-				<http://iot.linkeddata.es/def/wot#domain1> <http://iot.linkeddata.es/def/wot#interactionName> "name".
+				[:domain1] a [InteractionPattern] .
+				[:domain1] [interactionName] "name".
   
 				"""
 			];
@@ -353,12 +442,28 @@
 	dc:identifier "WoT28";
 	mf:name "Test case 3-Datatype Properties";
 	dc:description "Related to requirement WoT28 in https://docs.google.com/spreadsheets/d/1eNVcbxxHfV4PntP8f1cRW1uD8IhRTy6nlIkQM85r_Cc/edit#gid=25348694";
-	mf:action[ 
-
+	mf:action[
 			qt:data """
 			
-				<http://iot.linkeddata.es/def/wot#domain1> a <http://iot.linkeddata.es/def/wot#InteractionPattern> .
-				<http://iot.linkeddata.es/def/wot#domain1> <http://iot.linkeddata.es/def/wot#hasMediaType> "mediatype".
+				[:domain1] a [InteractionPattern] .
+				[:domain1] [hasMediaType] "mediatype".
+  
+				"""
+			];
+
+	mf:result "true".		
+
+
+	
+:TCDP4 a mf:QueryEvaluationTest;
+	dc:identifier "WoT33";
+	mf:name "Test case 4-Datatype Properties";
+	dc:description "Related to requirement WoT32 and WoT33 in https://docs.google.com/spreadsheets/d/1eNVcbxxHfV4PntP8f1cRW1uD8IhRTy6nlIkQM85r_Cc/edit#gid=25348693";
+	mf:action[
+			qt:data """
+			
+				[:domain1] a [InteractionPattern] .
+				[:domain1] [interactionName] "name".
   
 				"""
 			];
