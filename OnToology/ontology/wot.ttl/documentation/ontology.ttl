@@ -38,11 +38,6 @@ vs:term_status
       rdfs:label "Link"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :href ;
-                owl:someValuesFrom xsd:string
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:string ;
                 owl:onProperty :hasMediaType
               ] ;
@@ -50,6 +45,11 @@ vs:term_status
               [ a       owl:Restriction ;
                 owl:onProperty :isProvidedOverProtocol ;
                 owl:someValuesFrom :CommunicationProtocol
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :href ;
+                owl:someValuesFrom xsd:string
               ] .
 
 :CommunicationProtocol
@@ -57,6 +57,12 @@ vs:term_status
       rdfs:comment "A protocol is an agreement between the communicating parties on how communication is to proceed. (Definition taken from \"Tanenbaum, A. S. (2003). Computer networks, 4-th edition. ed: Prentice Hall.\")"@en ;
       rdfs:label "Communication protocol"@en ;
       owl:disjointWith :Property .
+
+<http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure>
+      a       owl:Class ;
+      rdfs:comment "The unit of measure is a standard for measurement of a quantity, such as a Property. For example, Temperature is a property and centigrade (or Celsius) is a unit of temperature that represents a definite predetermined temperature: when we say 20 centigrade, we actually mean 20 times the definite predetermined temperature unit called \"centigrade\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). (Definition adapted from SAREF ontology)"@en , "A unit of measure is a definite magnitude of a quantity, defined and adopted by convention and/or by law. It is used as a standard for measurement of the same quantity, where any other value of the quantity can be expressed as a simple multiple of the unit of measure. For example, length is a quantity; the metre is a unit of length that represents a definite predetermined length. When we say 10 metre (or 10 m), we actually mean 10 times the definite predetermined length called \"metre\". (definition taken from om ontology)"@en ;
+      rdfs:isDefinedBy "http://www.wurvoc.org/vocabularies/om-1.8/" ;
+      rdfs:label "Unit of measure"@en .
 
 :isMeasuredIn
       a       owl:ObjectProperty ;
@@ -102,7 +108,7 @@ vs:term_status
       rdfs:label "Data schema"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :UnitOfMeasure ;
+                owl:allValuesFrom <http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure> ;
                 owl:onProperty :isMeasuredIn
               ] ;
       rdfs:subClassOf
@@ -197,13 +203,13 @@ vs:term_status
       rdfs:label "Interaction pattern"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :isAccessibleThrough ;
-                owl:someValuesFrom :Link
+                owl:onProperty :interactionName ;
+                owl:someValuesFrom xsd:string
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:onProperty :interactionName ;
-                owl:someValuesFrom xsd:string
+                owl:onProperty :isAccessibleThrough ;
+                owl:someValuesFrom :Link
               ] .
 
 :describes
@@ -232,13 +238,13 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       rdfs:label "Thing"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :InteractionPattern ;
-                owl:onProperty :providesInteractionPattern
+                owl:allValuesFrom :Link ;
+                owl:onProperty :isAccessibleThrough
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :Link ;
-                owl:onProperty :isAccessibleThrough
+                owl:allValuesFrom :InteractionPattern ;
+                owl:onProperty :providesInteractionPattern
               ] .
 
 :defaultValue
@@ -271,8 +277,8 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       rdfs:subClassOf :InteractionPattern ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:boolean ;
-                owl:onProperty :isWritable
+                owl:allValuesFrom :DataSchema ;
+                owl:onProperty :hasOutputData
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -281,16 +287,11 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :DataSchema ;
-                owl:onProperty :hasOutputData
+                owl:allValuesFrom xsd:boolean ;
+                owl:onProperty :isWritable
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:boolean ;
                 owl:onProperty :isRequired
               ] .
-
-:UnitOfMeasure
-      a       owl:Class ;
-      rdfs:comment "The unit of measure is a standard for measurement of a quantity, such as a Property. For example, Temperature is a property and centigrade (or Celsius) is a unit of temperature that represents a definite predetermined temperature: when we say 20 centigrade, we actually mean 20 times the definite predetermined temperature unit called \"centigrade\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). (Definition adapted from SAREF ontology)"@en ;
-      rdfs:label "Unit of measure"@en .

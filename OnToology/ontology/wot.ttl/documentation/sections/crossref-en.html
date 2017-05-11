@@ -39,7 +39,8 @@ This section provides details for each class and property defined by [Ontology N
          <a href="#http://iot.linkeddata.es/def/wot#Thing" title="http://iot.linkeddata.es/def/wot#Thing">Thing</a>
       </li>
       <li>
-         <a href="#http://iot.linkeddata.es/def/wot#UnitOfMeasure" title="http://iot.linkeddata.es/def/wot#UnitOfMeasure">Unit of measure</a>
+         <a href="#http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"
+            title="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure">Unit of measure</a>
       </li>
    </ul>
    <div class="entity" id="http://iot.linkeddata.es/def/wot#Action">
@@ -60,14 +61,14 @@ This section provides details for each class and property defined by [Ontology N
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#http://iot.linkeddata.es/def/wot#hasInputData" title="http://iot.linkeddata.es/def/wot#hasInputData">has input data</a>
+            <a href="#http://iot.linkeddata.es/def/wot#hasOutputData" title="http://iot.linkeddata.es/def/wot#hasOutputData">has output data</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#http://iot.linkeddata.es/def/wot#DataSchema" title="http://iot.linkeddata.es/def/wot#DataSchema">Data schema</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#http://iot.linkeddata.es/def/wot#hasOutputData" title="http://iot.linkeddata.es/def/wot#hasOutputData">has output data</a>
+            <a href="#http://iot.linkeddata.es/def/wot#hasInputData" title="http://iot.linkeddata.es/def/wot#hasInputData">has input data</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#http://iot.linkeddata.es/def/wot#DataSchema" title="http://iot.linkeddata.es/def/wot#DataSchema">Data schema</a>
@@ -106,17 +107,18 @@ This section provides details for each class and property defined by [Ontology N
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
+            <a href="#http://iot.linkeddata.es/def/wot#isMeasuredIn" title="http://iot.linkeddata.es/def/wot#isMeasuredIn">is measured in</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"
+               title="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure">Unit of measure</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
             <a href="#http://iot.linkeddata.es/def/wot#hasValueType" title="http://iot.linkeddata.es/def/wot#hasValueType">has value type</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#http://iot.linkeddata.es/def/wot#DataType" title="http://iot.linkeddata.es/def/wot#DataType">Data type</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#http://iot.linkeddata.es/def/wot#isMeasuredIn" title="http://iot.linkeddata.es/def/wot#isMeasuredIn">is measured in</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#http://iot.linkeddata.es/def/wot#UnitOfMeasure" title="http://iot.linkeddata.es/def/wot#UnitOfMeasure">Unit of measure</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -212,12 +214,6 @@ This section provides details for each class and property defined by [Ontology N
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#http://iot.linkeddata.es/def/wot#href" title="http://iot.linkeddata.es/def/wot#href">href</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">some</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-         </dd>
-         <dd>
             <a href="#http://iot.linkeddata.es/def/wot#isProvidedOverProtocol"
                title="http://iot.linkeddata.es/def/wot#isProvidedOverProtocol">is provided over protocol</a>
             <sup class="type-op" title="object property">op</sup> 
@@ -225,6 +221,12 @@ This section provides details for each class and property defined by [Ontology N
             <a href="#http://iot.linkeddata.es/def/wot#CommunicationProtocol"
                title="http://iot.linkeddata.es/def/wot#CommunicationProtocol">Communication protocol</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://iot.linkeddata.es/def/wot#href" title="http://iot.linkeddata.es/def/wot#href">href</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">some</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
          <dd>
             <a href="#http://iot.linkeddata.es/def/wot#hasMediaType" title="http://iot.linkeddata.es/def/wot#hasMediaType">has media type</a>
@@ -267,16 +269,15 @@ The location of the media type registry is http://www.iana.org/assignments/media
          <dd>
             <a href="#http://iot.linkeddata.es/def/wot#hasOutputData" title="http://iot.linkeddata.es/def/wot#hasOutputData">has output data</a>
             <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
+            <span class="logic">only</span> 
             <a href="#http://iot.linkeddata.es/def/wot#DataSchema" title="http://iot.linkeddata.es/def/wot#DataSchema">Data schema</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#http://iot.linkeddata.es/def/wot#hasOutputData" title="http://iot.linkeddata.es/def/wot#hasOutputData">has output data</a>
-            <sup class="type-op" title="object property">op</sup> 
+            <a href="#http://iot.linkeddata.es/def/wot#isRequired" title="http://iot.linkeddata.es/def/wot#isRequired">is required</a>
+            <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">only</span> 
-            <a href="#http://iot.linkeddata.es/def/wot#DataSchema" title="http://iot.linkeddata.es/def/wot#DataSchema">Data schema</a>
-            <sup class="type-c" title="class">c</sup>
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
          </dd>
          <dd>
             <a href="#http://iot.linkeddata.es/def/wot#isWritable" title="http://iot.linkeddata.es/def/wot#isWritable">is writable</a>
@@ -285,10 +286,11 @@ The location of the media type registry is http://www.iana.org/assignments/media
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
          </dd>
          <dd>
-            <a href="#http://iot.linkeddata.es/def/wot#isRequired" title="http://iot.linkeddata.es/def/wot#isRequired">is required</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">only</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+            <a href="#http://iot.linkeddata.es/def/wot#hasOutputData" title="http://iot.linkeddata.es/def/wot#hasOutputData">has output data</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#http://iot.linkeddata.es/def/wot#DataSchema" title="http://iot.linkeddata.es/def/wot#DataSchema">Data schema</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is disjoint with</dt>
          <dd>
@@ -323,20 +325,20 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#http://iot.linkeddata.es/def/wot#isAccessibleThrough"
-               title="http://iot.linkeddata.es/def/wot#isAccessibleThrough">is accessible through</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#http://iot.linkeddata.es/def/wot#Link" title="http://iot.linkeddata.es/def/wot#Link">Link</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
             <a href="#http://iot.linkeddata.es/def/wot#providesInteractionPattern"
                title="http://iot.linkeddata.es/def/wot#providesInteractionPattern">provides interaction pattern</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#http://iot.linkeddata.es/def/wot#InteractionPattern"
                title="http://iot.linkeddata.es/def/wot#InteractionPattern">Interaction pattern</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#http://iot.linkeddata.es/def/wot#isAccessibleThrough"
+               title="http://iot.linkeddata.es/def/wot#isAccessibleThrough">is accessible through</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#http://iot.linkeddata.es/def/wot#Link" title="http://iot.linkeddata.es/def/wot#Link">Link</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -347,16 +349,20 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          </dd>
       </dl>
    </div>
-   <div class="entity" id="http://iot.linkeddata.es/def/wot#UnitOfMeasure">
+   <div class="entity" id="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure">
       <h3>Unit of measure<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://iot.linkeddata.es/def/wot#UnitOfMeasure</p>
+         <strong>IRI:</strong> http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure</p>
       <div class="comment">
-         <span class="markdown">The unit of measure is a standard for measurement of a quantity, such as a Property. For example, Temperature is a property and centigrade (or Celsius) is a unit of temperature that represents a definite predetermined temperature: when we say 20 centigrade, we actually mean 20 times the definite predetermined temperature unit called "centigrade". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). (Definition adapted from SAREF ontology)</span>
+         <span class="markdown">A unit of measure is a definite magnitude of a quantity, defined and adopted by convention and/or by law. It is used as a standard for measurement of the same quantity, where any other value of the quantity can be expressed as a simple multiple of the unit of measure. For example, length is a quantity; the metre is a unit of length that represents a definite predetermined length. When we say 10 metre (or 10 m), we actually mean 10 times the definite predetermined length called "metre". (definition taken from om ontology)</span>
       </div>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>[Ontology URI]</dd>
+      </dl>
    </div>
 </div><div id="objectproperties">
    <h3 id="properties" class="list">Object Properties</h3>
@@ -768,4 +774,12 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          </dl>
       </div>
    </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
 </div>
