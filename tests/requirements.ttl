@@ -5,7 +5,7 @@
 @prefix dc:    <http://purl.org/dc/terms/>
 @prefix  :     <http://vicinity.iot.linkeddata.es/vicinity/tests/testsuite-wot.ttl> 
 : rdf:type mf:Manifest;
-	mf:name "Test suite  for WoT Ontology v0.0.6"; 
+	mf:name "Test suite  for WoT Ontology v0.0.7"; 
 	mf:entries (
 		:class-test1
 		:class-test2
@@ -226,15 +226,15 @@
 				ASK {
  					ObjectProperty([providesIP]),
  					Class([InteractionPattern]),
- 					Class([Link])
+ 					Class([Thing])
 				} 
 				""";
 
 			qt:data """
 			
-				[:domain1] a [InteractionPattern] .
+				[:domain1] a [Thing] .
 				[:domain1] a [NamedIndividual] .
- 				[:range1]   a [Link] .
+ 				[:range1]   a [InteractionPattern] .
  				[:range1] a [NamedIndividual] .
 				[:domain1] [providesIP] [:range1].
   
