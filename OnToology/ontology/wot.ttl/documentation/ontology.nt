@@ -7,7 +7,7 @@
 <http://iot.linkeddata.es/def/wot#> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
 <http://iot.linkeddata.es/def/wot#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "wot" .
 <http://iot.linkeddata.es/def/wot#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://iot.linkeddata.es/def/wot" .
-<http://iot.linkeddata.es/def/wot#> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology aims to model the Web of Things domain according to the w3c Interest Group (http://w3c.github.io/wot/)"@en .
+<http://iot.linkeddata.es/def/wot#> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology aims to model the Web of Things domain according to the W3C Interest Group (http://w3c.github.io/wot/)"@en .
 <http://iot.linkeddata.es/def/wot#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.7" .
 # 
 # 

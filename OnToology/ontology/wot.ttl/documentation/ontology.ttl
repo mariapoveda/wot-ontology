@@ -15,7 +15,7 @@
                                      <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                      <http://purl.org/vocab/vann/preferredNamespacePrefix> "wot"^^xsd:string ;
                                      <http://purl.org/vocab/vann/preferredNamespaceUri> "http://iot.linkeddata.es/def/wot"^^xsd:string ;
-                                     rdfs:comment "This ontology aims to model the Web of Things domain according to the w3c Interest Group (http://w3c.github.io/wot/)"@en ;
+                                     rdfs:comment "This ontology aims to model the Web of Things domain according to the W3C Interest Group (http://w3c.github.io/wot/)"@en ;
                                      owl:versionInfo "0.0.7"^^xsd:string .
 
 #################################################################
