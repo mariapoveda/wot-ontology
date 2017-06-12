@@ -19,7 +19,7 @@
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wot</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://iot.linkeddata.es/def/wot</vann:preferredNamespaceUri>
-        <rdfs:comment xml:lang="en">This ontology aims to model the Web of Things domain according to the w3c Interest Group (http://w3c.github.io/wot/)</rdfs:comment>
+        <rdfs:comment xml:lang="en">This ontology aims to model the Web of Things domain according to the W3C Interest Group (http://w3c.github.io/wot/)</rdfs:comment>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.0.7</owl:versionInfo>
     </owl:Ontology>
     
