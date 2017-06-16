@@ -19,8 +19,8 @@
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wot</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://iot.linkeddata.es/def/wot</vann:preferredNamespaceUri>
-        <rdfs:comment xml:lang="en">This ontology aims to model the Web of Things domain according to the w3c Interest Group (http://w3c.github.io/wot/)</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.0.7</owl:versionInfo>
+        <rdfs:comment xml:lang="en">This ontology aims to model the Web of Things domain according to the W3C Interest Group (http://w3c.github.io/wot/)</rdfs:comment>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.0.8</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -146,6 +146,28 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:comment xml:lang="en">Relates an endpoint with the communication protocol it is served over. A given endpoint can be provided over at most one protocol.</rdfs:comment>
         <rdfs:label xml:lang="en">is provided over protocol</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iot.linkeddata.es/def/wot#isReadableThrough -->
+
+
+    <owl:ObjectProperty rdf:about="http://iot.linkeddata.es/def/wot#isReadableThrough">
+        <rdfs:subPropertyOf rdf:resource="http://iot.linkeddata.es/def/wot#isAccessibleThrough"/>
+        <rdfs:comment xml:lang="en">Indicates the endpoints from which an interaction pattern can be read.</rdfs:comment>
+        <rdfs:label xml:lang="en">is teadable through</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iot.linkeddata.es/def/wot#isWritableThrough -->
+
+
+    <owl:ObjectProperty rdf:about="http://iot.linkeddata.es/def/wot#isWritableThrough">
+        <rdfs:subPropertyOf rdf:resource="http://iot.linkeddata.es/def/wot#isAccessibleThrough"/>
+        <rdfs:label xml:lang="en">is writable through</rdfs:label>
+        <owl:backwardCompatibleWith xml:lang="en">Indicates the endpoints from which an interaction pattern can be written.</owl:backwardCompatibleWith>
     </owl:ObjectProperty>
     
 

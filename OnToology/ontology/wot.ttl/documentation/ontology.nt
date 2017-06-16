@@ -7,8 +7,8 @@
 <http://iot.linkeddata.es/def/wot#> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
 <http://iot.linkeddata.es/def/wot#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "wot" .
 <http://iot.linkeddata.es/def/wot#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://iot.linkeddata.es/def/wot" .
-<http://iot.linkeddata.es/def/wot#> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology aims to model the Web of Things domain according to the w3c Interest Group (http://w3c.github.io/wot/)"@en .
-<http://iot.linkeddata.es/def/wot#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.7" .
+<http://iot.linkeddata.es/def/wot#> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology aims to model the Web of Things domain according to the W3C Interest Group (http://w3c.github.io/wot/)"@en .
+<http://iot.linkeddata.es/def/wot#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.8" .
 # 
 # 
 # #################################################################
@@ -78,6 +78,18 @@
 <http://iot.linkeddata.es/def/wot#isProvidedOverProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://iot.linkeddata.es/def/wot#isProvidedOverProtocol> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an endpoint with the communication protocol it is served over. A given endpoint can be provided over at most one protocol."@en .
 <http://iot.linkeddata.es/def/wot#isProvidedOverProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "is provided over protocol"@en .
+# 
+# http://iot.linkeddata.es/def/wot#isReadableThrough
+<http://iot.linkeddata.es/def/wot#isReadableThrough> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://iot.linkeddata.es/def/wot#isReadableThrough> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://iot.linkeddata.es/def/wot#isAccessibleThrough> .
+<http://iot.linkeddata.es/def/wot#isReadableThrough> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the endpoints from which an interaction pattern can be read."@en .
+<http://iot.linkeddata.es/def/wot#isReadableThrough> <http://www.w3.org/2000/01/rdf-schema#label> "is teadable through"@en .
+# 
+# http://iot.linkeddata.es/def/wot#isWritableThrough
+<http://iot.linkeddata.es/def/wot#isWritableThrough> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://iot.linkeddata.es/def/wot#isWritableThrough> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://iot.linkeddata.es/def/wot#isAccessibleThrough> .
+<http://iot.linkeddata.es/def/wot#isWritableThrough> <http://www.w3.org/2000/01/rdf-schema#label> "is writable through"@en .
+<http://iot.linkeddata.es/def/wot#isWritableThrough> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> "Indicates the endpoints from which an interaction pattern can be written."@en .
 # 
 # http://iot.linkeddata.es/def/wot#providedBy
 <http://iot.linkeddata.es/def/wot#providedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

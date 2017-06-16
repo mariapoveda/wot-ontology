@@ -413,6 +413,14 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             title="http://iot.linkeddata.es/def/wot#isProvidedOverProtocol">is provided over protocol</a>
       </li>
       <li>
+         <a href="#http://iot.linkeddata.es/def/wot#isReadableThrough"
+            title="http://iot.linkeddata.es/def/wot#isReadableThrough">is teadable through</a>
+      </li>
+      <li>
+         <a href="#http://iot.linkeddata.es/def/wot#isWritableThrough"
+            title="http://iot.linkeddata.es/def/wot#isWritableThrough">is writable through</a>
+      </li>
+      <li>
          <a href="#http://iot.linkeddata.es/def/wot#providedBy" title="http://iot.linkeddata.es/def/wot#providedBy">providedBy</a>
       </li>
       <li>
@@ -498,6 +506,18 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       <div class="comment">
          <span class="markdown">Indicates the endpoints from which an interaction pattern is accessible</span>
       </div>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#http://iot.linkeddata.es/def/wot#isReadableThrough"
+                  title="http://iot.linkeddata.es/def/wot#isReadableThrough">is teadable through</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#http://iot.linkeddata.es/def/wot#isWritableThrough"
+                  title="http://iot.linkeddata.es/def/wot#isWritableThrough">is writable through</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="http://iot.linkeddata.es/def/wot#isDescribedBy">
       <h3>is described by<sup class="type-op" title="object property">op</sup>
@@ -543,6 +563,49 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <strong>IRI:</strong> http://iot.linkeddata.es/def/wot#isProvidedOverProtocol</p>
       <div class="comment">
          <span class="markdown">Relates an endpoint with the communication protocol it is served over. A given endpoint can be provided over at most one protocol.</span>
+      </div>
+   </div>
+   <div class="entity" id="http://iot.linkeddata.es/def/wot#isReadableThrough">
+      <h3>is teadable through<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/wot#isReadableThrough</p>
+      <div class="comment">
+         <span class="markdown">Indicates the endpoints from which an interaction pattern can be read.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#http://iot.linkeddata.es/def/wot#isAccessibleThrough"
+                  title="http://iot.linkeddata.es/def/wot#isAccessibleThrough">is accessible through</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://iot.linkeddata.es/def/wot#isWritableThrough">
+      <h3>is writable through<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/wot#isWritableThrough</p>
+      <dl>
+         <dt>Backward compatible with:</dt>
+         <dd>Indicates the endpoints from which an interaction pattern can be written.</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#http://iot.linkeddata.es/def/wot#isAccessibleThrough"
+                  title="http://iot.linkeddata.es/def/wot#isAccessibleThrough">is accessible through</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
       </div>
    </div>
    <div class="entity" id="http://iot.linkeddata.es/def/wot#providedBy">
