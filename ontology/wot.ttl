@@ -19,7 +19,7 @@
                                      dcterms:creator <http://purl.org/net/mpoveda> ,
                                                      <http://www.garcia-castro.com/foaf.rdf#me> ;
                                      vann:preferredNamespacePrefix "wot" ;
-                                     owl:versionInfo "0.0.7" ;
+                                     owl:versionInfo "0.0.8" ;
                                      dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                      vann:preferredNamespaceUri "http://iot.linkeddata.es/def/wot" ;
                                      rdfs:comment "This ontology aims to model the Web of Things domain according to the W3C Interest Group (http://w3c.github.io/wot/)"@en ;
@@ -95,6 +95,20 @@ vs:term_status rdf:type owl:AnnotationProperty .
                                  owl:FunctionalProperty ;
                         rdfs:comment "Relates an endpoint with the communication protocol it is served over. A given endpoint can be provided over at most one protocol."@en ;
                         rdfs:label "is provided over protocol"@en .
+
+
+###  http://iot.linkeddata.es/def/wot#isReadableThrough
+:isReadableThrough rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :isAccessibleThrough ;
+                   rdfs:comment "Indicates the endpoints from which an interaction pattern can be read."@en ;
+                   rdfs:label "is teadable through"@en .
+
+
+###  http://iot.linkeddata.es/def/wot#isWritableThrough
+:isWritableThrough rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :isAccessibleThrough ;
+                   rdfs:label "is writable through"@en ;
+                   owl:backwardCompatibleWith "Indicates the endpoints from which an interaction pattern can be written."@en .
 
 
 ###  http://iot.linkeddata.es/def/wot#providedBy
