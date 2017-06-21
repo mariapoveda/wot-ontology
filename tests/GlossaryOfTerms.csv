@@ -20,3 +20,5 @@ implementsSecurity,"""implements security""@en",http://iot.linkeddata.es/def/wot
 isWritable,"""is writable""@en",http://iot.linkeddata.es/def/wot#isWritable
 isRequired,"""is required""@en",http://iot.linkeddata.es/def/wot#isRequired
 NamedIndividual,,http://www.w3.org/2002/07/owl#NamedIndividual
+isReadableThrough,,http://iot.linkeddata.es/def/wot#isReadableThrough
+isWritableThrough,,http://iot.linkeddata.es/def/wot#isWritableThrough
