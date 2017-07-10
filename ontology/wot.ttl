@@ -101,7 +101,7 @@ vs:term_status rdf:type owl:AnnotationProperty .
 :isReadableThrough rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :isAccessibleThrough ;
                    rdfs:comment "Indicates the endpoints from which an interaction pattern can be read."@en ;
-                   rdfs:label "is teadable through"@en .
+                   rdfs:label "is readable through"@en .
 
 
 ###  http://iot.linkeddata.es/def/wot#isWritableThrough
