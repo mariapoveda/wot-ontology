@@ -83,7 +83,7 @@
 <http://iot.linkeddata.es/def/wot#isReadableThrough> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://iot.linkeddata.es/def/wot#isReadableThrough> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://iot.linkeddata.es/def/wot#isAccessibleThrough> .
 <http://iot.linkeddata.es/def/wot#isReadableThrough> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the endpoints from which an interaction pattern can be read."@en .
-<http://iot.linkeddata.es/def/wot#isReadableThrough> <http://www.w3.org/2000/01/rdf-schema#label> "is teadable through"@en .
+<http://iot.linkeddata.es/def/wot#isReadableThrough> <http://www.w3.org/2000/01/rdf-schema#label> "is readable through"@en .
 # 
 # http://iot.linkeddata.es/def/wot#isWritableThrough
 <http://iot.linkeddata.es/def/wot#isWritableThrough> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

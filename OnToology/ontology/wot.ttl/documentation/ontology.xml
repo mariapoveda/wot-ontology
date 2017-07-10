@@ -156,7 +156,7 @@
     <owl:ObjectProperty rdf:about="http://iot.linkeddata.es/def/wot#isReadableThrough">
         <rdfs:subPropertyOf rdf:resource="http://iot.linkeddata.es/def/wot#isAccessibleThrough"/>
         <rdfs:comment xml:lang="en">Indicates the endpoints from which an interaction pattern can be read.</rdfs:comment>
-        <rdfs:label xml:lang="en">is teadable through</rdfs:label>
+        <rdfs:label xml:lang="en">is readable through</rdfs:label>
     </owl:ObjectProperty>
     
 
