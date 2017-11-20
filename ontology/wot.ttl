@@ -5,6 +5,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix wot: <http://xmlns.com/wot/0.1/> .
+@prefix om18: <http://www.wurvoc.org/vocabularies/om-1.8/>.
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix doap: <http://usefulinc.com/ns/doap#> .
