@@ -145,6 +145,14 @@
 <http://iot.linkeddata.es/def/wot#interactionName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of an interaction pattern" .
 <http://iot.linkeddata.es/def/wot#interactionName> <http://www.w3.org/2000/01/rdf-schema#label> "interaction name"@en .
 # 
+# http://iot.linkeddata.es/def/wot#isQueueable
+<http://iot.linkeddata.es/def/wot#isQueueable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://iot.linkeddata.es/def/wot#isQueueable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://iot.linkeddata.es/def/wot#isQueueable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://iot.linkeddata.es/def/wot#isQueueable> <http://www.w3.org/2000/01/rdf-schema#comment> "Boolean value that indicates whether a property is queueable, that is, whether there can be a queue of requests waiting to execute given action."@en .
+<http://iot.linkeddata.es/def/wot#isQueueable> <http://www.w3.org/2000/01/rdf-schema#label> "is queueable"@en .
+<http://iot.linkeddata.es/def/wot#isQueueable> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://github.com/mariapoveda/wot-ontology/issues/43" .
+# 
 # http://iot.linkeddata.es/def/wot#isRequired
 <http://iot.linkeddata.es/def/wot#isRequired> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://iot.linkeddata.es/def/wot#isRequired> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
