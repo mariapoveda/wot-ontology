@@ -17,10 +17,11 @@
         <terms:creator rdf:resource="http://www.garcia-castro.com/foaf.rdf#me"/>
         <terms:creator rdf:resource="http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/"/>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-03-14</terms:modified>
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wot</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://iot.linkeddata.es/def/wot</vann:preferredNamespaceUri>
         <rdfs:comment xml:lang="en">This ontology aims to model the Web of Things domain according to the W3C Interest Group (http://w3c.github.io/wot/)</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.0.8</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.0.9</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -34,6 +35,13 @@
      -->
 
 
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
     
 
 
@@ -351,6 +359,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#hasOutputData"/>
                 <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#DataSchema"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#isQueueable"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The Action interaction pattern targets changes or processes on a Thing that take a certain time to complete (i.e., actions cannot be applied instantaneously like property writes). Examples include an LED fade in, moving a robot, brewing a cup of coffee, etc. Usually, ongoing Actions are modelled as Task resources, which are created when an Action invocation is received by the Thing. (Definition taken from http://w3c.github.io/wot/current-practices/wot-practices#action)</rdfs:comment>
