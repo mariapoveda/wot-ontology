@@ -158,6 +158,15 @@
                                                    rdfs:label "interaction name"@en .
 
 
+###  http://iot.linkeddata.es/def/wot#isQueueable
+<http://iot.linkeddata.es/def/wot#isQueueable> rdf:type owl:DatatypeProperty ,
+                                                        owl:FunctionalProperty ;
+                                               rdfs:range xsd:boolean ;
+                                               rdfs:comment "Boolean value that indicates whether a property is queueable, that is, whether there can be a queue of requests waiting to execute given action."@en ;
+                                               rdfs:label "is queueable"@en ;
+                                               rdfs:seeAlso "https://github.com/mariapoveda/wot-ontology/issues/43"^^xsd:string .
+
+
 ###  http://iot.linkeddata.es/def/wot#isRequired
 <http://iot.linkeddata.es/def/wot#isRequired> rdf:type owl:DatatypeProperty ,
                                                        owl:FunctionalProperty ;

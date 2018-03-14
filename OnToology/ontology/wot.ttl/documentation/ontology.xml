@@ -264,6 +264,19 @@
     
 
 
+    <!-- http://iot.linkeddata.es/def/wot#isQueueable -->
+
+
+    <owl:DatatypeProperty rdf:about="http://iot.linkeddata.es/def/wot#isQueueable">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Boolean value that indicates whether a property is queueable, that is, whether there can be a queue of requests waiting to execute given action.</rdfs:comment>
+        <rdfs:label xml:lang="en">is queueable</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/mariapoveda/wot-ontology/issues/43</rdfs:seeAlso>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://iot.linkeddata.es/def/wot#isRequired -->
 
 
