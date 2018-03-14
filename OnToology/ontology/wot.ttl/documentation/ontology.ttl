@@ -13,14 +13,19 @@
                                                                         <http://www.garcia-castro.com/foaf.rdf#me> ,
                                                                         <http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/> ;
                                      <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
+                                     <http://purl.org/dc/terms/modified> "2018-03-14"^^xsd:string ;
                                      <http://purl.org/vocab/vann/preferredNamespacePrefix> "wot"^^xsd:string ;
                                      <http://purl.org/vocab/vann/preferredNamespaceUri> "http://iot.linkeddata.es/def/wot"^^xsd:string ;
                                      rdfs:comment "This ontology aims to model the Web of Things domain according to the W3C Interest Group (http://w3c.github.io/wot/)"@en ;
-                                     owl:versionInfo "0.0.8"^^xsd:string .
+                                     owl:versionInfo "0.0.9"^^xsd:string .
 
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
 
 ###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
 <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> rdf:type owl:AnnotationProperty .
@@ -212,6 +217,10 @@
                                                           [ rdf:type owl:Restriction ;
                                                             owl:onProperty <http://iot.linkeddata.es/def/wot#hasOutputData> ;
                                                             owl:allValuesFrom <http://iot.linkeddata.es/def/wot#DataSchema>
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://iot.linkeddata.es/def/wot#isQueueable> ;
+                                                            owl:allValuesFrom xsd:boolean
                                                           ] ;
                                           rdfs:comment "The Action interaction pattern targets changes or processes on a Thing that take a certain time to complete (i.e., actions cannot be applied instantaneously like property writes). Examples include an LED fade in, moving a robot, brewing a cup of coffee, etc. Usually, ongoing Actions are modelled as Task resources, which are created when an Action invocation is received by the Thing. (Definition taken from http://w3c.github.io/wot/current-practices/wot-practices#action)"@en ;
                                           rdfs:label "Action"@en .
