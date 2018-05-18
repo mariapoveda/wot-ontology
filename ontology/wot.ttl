@@ -16,11 +16,10 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
 <http://iot.linkeddata.es/def/wot#> a owl:Ontology ;
-	dcterms:creator <http://purl.org/net/mpoveda> ;
-	dcterms:modified "2018-03-14" ;
-	owl:versionInfo "0.0.9" ;
-	dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
+	dcterms:creator <http://purl.org/net/mpoveda> , <http://www.garcia-castro.com/foaf.rdf#me> ;
 	vann:preferredNamespacePrefix "wot" ;
+	dcterms:modified "2018-05-18" ;
+	owl:versionInfo "0.0.10" ;
 	dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
 	vann:preferredNamespaceUri "http://iot.linkeddata.es/def/wot" ;
 	rdfs:comment "This ontology aims to model the Web of Things domain according to the W3C Interest Group (http://w3c.github.io/wot/)"@en ;
@@ -322,18 +321,30 @@ _:genid8 a owl:Restriction ;
 	rdfs:subClassOf _:genid9 .
 
 _:genid9 a owl:Restriction ;
-	owl:onProperty :isProvidedOverProtocol ;
-	owl:someValuesFrom :CommunicationProtocol .
+	owl:onProperty :hasInputData ;
+	owl:someValuesFrom :DataSchema .
 
 :Link rdfs:subClassOf _:genid10 .
 
 _:genid10 a owl:Restriction ;
-	owl:onProperty :href ;
-	owl:someValuesFrom xsd:string .
+	owl:onProperty :hasOutputData ;
+	owl:someValuesFrom :DataSchema .
 
 :Link rdfs:subClassOf _:genid11 .
 
 _:genid11 a owl:Restriction ;
+	owl:onProperty :isProvidedOverProtocol ;
+	owl:someValuesFrom :CommunicationProtocol .
+
+:Link rdfs:subClassOf _:genid12 .
+
+_:genid12 a owl:Restriction ;
+	owl:onProperty :href ;
+	owl:someValuesFrom xsd:string .
+
+:Link rdfs:subClassOf _:genid13 .
+
+_:genid13 a owl:Restriction ;
 	owl:onProperty :hasMediaType ;
 	owl:allValuesFrom xsd:string .
 
@@ -352,27 +363,27 @@ The location of the media type registry is http://www.iana.org/assignments/media
 # http://iot.linkeddata.es/def/wot#Property
 
 :Property a owl:Class ;
-	rdfs:subClassOf :InteractionPattern , _:genid12 .
-
-_:genid12 a owl:Restriction ;
-	owl:onProperty :hasOutputData ;
-	owl:someValuesFrom :DataSchema .
-
-:Property rdfs:subClassOf _:genid13 .
-
-_:genid13 a owl:Restriction ;
-	owl:onProperty :hasOutputData ;
-	owl:allValuesFrom :DataSchema .
-
-:Property rdfs:subClassOf _:genid14 .
+	rdfs:subClassOf :InteractionPattern , _:genid14 .
 
 _:genid14 a owl:Restriction ;
-	owl:onProperty :isRequired ;
-	owl:allValuesFrom xsd:boolean .
+	owl:onProperty :hasOutputData ;
+	owl:someValuesFrom :DataSchema .
 
 :Property rdfs:subClassOf _:genid15 .
 
 _:genid15 a owl:Restriction ;
+	owl:onProperty :hasOutputData ;
+	owl:allValuesFrom :DataSchema .
+
+:Property rdfs:subClassOf _:genid16 .
+
+_:genid16 a owl:Restriction ;
+	owl:onProperty :isRequired ;
+	owl:allValuesFrom xsd:boolean .
+
+:Property rdfs:subClassOf _:genid17 .
+
+_:genid17 a owl:Restriction ;
 	owl:onProperty :isWritable ;
 	owl:allValuesFrom xsd:boolean .
 
@@ -389,15 +400,15 @@ _:genid15 a owl:Restriction ;
 # http://iot.linkeddata.es/def/wot#Thing
 
 :Thing a owl:Class ;
-	rdfs:subClassOf _:genid16 .
+	rdfs:subClassOf _:genid18 .
 
-_:genid16 a owl:Restriction ;
+_:genid18 a owl:Restriction ;
 	owl:onProperty :isAccessibleThrough ;
 	owl:allValuesFrom :Link .
 
-:Thing rdfs:subClassOf _:genid17 .
+:Thing rdfs:subClassOf _:genid19 .
 
-_:genid17 a owl:Restriction ;
+_:genid19 a owl:Restriction ;
 	owl:onProperty :providesInteractionPattern ;
 	owl:allValuesFrom :InteractionPattern .
 
