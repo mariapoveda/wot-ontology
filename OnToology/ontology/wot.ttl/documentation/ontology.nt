@@ -5,11 +5,11 @@
 <http://iot.linkeddata.es/def/wot#> <http://purl.org/dc/terms/creator> <http://www.garcia-castro.com/foaf.rdf#me> .
 <http://iot.linkeddata.es/def/wot#> <http://purl.org/dc/terms/creator> <http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/> .
 <http://iot.linkeddata.es/def/wot#> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
-<http://iot.linkeddata.es/def/wot#> <http://purl.org/dc/terms/modified> "2018-03-14" .
+<http://iot.linkeddata.es/def/wot#> <http://purl.org/dc/terms/modified> "2018-05-18" .
 <http://iot.linkeddata.es/def/wot#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "wot" .
 <http://iot.linkeddata.es/def/wot#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://iot.linkeddata.es/def/wot" .
 <http://iot.linkeddata.es/def/wot#> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology aims to model the Web of Things domain according to the W3C Interest Group (http://w3c.github.io/wot/)"@en .
-<http://iot.linkeddata.es/def/wot#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.9" .
+<http://iot.linkeddata.es/def/wot#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.10" .
 # 
 # 
 # #################################################################
@@ -263,16 +263,24 @@ _:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/
 <http://iot.linkeddata.es/def/wot#Link> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://iot.linkeddata.es/def/wot#Link> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#isProvidedOverProtocol> .
-_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.es/def/wot#CommunicationProtocol> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#hasInputData> .
+_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.es/def/wot#DataSchema> .
 <http://iot.linkeddata.es/def/wot#Link> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
 _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#href> .
-_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#hasOutputData> .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.es/def/wot#DataSchema> .
 <http://iot.linkeddata.es/def/wot#Link> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
 _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#hasMediaType> .
-_:genid11 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#isProvidedOverProtocol> .
+_:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.es/def/wot#CommunicationProtocol> .
+<http://iot.linkeddata.es/def/wot#Link> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#href> .
+_:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://iot.linkeddata.es/def/wot#Link> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#hasMediaType> .
+_:genid13 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
 <http://iot.linkeddata.es/def/wot#Link> <http://www.w3.org/2000/01/rdf-schema#comment> "A URL where a service can be accessed by a client application. A service might have more than one link."@en .
 <http://iot.linkeddata.es/def/wot#Link> <http://www.w3.org/2000/01/rdf-schema#label> "Link"@en .
 # 
@@ -285,22 +293,22 @@ _:genid11 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/
 # http://iot.linkeddata.es/def/wot#Property
 <http://iot.linkeddata.es/def/wot#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://iot.linkeddata.es/def/wot#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://iot.linkeddata.es/def/wot#InteractionPattern> .
-<http://iot.linkeddata.es/def/wot#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#hasOutputData> .
-_:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.es/def/wot#DataSchema> .
-<http://iot.linkeddata.es/def/wot#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#hasOutputData> .
-_:genid13 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es/def/wot#DataSchema> .
 <http://iot.linkeddata.es/def/wot#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
 _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#isRequired> .
-_:genid14 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#hasOutputData> .
+_:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://iot.linkeddata.es/def/wot#DataSchema> .
 <http://iot.linkeddata.es/def/wot#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
 _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#isWritable> .
-_:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#hasOutputData> .
+_:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es/def/wot#DataSchema> .
+<http://iot.linkeddata.es/def/wot#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#isRequired> .
+_:genid16 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://iot.linkeddata.es/def/wot#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#isWritable> .
+_:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
 <http://iot.linkeddata.es/def/wot#Property> <http://www.w3.org/2000/01/rdf-schema#comment> "Property provides readable and/or writeable data that can be static (e.g., supported mode, rated output voltage, etc.) or dynamic (e.g., current fill level of water, minimum recorded temperature, etc.).  (Definition taken from http://w3c.github.io/wot/current-practices/wot-practices#property)"@en .
 <http://iot.linkeddata.es/def/wot#Property> <http://www.w3.org/2000/01/rdf-schema#label> "Property"@en .
 # 
@@ -312,14 +320,14 @@ _:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/
 # 
 # http://iot.linkeddata.es/def/wot#Thing
 <http://iot.linkeddata.es/def/wot#Thing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://iot.linkeddata.es/def/wot#Thing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#isAccessibleThrough> .
-_:genid16 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es/def/wot#Link> .
-<http://iot.linkeddata.es/def/wot#Thing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#providesInteractionPattern> .
-_:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es/def/wot#InteractionPattern> .
+<http://iot.linkeddata.es/def/wot#Thing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#isAccessibleThrough> .
+_:genid18 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es/def/wot#Link> .
+<http://iot.linkeddata.es/def/wot#Thing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://iot.linkeddata.es/def/wot#providesInteractionPattern> .
+_:genid19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://iot.linkeddata.es/def/wot#InteractionPattern> .
 <http://iot.linkeddata.es/def/wot#Thing> <http://www.w3.org/2000/01/rdf-schema#comment> "An thing is anything (both physical and non-physical) which has a distinct and independent existence. Every thing has a unique identity. (Definition adapted from \nISO/IEC CC 30141. Information technology - Internet of Things Reference architecutre (IoT RA))"@en .
 <http://iot.linkeddata.es/def/wot#Thing> <http://www.w3.org/2000/01/rdf-schema#comment> "The abstract concept of a physical entity that can either be a real-world artifact, such as a device, or a virtual entity that represents physicality, such as a room or group of devices"@en .
 <http://iot.linkeddata.es/def/wot#Thing> <http://www.w3.org/2000/01/rdf-schema#label> "Thing"@en .
