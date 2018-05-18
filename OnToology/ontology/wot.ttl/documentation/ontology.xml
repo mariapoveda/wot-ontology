@@ -17,11 +17,11 @@
         <terms:creator rdf:resource="http://www.garcia-castro.com/foaf.rdf#me"/>
         <terms:creator rdf:resource="http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/"/>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-03-14</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-18</terms:modified>
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wot</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://iot.linkeddata.es/def/wot</vann:preferredNamespaceUri>
         <rdfs:comment xml:lang="en">This ontology aims to model the Web of Things domain according to the W3C Interest Group (http://w3c.github.io/wot/)</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.0.9</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.0.10</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -460,6 +460,18 @@
 
 
     <owl:Class rdf:about="http://iot.linkeddata.es/def/wot#Link">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#hasInputData"/>
+                <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#DataSchema"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#hasOutputData"/>
+                <owl:someValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot#DataSchema"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot#isProvidedOverProtocol"/>

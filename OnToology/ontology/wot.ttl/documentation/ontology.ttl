@@ -13,11 +13,11 @@
                                                                         <http://www.garcia-castro.com/foaf.rdf#me> ,
                                                                         <http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/> ;
                                      <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
-                                     <http://purl.org/dc/terms/modified> "2018-03-14"^^xsd:string ;
+                                     <http://purl.org/dc/terms/modified> "2018-05-18"^^xsd:string ;
                                      <http://purl.org/vocab/vann/preferredNamespacePrefix> "wot"^^xsd:string ;
                                      <http://purl.org/vocab/vann/preferredNamespaceUri> "http://iot.linkeddata.es/def/wot"^^xsd:string ;
                                      rdfs:comment "This ontology aims to model the Web of Things domain according to the W3C Interest Group (http://w3c.github.io/wot/)"@en ;
-                                     owl:versionInfo "0.0.9"^^xsd:string .
+                                     owl:versionInfo "0.0.10"^^xsd:string .
 
 #################################################################
 #    Annotation properties
@@ -282,6 +282,14 @@
 ###  http://iot.linkeddata.es/def/wot#Link
 <http://iot.linkeddata.es/def/wot#Link> rdf:type owl:Class ;
                                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://iot.linkeddata.es/def/wot#hasInputData> ;
+                                                          owl:someValuesFrom <http://iot.linkeddata.es/def/wot#DataSchema>
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://iot.linkeddata.es/def/wot#hasOutputData> ;
+                                                          owl:someValuesFrom <http://iot.linkeddata.es/def/wot#DataSchema>
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
                                                           owl:onProperty <http://iot.linkeddata.es/def/wot#isProvidedOverProtocol> ;
                                                           owl:someValuesFrom <http://iot.linkeddata.es/def/wot#CommunicationProtocol>
                                                         ] ,
