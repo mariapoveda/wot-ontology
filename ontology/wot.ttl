@@ -19,7 +19,7 @@
 	dcterms:creator <http://purl.org/net/mpoveda> , <http://www.garcia-castro.com/foaf.rdf#me> ;
 	vann:preferredNamespacePrefix "wot" ;
 	dcterms:modified "2018-05-18" ;
-	owl:versionInfo "0.0.10" ;
+	owl:versionInfo "0.0.11" ;
 	dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
 	vann:preferredNamespaceUri "http://iot.linkeddata.es/def/wot" ;
 	rdfs:comment "This ontology aims to model the Web of Things domain according to the W3C Interest Group (http://w3c.github.io/wot/)"@en ;
@@ -71,6 +71,13 @@ vs:term_status a owl:AnnotationProperty .
 :hasOutputData a owl:ObjectProperty ;
 	rdfs:comment "link to the n-ary class that allows the declaration of the data type and unit of measure provided by an interaction pattern."@en ;
 	rdfs:label "has output data"@en .
+# 
+# http://iot.linkeddata.es/def/wot#hasPriorityEndpoint
+
+:hasPriorityEndpoint a owl:ObjectProperty ;
+	rdfs:subPropertyOf :isAccessibleThrough ;
+	rdfs:comment "Priority endpoint representation of \"pri\" field for endpoints in \"(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification\""@en ;
+	rdfs:label "has priority endpoint"@en .
 # 
 # http://iot.linkeddata.es/def/wot#hasValueType
 
@@ -175,13 +182,18 @@ vs:term_status a owl:AnnotationProperty .
 	rdfs:comment "URI of the endpoint where an interaction pattern is provided"@en ;
 	rdfs:label "href"@en .
 # 
+# http://iot.linkeddata.es/def/wot#interactionDescription
+
+:interactionDescription a owl:DatatypeProperty ;
+	rdfs:label "Description of an interaction pattern, aligment with \"(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification\""@en , "interaction pattern description"@en .
+# 
 # http://iot.linkeddata.es/def/wot#interactionName
 
 :interactionName a owl:DatatypeProperty ;
 	rdfs:subPropertyOf :name ;
 	rdfs:domain :InteractionPattern ;
 	rdfs:comment "Name of an interaction pattern" ;
-	rdfs:label "interaction name"@en .
+	rdfs:label "Title of an interaction pattern, aligment with \"(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification\""@en , "interaction name"@en , "interaction pattern title"@en .
 # 
 # http://iot.linkeddata.es/def/wot#isQueueable
 
