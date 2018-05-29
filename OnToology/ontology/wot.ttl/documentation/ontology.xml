@@ -275,7 +275,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://iot.linkeddata.es/def/wot#interactionDescription">
-        <rdfs:label xml:lang="en">Description of an interaction pattern, aligment with &quot;(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification&quot;</rdfs:label>
+        <rdfs:comment xml:lang="en">Description of an interaction pattern, aligment with &quot;(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">interaction pattern description</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -287,8 +287,8 @@
     <owl:DatatypeProperty rdf:about="http://iot.linkeddata.es/def/wot#interactionName">
         <rdfs:subPropertyOf rdf:resource="http://iot.linkeddata.es/def/wot#name"/>
         <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/wot#InteractionPattern"/>
+        <rdfs:comment xml:lang="en">Title of an interaction pattern, aligment with &quot;(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification&quot;</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Name of an interaction pattern</rdfs:comment>
-        <rdfs:label xml:lang="en">Title of an interaction pattern, aligment with &quot;(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification&quot;</rdfs:label>
         <rdfs:label xml:lang="en">interaction name</rdfs:label>
         <rdfs:label xml:lang="en">interaction pattern title</rdfs:label>
     </owl:DatatypeProperty>
