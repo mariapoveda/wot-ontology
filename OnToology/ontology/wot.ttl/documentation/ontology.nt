@@ -9,7 +9,7 @@
 <http://iot.linkeddata.es/def/wot#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "wot" .
 <http://iot.linkeddata.es/def/wot#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://iot.linkeddata.es/def/wot" .
 <http://iot.linkeddata.es/def/wot#> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology aims to model the Web of Things domain according to the W3C Interest Group (http://w3c.github.io/wot/)"@en .
-<http://iot.linkeddata.es/def/wot#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.10" .
+<http://iot.linkeddata.es/def/wot#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.11" .
 # 
 # 
 # #################################################################
@@ -50,6 +50,12 @@
 <http://iot.linkeddata.es/def/wot#hasOutputData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://iot.linkeddata.es/def/wot#hasOutputData> <http://www.w3.org/2000/01/rdf-schema#comment> "link to the n-ary class that allows the declaration of the data type and unit of measure provided by an interaction pattern."@en .
 <http://iot.linkeddata.es/def/wot#hasOutputData> <http://www.w3.org/2000/01/rdf-schema#label> "has output data"@en .
+# 
+# http://iot.linkeddata.es/def/wot#hasPriorityEndpoint
+<http://iot.linkeddata.es/def/wot#hasPriorityEndpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://iot.linkeddata.es/def/wot#hasPriorityEndpoint> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://iot.linkeddata.es/def/wot#isAccessibleThrough> .
+<http://iot.linkeddata.es/def/wot#hasPriorityEndpoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Priority endpoint representation of \"pri\" field for endpoints in \"(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology \u2014 Open Connectivity Foundation \u2014 Part 1: Core specification\""@en .
+<http://iot.linkeddata.es/def/wot#hasPriorityEndpoint> <http://www.w3.org/2000/01/rdf-schema#label> "has priority endpoint"@en .
 # 
 # http://iot.linkeddata.es/def/wot#hasValueType
 <http://iot.linkeddata.es/def/wot#hasValueType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -142,12 +148,19 @@
 <http://iot.linkeddata.es/def/wot#href> <http://www.w3.org/2000/01/rdf-schema#comment> "URI of the endpoint where an interaction pattern is provided"@en .
 <http://iot.linkeddata.es/def/wot#href> <http://www.w3.org/2000/01/rdf-schema#label> "href"@en .
 # 
+# http://iot.linkeddata.es/def/wot#interactionDescription
+<http://iot.linkeddata.es/def/wot#interactionDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://iot.linkeddata.es/def/wot#interactionDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Description of an interaction pattern, aligment with \"(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology \u2014 Open Connectivity Foundation \u2014 Part 1: Core specification\""@en .
+<http://iot.linkeddata.es/def/wot#interactionDescription> <http://www.w3.org/2000/01/rdf-schema#label> "interaction pattern description"@en .
+# 
 # http://iot.linkeddata.es/def/wot#interactionName
 <http://iot.linkeddata.es/def/wot#interactionName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://iot.linkeddata.es/def/wot#interactionName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://iot.linkeddata.es/def/wot#name> .
 <http://iot.linkeddata.es/def/wot#interactionName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iot.linkeddata.es/def/wot#InteractionPattern> .
 <http://iot.linkeddata.es/def/wot#interactionName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of an interaction pattern" .
+<http://iot.linkeddata.es/def/wot#interactionName> <http://www.w3.org/2000/01/rdf-schema#label> "Title of an interaction pattern, aligment with \"(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology \u2014 Open Connectivity Foundation \u2014 Part 1: Core specification\""@en .
 <http://iot.linkeddata.es/def/wot#interactionName> <http://www.w3.org/2000/01/rdf-schema#label> "interaction name"@en .
+<http://iot.linkeddata.es/def/wot#interactionName> <http://www.w3.org/2000/01/rdf-schema#label> "interaction pattern title"@en .
 # 
 # http://iot.linkeddata.es/def/wot#isQueueable
 <http://iot.linkeddata.es/def/wot#isQueueable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
