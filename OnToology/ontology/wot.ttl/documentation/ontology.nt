@@ -150,15 +150,15 @@
 # 
 # http://iot.linkeddata.es/def/wot#interactionDescription
 <http://iot.linkeddata.es/def/wot#interactionDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://iot.linkeddata.es/def/wot#interactionDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Description of an interaction pattern, aligment with \"(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology \u2014 Open Connectivity Foundation \u2014 Part 1: Core specification\""@en .
+<http://iot.linkeddata.es/def/wot#interactionDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of an interaction pattern, aligment with \"(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology \u2014 Open Connectivity Foundation \u2014 Part 1: Core specification\""@en .
 <http://iot.linkeddata.es/def/wot#interactionDescription> <http://www.w3.org/2000/01/rdf-schema#label> "interaction pattern description"@en .
 # 
 # http://iot.linkeddata.es/def/wot#interactionName
 <http://iot.linkeddata.es/def/wot#interactionName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://iot.linkeddata.es/def/wot#interactionName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://iot.linkeddata.es/def/wot#name> .
 <http://iot.linkeddata.es/def/wot#interactionName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iot.linkeddata.es/def/wot#InteractionPattern> .
+<http://iot.linkeddata.es/def/wot#interactionName> <http://www.w3.org/2000/01/rdf-schema#comment> "Title of an interaction pattern, aligment with \"(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology \u2014 Open Connectivity Foundation \u2014 Part 1: Core specification\""@en .
 <http://iot.linkeddata.es/def/wot#interactionName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of an interaction pattern" .
-<http://iot.linkeddata.es/def/wot#interactionName> <http://www.w3.org/2000/01/rdf-schema#label> "Title of an interaction pattern, aligment with \"(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology \u2014 Open Connectivity Foundation \u2014 Part 1: Core specification\""@en .
 <http://iot.linkeddata.es/def/wot#interactionName> <http://www.w3.org/2000/01/rdf-schema#label> "interaction name"@en .
 <http://iot.linkeddata.es/def/wot#interactionName> <http://www.w3.org/2000/01/rdf-schema#label> "interaction pattern title"@en .
 # 

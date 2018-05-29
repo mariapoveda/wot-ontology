@@ -164,17 +164,17 @@
 
 ###  http://iot.linkeddata.es/def/wot#interactionDescription
 <http://iot.linkeddata.es/def/wot#interactionDescription> rdf:type owl:DatatypeProperty ;
-                                                          rdfs:label "Description of an interaction pattern, aligment with \"(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification\""@en ,
-                                                                     "interaction pattern description"@en .
+                                                          rdfs:comment "Description of an interaction pattern, aligment with \"(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification\""@en ;
+                                                          rdfs:label "interaction pattern description"@en .
 
 
 ###  http://iot.linkeddata.es/def/wot#interactionName
 <http://iot.linkeddata.es/def/wot#interactionName> rdf:type owl:DatatypeProperty ;
                                                    rdfs:subPropertyOf <http://iot.linkeddata.es/def/wot#name> ;
                                                    rdfs:domain <http://iot.linkeddata.es/def/wot#InteractionPattern> ;
-                                                   rdfs:comment "Name of an interaction pattern"^^xsd:string ;
-                                                   rdfs:label "Title of an interaction pattern, aligment with \"(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification\""@en ,
-                                                              "interaction name"@en ,
+                                                   rdfs:comment "Title of an interaction pattern, aligment with \"(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification\""@en ,
+                                                                "Name of an interaction pattern"^^xsd:string ;
+                                                   rdfs:label "interaction name"@en ,
                                                               "interaction pattern title"@en .
 
 

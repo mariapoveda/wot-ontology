@@ -187,7 +187,7 @@ This section provides details for each class and property defined by [Ontology N
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#http://iot.linkeddata.es/def/wot#interactionName" title="http://iot.linkeddata.es/def/wot#interactionName">Title of an interaction pattern, aligment with "(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification"</a>
+            <a href="#http://iot.linkeddata.es/def/wot#interactionName" title="http://iot.linkeddata.es/def/wot#interactionName">interaction name</a>
             <sup class="type-dp" title="data property">dp</sup> 
             <span class="logic">some</span> 
             <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
@@ -201,7 +201,7 @@ This section provides details for each class and property defined by [Ontology N
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#http://iot.linkeddata.es/def/wot#interactionName" title="http://iot.linkeddata.es/def/wot#interactionName">Title of an interaction pattern, aligment with "(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification"</a>
+            <a href="#http://iot.linkeddata.es/def/wot#interactionName" title="http://iot.linkeddata.es/def/wot#interactionName">interaction name</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
@@ -703,14 +703,17 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <a href="#http://iot.linkeddata.es/def/wot#defaultValue" title="http://iot.linkeddata.es/def/wot#defaultValue">defaultValue</a>
       </li>
       <li>
-         <a href="#http://iot.linkeddata.es/def/wot#interactionDescription"
-            title="http://iot.linkeddata.es/def/wot#interactionDescription">Description of an interaction pattern, aligment with "(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification"</a>
-      </li>
-      <li>
          <a href="#http://iot.linkeddata.es/def/wot#hasMediaType" title="http://iot.linkeddata.es/def/wot#hasMediaType">has media type</a>
       </li>
       <li>
          <a href="#http://iot.linkeddata.es/def/wot#href" title="http://iot.linkeddata.es/def/wot#href">href</a>
+      </li>
+      <li>
+         <a href="#http://iot.linkeddata.es/def/wot#interactionName" title="http://iot.linkeddata.es/def/wot#interactionName">interaction name</a>
+      </li>
+      <li>
+         <a href="#http://iot.linkeddata.es/def/wot#interactionDescription"
+            title="http://iot.linkeddata.es/def/wot#interactionDescription">interaction pattern description</a>
       </li>
       <li>
          <a href="#http://iot.linkeddata.es/def/wot#isQueueable" title="http://iot.linkeddata.es/def/wot#isQueueable">is queueable</a>
@@ -726,9 +729,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
       </li>
       <li>
          <a href="#http://iot.linkeddata.es/def/wot#thingName" title="http://iot.linkeddata.es/def/wot#thingName">thing name</a>
-      </li>
-      <li>
-         <a href="#http://iot.linkeddata.es/def/wot#interactionName" title="http://iot.linkeddata.es/def/wot#interactionName">Title of an interaction pattern, aligment with "(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification"</a>
       </li>
    </ul>
    <div class="entity" id="http://iot.linkeddata.es/def/wot#baseURI">
@@ -775,14 +775,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          </dl>
       </div>
    </div>
-   <div class="entity" id="http://iot.linkeddata.es/def/wot#interactionDescription">
-      <h3>Description of an interaction pattern, aligment with "(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification"<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://iot.linkeddata.es/def/wot#interactionDescription</p>
-   </div>
    <div class="entity" id="http://iot.linkeddata.es/def/wot#hasMediaType">
       <h3>has media type<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -821,6 +813,43 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
             </dd>
          </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://iot.linkeddata.es/def/wot#interactionName">
+      <h3>interaction name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/wot#interactionName</p>
+      <div class="comment">
+         <span class="markdown">Title of an interaction pattern, aligment with "(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification"</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#http://iot.linkeddata.es/def/wot#name" title="http://iot.linkeddata.es/def/wot#name">name</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://iot.linkeddata.es/def/wot#InteractionPattern"
+                  title="http://iot.linkeddata.es/def/wot#InteractionPattern">Interaction pattern</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://iot.linkeddata.es/def/wot#interactionDescription">
+      <h3>interaction pattern description<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://iot.linkeddata.es/def/wot#interactionDescription</p>
+      <div class="comment">
+         <span class="markdown">Description of an interaction pattern, aligment with "(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification"</span>
       </div>
    </div>
    <div class="entity" id="http://iot.linkeddata.es/def/wot#isQueueable">
@@ -900,7 +929,7 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
          <dl>
             <dt>has sub-properties</dt>
             <dd>
-               <a href="#http://iot.linkeddata.es/def/wot#interactionName" title="http://iot.linkeddata.es/def/wot#interactionName">Title of an interaction pattern, aligment with "(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification"</a>
+               <a href="#http://iot.linkeddata.es/def/wot#interactionName" title="http://iot.linkeddata.es/def/wot#interactionName">interaction name</a>
                <sup class="type-dp" title="data property">dp</sup>, <a href="#http://iot.linkeddata.es/def/wot#thingName" title="http://iot.linkeddata.es/def/wot#thingName">thing name</a>
                <sup class="type-dp" title="data property">dp</sup>
             </dd>
@@ -931,32 +960,6 @@ ISO/IEC CC 30141. Information technology - Internet of Things Reference architec
             <dt>has domain</dt>
             <dd>
                <a href="#http://iot.linkeddata.es/def/wot#Thing" title="http://iot.linkeddata.es/def/wot#Thing">Thing</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="http://iot.linkeddata.es/def/wot#interactionName">
-      <h3>Title of an interaction pattern, aligment with "(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification"<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://iot.linkeddata.es/def/wot#interactionName</p>
-      <div class="comment">
-         <span class="markdown">Name of an interaction pattern</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="#http://iot.linkeddata.es/def/wot#name" title="http://iot.linkeddata.es/def/wot#name">name</a>
-               <sup class="type-dp" title="data property">dp</sup>
-            </dd>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#http://iot.linkeddata.es/def/wot#InteractionPattern"
-                  title="http://iot.linkeddata.es/def/wot#InteractionPattern">Interaction pattern</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
