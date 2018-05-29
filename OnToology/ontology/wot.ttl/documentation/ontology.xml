@@ -21,7 +21,7 @@
         <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wot</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://iot.linkeddata.es/def/wot</vann:preferredNamespaceUri>
         <rdfs:comment xml:lang="en">This ontology aims to model the Web of Things domain according to the W3C Interest Group (http://w3c.github.io/wot/)</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.0.10</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.0.11</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -92,6 +92,17 @@
     <owl:ObjectProperty rdf:about="http://iot.linkeddata.es/def/wot#hasOutputData">
         <rdfs:comment xml:lang="en">link to the n-ary class that allows the declaration of the data type and unit of measure provided by an interaction pattern.</rdfs:comment>
         <rdfs:label xml:lang="en">has output data</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iot.linkeddata.es/def/wot#hasPriorityEndpoint -->
+
+
+    <owl:ObjectProperty rdf:about="http://iot.linkeddata.es/def/wot#hasPriorityEndpoint">
+        <rdfs:subPropertyOf rdf:resource="http://iot.linkeddata.es/def/wot#isAccessibleThrough"/>
+        <rdfs:comment xml:lang="en">Priority endpoint representation of &quot;pri&quot; field for endpoints in &quot;(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification&quot;</rdfs:comment>
+        <rdfs:label xml:lang="en">has priority endpoint</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -260,6 +271,16 @@
     
 
 
+    <!-- http://iot.linkeddata.es/def/wot#interactionDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="http://iot.linkeddata.es/def/wot#interactionDescription">
+        <rdfs:label xml:lang="en">Description of an interaction pattern, aligment with &quot;(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification&quot;</rdfs:label>
+        <rdfs:label xml:lang="en">interaction pattern description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://iot.linkeddata.es/def/wot#interactionName -->
 
 
@@ -267,7 +288,9 @@
         <rdfs:subPropertyOf rdf:resource="http://iot.linkeddata.es/def/wot#name"/>
         <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/wot#InteractionPattern"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Name of an interaction pattern</rdfs:comment>
+        <rdfs:label xml:lang="en">Title of an interaction pattern, aligment with &quot;(IoT) DIS 30118-1 - Text for ISO/IEC DIS 30118-1, Information technology — Open Connectivity Foundation — Part 1: Core specification&quot;</rdfs:label>
         <rdfs:label xml:lang="en">interaction name</rdfs:label>
+        <rdfs:label xml:lang="en">interaction pattern title</rdfs:label>
     </owl:DatatypeProperty>
     
 
