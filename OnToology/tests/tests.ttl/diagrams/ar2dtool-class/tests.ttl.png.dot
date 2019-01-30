@@ -1,0 +1,19 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"file:///home/ahmad/OnToology/test-case-4" -> "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot17" [ label = "vtc:isRelatedToRequirement" ];
+	"file:///home/ahmad/OnToology/test-case-9" -> "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot26" [ label = "vtc:isRelatedToRequirement" ];
+	"file:///home/ahmad/OnToology/test-case-13" -> "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot31" [ label = "vtc:isRelatedToRequirement" ];
+	"file:///home/ahmad/OnToology/test-case-2" -> "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot15" [ label = "vtc:isRelatedToRequirement" ];
+	"file:///home/ahmad/OnToology/test-case-7" -> "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot24" [ label = "vtc:isRelatedToRequirement" ];
+	"file:///home/ahmad/OnToology/test-case-11" -> "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot28" [ label = "vtc:isRelatedToRequirement" ];
+	"file:///home/ahmad/OnToology/test-case-5" -> "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot21" [ label = "vtc:isRelatedToRequirement" ];
+	"file:///home/ahmad/OnToology/test-case-14" -> "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot32" [ label = "vtc:isRelatedToRequirement" ];
+	"file:///home/ahmad/OnToology/test-case-3" -> "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot16" [ label = "vtc:isRelatedToRequirement" ];
+	"file:///home/ahmad/OnToology/test-case-8" -> "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot25" [ label = "vtc:isRelatedToRequirement" ];
+	"file:///home/ahmad/OnToology/test-case-12" -> "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot29" [ label = "vtc:isRelatedToRequirement" ];
+	"file:///home/ahmad/OnToology/test-case-1" -> "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot1" [ label = "vtc:isRelatedToRequirement" ];
+	"file:///home/ahmad/OnToology/test-case-6" -> "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot22" [ label = "vtc:isRelatedToRequirement" ];
+	"file:///home/ahmad/OnToology/test-case-10" -> "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot27" [ label = "vtc:isRelatedToRequirement" ];
+
+}
