@@ -1,0 +1,254 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:vtc="http://w3id.org/def/vtc#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://w3id.org/def/vtc#desiredBehaviour -->
+
+
+    <AnnotationProperty rdf:about="http://w3id.org/def/vtc#desiredBehaviour"/>
+    
+
+
+    <!-- http://w3id.org/def/vtc#isRelatedToRequirement -->
+
+
+    <AnnotationProperty rdf:about="http://w3id.org/def/vtc#isRelatedToRequirement"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/def/vtc#TestCaseDesign -->
+
+
+    <Class rdf:about="http://w3id.org/def/vtc#TestCaseDesign"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- urn:default:baseUri:test-case-1 -->
+
+
+    <NamedIndividual rdf:about="urn:default:baseUri:test-case-1">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>What is a thing in the web thing context?</terms:description>
+        <vtc:desiredBehaviour>Thing type Class</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot1"/>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:test-case-10 -->
+
+
+    <NamedIndividual rdf:about="urn:default:baseUri:test-case-10">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Each interaction pattern has an endpoint</terms:description>
+        <vtc:desiredBehaviour>InteraccionPattern subclassOf isAccessibleThrough some Link</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot27"/>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:test-case-11 -->
+
+
+    <NamedIndividual rdf:about="urn:default:baseUri:test-case-11">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Each endpoints has minimun two attributes URI and mediatype</terms:description>
+        <vtc:desiredBehaviour>Link subclassOf hasMediaType only string</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Link subclassOf href only string</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot28"/>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:test-case-12 -->
+
+
+    <NamedIndividual rdf:about="urn:default:baseUri:test-case-12">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Security is associated with things</terms:description>
+        <vtc:desiredBehaviour>Thing subclassOf implementsSecurity some Security</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot29"/>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:test-case-13 -->
+
+
+    <NamedIndividual rdf:about="urn:default:baseUri:test-case-13">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>An endpoint can be associated with a thing without determine the interaction patterns</terms:description>
+        <vtc:desiredBehaviour>Thing subclassOf isAccessibleThrough only Link</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot31"/>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:test-case-14 -->
+
+
+    <NamedIndividual rdf:about="urn:default:baseUri:test-case-14">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Each interaction pattern has a name and a Web Resource address</terms:description>
+        <vtc:desiredBehaviour>InteractionPattern subclassOf interactionName only string</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>InteractionPattern subclassOf isAccessibleThrough some Link</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot32"/>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:test-case-2 -->
+
+
+    <NamedIndividual rdf:about="urn:default:baseUri:test-case-2">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>What is a Property?</terms:description>
+        <vtc:desiredBehaviour>Property subclassOf InteractionPattern</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot15"/>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:test-case-3 -->
+
+
+    <NamedIndividual rdf:about="urn:default:baseUri:test-case-3">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>What is an action?</terms:description>
+        <vtc:desiredBehaviour>Action subclassOf InteractionPattern</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot16"/>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:test-case-4 -->
+
+
+    <NamedIndividual rdf:about="urn:default:baseUri:test-case-4">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>What is an event?</terms:description>
+        <vtc:desiredBehaviour>Event subclassOf InteractionPattern</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot17"/>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:test-case-5 -->
+
+
+    <NamedIndividual rdf:about="urn:default:baseUri:test-case-5">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>A thing interaction can be available over different or multiple protocols</terms:description>
+        <vtc:desiredBehaviour>InteractionPattern subclassOf isProvidedOverProtocol some CommunicationProtocol</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot21"/>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:test-case-6 -->
+
+
+    <NamedIndividual rdf:about="urn:default:baseUri:test-case-6">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>What is a protocol?</terms:description>
+        <vtc:desiredBehaviour>CommunicationProtocol type Class</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot22"/>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:test-case-7 -->
+
+
+    <NamedIndividual rdf:about="urn:default:baseUri:test-case-7">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Each thing has at least an interaction pattern</terms:description>
+        <vtc:desiredBehaviour>Thing subclassOf providesInteractionPattern only InteractionPattern</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot24"/>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:test-case-8 -->
+
+
+    <NamedIndividual rdf:about="urn:default:baseUri:test-case-8">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>An interaction pattern can have different endpoints</terms:description>
+        <vtc:desiredBehaviour>InteractionPattern subclassOf isAccessibleThrough min 1 Link</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot25"/>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:default:baseUri:test-case-9 -->
+
+
+    <NamedIndividual rdf:about="urn:default:baseUri:test-case-9">
+        <rdf:type rdf:resource="http://w3id.org/def/vtc#TestCaseDesign"/>
+        <terms:description>Each interaction pattern has its own attributes</terms:description>
+        <vtc:desiredBehaviour>Property subclassOf InteractionPattern</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Property subclassOf isRequired only boolean</vtc:desiredBehaviour>
+        <vtc:desiredBehaviour>Property subclassOf isWritable only boolean</vtc:desiredBehaviour>
+        <vtc:isRelatedToRequirement rdf:resource="http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot26"/>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/ -->
+
+

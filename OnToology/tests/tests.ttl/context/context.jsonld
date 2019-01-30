@@ -1,0 +1,16 @@
+{
+  "@context" : {
+    "desiredBehaviour" : {
+      "@id" : "http://w3id.org/def/vtc#desiredBehaviour"
+    },
+    "isRelatedToRequirement" : {
+      "@id" : "http://w3id.org/def/vtc#isRelatedToRequirement"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "TestCaseDesign" : {
+      "@id" : "http://w3id.org/def/vtc#TestCaseDesign"
+    }
+  }
+}

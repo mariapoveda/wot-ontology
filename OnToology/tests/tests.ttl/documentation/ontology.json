@@ -1,0 +1,192 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://w3id.org/def/vtc#TestCaseDesign",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://w3id.org/def/vtc#desiredBehaviour",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://w3id.org/def/vtc#isRelatedToRequirement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "urn:default:baseUri:test-case-1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "What is a thing in the web thing context?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Thing type Class"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot1"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:test-case-10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Each interaction pattern has an endpoint"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "InteraccionPattern subclassOf isAccessibleThrough some Link"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot27"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:test-case-11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Each endpoints has minimun two attributes URI and mediatype"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Link subclassOf hasMediaType only string"
+  }, {
+    "@value" : "Link subclassOf href only string"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot28"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:test-case-12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Security is associated with things"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Thing subclassOf implementsSecurity some Security"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot29"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:test-case-13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "An endpoint can be associated with a thing without determine the interaction patterns"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Thing subclassOf isAccessibleThrough only Link"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot31"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:test-case-14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Each interaction pattern has a name and a Web Resource address"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "InteractionPattern subclassOf interactionName only string"
+  }, {
+    "@value" : "InteractionPattern subclassOf isAccessibleThrough some Link"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot32"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:test-case-2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "What is a Property?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Property subclassOf InteractionPattern"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot15"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:test-case-3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "What is an action?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Action subclassOf InteractionPattern"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot16"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:test-case-4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "What is an event?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Event subclassOf InteractionPattern"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot17"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:test-case-5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "A thing interaction can be available over different or multiple protocols"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "InteractionPattern subclassOf isProvidedOverProtocol some CommunicationProtocol"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot21"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:test-case-6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "What is a protocol?"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "CommunicationProtocol type Class"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot22"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:test-case-7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Each thing has at least an interaction pattern"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Thing subclassOf providesInteractionPattern only InteractionPattern"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot24"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:test-case-8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "An interaction pattern can have different endpoints"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "InteractionPattern subclassOf isAccessibleThrough min 1 Link"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot25"
+  } ]
+}, {
+  "@id" : "urn:default:baseUri:test-case-9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Each interaction pattern has its own attributes"
+  } ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Property subclassOf InteractionPattern"
+  }, {
+    "@value" : "Property subclassOf isRequired only boolean"
+  }, {
+    "@value" : "Property subclassOf isWritable only boolean"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot26"
+  } ]
+} ]

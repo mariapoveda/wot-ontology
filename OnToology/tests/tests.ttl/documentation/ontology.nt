@@ -1,0 +1,143 @@
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://w3id.org/def/vtc#desiredBehaviour
+<http://w3id.org/def/vtc#desiredBehaviour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://w3id.org/def/vtc#isRelatedToRequirement
+<http://w3id.org/def/vtc#isRelatedToRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/def/vtc#TestCaseDesign
+<http://w3id.org/def/vtc#TestCaseDesign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# urn:default:baseUri:test-case-1
+<urn:default:baseUri:test-case-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:test-case-1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:test-case-1> <http://purl.org/dc/terms/description> "What is a thing in the web thing context?" .
+<urn:default:baseUri:test-case-1> <http://w3id.org/def/vtc#desiredBehaviour> "Thing type Class" .
+<urn:default:baseUri:test-case-1> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot1> .
+# 
+# urn:default:baseUri:test-case-10
+<urn:default:baseUri:test-case-10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:test-case-10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:test-case-10> <http://purl.org/dc/terms/description> "Each interaction pattern has an endpoint" .
+<urn:default:baseUri:test-case-10> <http://w3id.org/def/vtc#desiredBehaviour> "InteraccionPattern subclassOf isAccessibleThrough some Link" .
+<urn:default:baseUri:test-case-10> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot27> .
+# 
+# urn:default:baseUri:test-case-11
+<urn:default:baseUri:test-case-11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:test-case-11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:test-case-11> <http://purl.org/dc/terms/description> "Each endpoints has minimun two attributes URI and mediatype" .
+<urn:default:baseUri:test-case-11> <http://w3id.org/def/vtc#desiredBehaviour> "Link subclassOf hasMediaType only string" .
+<urn:default:baseUri:test-case-11> <http://w3id.org/def/vtc#desiredBehaviour> "Link subclassOf href only string" .
+<urn:default:baseUri:test-case-11> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot28> .
+# 
+# urn:default:baseUri:test-case-12
+<urn:default:baseUri:test-case-12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:test-case-12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:test-case-12> <http://purl.org/dc/terms/description> "Security is associated with things" .
+<urn:default:baseUri:test-case-12> <http://w3id.org/def/vtc#desiredBehaviour> "Thing subclassOf implementsSecurity some Security" .
+<urn:default:baseUri:test-case-12> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot29> .
+# 
+# urn:default:baseUri:test-case-13
+<urn:default:baseUri:test-case-13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:test-case-13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:test-case-13> <http://purl.org/dc/terms/description> "An endpoint can be associated with a thing without determine the interaction patterns" .
+<urn:default:baseUri:test-case-13> <http://w3id.org/def/vtc#desiredBehaviour> "Thing subclassOf isAccessibleThrough only Link" .
+<urn:default:baseUri:test-case-13> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot31> .
+# 
+# urn:default:baseUri:test-case-14
+<urn:default:baseUri:test-case-14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:test-case-14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:test-case-14> <http://purl.org/dc/terms/description> "Each interaction pattern has a name and a Web Resource address" .
+<urn:default:baseUri:test-case-14> <http://w3id.org/def/vtc#desiredBehaviour> "InteractionPattern subclassOf interactionName only string" .
+<urn:default:baseUri:test-case-14> <http://w3id.org/def/vtc#desiredBehaviour> "InteractionPattern subclassOf isAccessibleThrough some Link" .
+<urn:default:baseUri:test-case-14> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot32> .
+# 
+# urn:default:baseUri:test-case-2
+<urn:default:baseUri:test-case-2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:test-case-2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:test-case-2> <http://purl.org/dc/terms/description> "What is a Property?" .
+<urn:default:baseUri:test-case-2> <http://w3id.org/def/vtc#desiredBehaviour> "Property subclassOf InteractionPattern" .
+<urn:default:baseUri:test-case-2> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot15> .
+# 
+# urn:default:baseUri:test-case-3
+<urn:default:baseUri:test-case-3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:test-case-3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:test-case-3> <http://purl.org/dc/terms/description> "What is an action?" .
+<urn:default:baseUri:test-case-3> <http://w3id.org/def/vtc#desiredBehaviour> "Action subclassOf InteractionPattern" .
+<urn:default:baseUri:test-case-3> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot16> .
+# 
+# urn:default:baseUri:test-case-4
+<urn:default:baseUri:test-case-4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:test-case-4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:test-case-4> <http://purl.org/dc/terms/description> "What is an event?" .
+<urn:default:baseUri:test-case-4> <http://w3id.org/def/vtc#desiredBehaviour> "Event subclassOf InteractionPattern" .
+<urn:default:baseUri:test-case-4> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot17> .
+# 
+# urn:default:baseUri:test-case-5
+<urn:default:baseUri:test-case-5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:test-case-5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:test-case-5> <http://purl.org/dc/terms/description> "A thing interaction can be available over different or multiple protocols" .
+<urn:default:baseUri:test-case-5> <http://w3id.org/def/vtc#desiredBehaviour> "InteractionPattern subclassOf isProvidedOverProtocol some CommunicationProtocol" .
+<urn:default:baseUri:test-case-5> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot21> .
+# 
+# urn:default:baseUri:test-case-6
+<urn:default:baseUri:test-case-6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:test-case-6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:test-case-6> <http://purl.org/dc/terms/description> "What is a protocol?" .
+<urn:default:baseUri:test-case-6> <http://w3id.org/def/vtc#desiredBehaviour> "CommunicationProtocol type Class" .
+<urn:default:baseUri:test-case-6> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot22> .
+# 
+# urn:default:baseUri:test-case-7
+<urn:default:baseUri:test-case-7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:test-case-7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:test-case-7> <http://purl.org/dc/terms/description> "Each thing has at least an interaction pattern" .
+<urn:default:baseUri:test-case-7> <http://w3id.org/def/vtc#desiredBehaviour> "Thing subclassOf providesInteractionPattern only InteractionPattern" .
+<urn:default:baseUri:test-case-7> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot24> .
+# 
+# urn:default:baseUri:test-case-8
+<urn:default:baseUri:test-case-8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:test-case-8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:test-case-8> <http://purl.org/dc/terms/description> "An interaction pattern can have different endpoints" .
+<urn:default:baseUri:test-case-8> <http://w3id.org/def/vtc#desiredBehaviour> "InteractionPattern subclassOf isAccessibleThrough min 1 Link" .
+<urn:default:baseUri:test-case-8> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot25> .
+# 
+# urn:default:baseUri:test-case-9
+<urn:default:baseUri:test-case-9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:default:baseUri:test-case-9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/def/vtc#TestCaseDesign> .
+<urn:default:baseUri:test-case-9> <http://purl.org/dc/terms/description> "Each interaction pattern has its own attributes" .
+<urn:default:baseUri:test-case-9> <http://w3id.org/def/vtc#desiredBehaviour> "Property subclassOf InteractionPattern" .
+<urn:default:baseUri:test-case-9> <http://w3id.org/def/vtc#desiredBehaviour> "Property subclassOf isRequired only boolean" .
+<urn:default:baseUri:test-case-9> <http://w3id.org/def/vtc#desiredBehaviour> "Property subclassOf isWritable only boolean" .
+<urn:default:baseUri:test-case-9> <http://w3id.org/def/vtc#isRelatedToRequirement> <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot26> .
+# 
+# Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/
