@@ -1,0 +1,125 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:    <http://purl.org/dc/terms/> .
+@prefix vtc: <http://w3id.org/def/vtc#> .
+@prefix  :     <> .
+
+
+
+:test-case-1 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot1>;
+	dc:description "What is a thing in the web thing context?";
+	vtc:desiredBehaviour "Thing type Class".
+	
+
+
+
+
+:test-case-2 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot15>;
+	dc:description "What is a Property?";
+	vtc:desiredBehaviour "Property subclassOf InteractionPattern".
+	
+
+
+
+
+:test-case-3 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot16>;
+	dc:description "What is an action?";
+	vtc:desiredBehaviour "Action subclassOf InteractionPattern" .
+
+
+
+
+:test-case-4 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot17>;
+	dc:description "What is an event?";
+	vtc:desiredBehaviour "Event subclassOf InteractionPattern" .
+
+
+:test-case-5 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot21>;
+	dc:description "A thing interaction can be available over different or multiple protocols";
+	vtc:desiredBehaviour "InteractionPattern subclassOf isProvidedOverProtocol some CommunicationProtocol" .
+
+
+
+
+
+:test-case-6 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot22>;
+	dc:description "What is a protocol?";
+	vtc:desiredBehaviour "CommunicationProtocol type Class" . 
+	
+
+
+
+
+:test-case-7 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot24>;
+	dc:description "Each thing has at least an interaction pattern";
+	vtc:desiredBehaviour "Thing subclassOf providesInteractionPattern only InteractionPattern" .
+	
+
+
+
+
+:test-case-8 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot25>;
+	dc:description "An interaction pattern can have different endpoints";
+	vtc:desiredBehaviour "InteractionPattern subclassOf isAccessibleThrough min 1 Link" .
+	
+
+
+
+
+:test-case-9 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot26>;
+	dc:description "Each interaction pattern has its own attributes";
+	vtc:desiredBehaviour "Property subclassOf InteractionPattern";
+	vtc:desiredBehaviour "Property subclassOf isWritable only boolean";
+	vtc:desiredBehaviour "Property subclassOf isRequired only boolean" .
+	
+
+
+
+
+:test-case-10 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot27>;
+	dc:description "Each interaction pattern has an endpoint";
+	vtc:desiredBehaviour "InteraccionPattern subclassOf isAccessibleThrough some Link" .
+	
+
+
+
+
+:test-case-11 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot28>;
+	dc:description "Each endpoints has minimun two attributes URI and mediatype";
+	vtc:desiredBehaviour "Link subclassOf hasMediaType only string";
+	vtc:desiredBehaviour "Link subclassOf href only string".
+
+
+
+:test-case-12 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot29>;
+	dc:description "Security is associated with things";
+	vtc:desiredBehaviour "Thing subclassOf implementsSecurity some Security" .
+	
+
+:test-case-13 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot31>;
+	dc:description "An endpoint can be associated with a thing without determine the interaction patterns";
+	vtc:desiredBehaviour "Thing subclassOf isAccessibleThrough only Link".
+	
+
+
+
+:test-case-14 a vtc:TestCaseDesign;
+	vtc:isRelatedToRequirement <http://vicinity.iot.linkeddata.es/vicinity/requirements/report-wot.html#wot32>;
+	dc:description "Each interaction pattern has a name and a Web Resource address";
+	vtc:desiredBehaviour "InteractionPattern subclassOf isAccessibleThrough some Link" ;
+	vtc:desiredBehaviour "InteractionPattern subclassOf interactionName only string" .
+	
+
